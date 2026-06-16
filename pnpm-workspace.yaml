@@ -1,0 +1,6 @@
+verifyDepsBeforeRun: false
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - "@swc/core"
+  - sharp
+  - unrs-resolver

@@ -1,0 +1,2 @@
+# Le push n'est autorisé que si le build de production réussit.
+next build
