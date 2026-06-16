@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "siteName": "A2M 2027",
+    "tagline": "Là où la richesse minérale africaine rencontre le capital canadien"
+  },
+  "common": {
+    "register": "S'inscrire",
+    "registerNow": "S'inscrire maintenant",
+    "downloadProgram": "Télécharger le programme",
+    "learnMore": "En savoir plus",
+    "discover": "Découvrir",
+    "comingSoon": "Bientôt disponible",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "french": "Français",
+    "english": "English",
+    "backToTop": "Haut de page",
+    "skipToContent": "Aller au contenu principal",
+    "breadcrumb": "Fil d'Ariane",
+    "sitemap": "Plan du site",
+    "home": "Accueil"
+  },
+  "home": {
+    "eventDates": "7–9 juin 2027",
+    "venue": "Centre Mont-Royal, Montréal",
+    "honoraryPatron": "Patron d'honneur",
+    "kpiDelegates": "délégués",
+    "kpiMinisters": "ministres",
+    "kpiCompanies": "sociétés au TSX",
+    "kpiMeetings": "rencontres B2B"
+  },
+  "footer": {
+    "about": "A2M est la plateforme nord-américaine de référence pour l'investissement minier en Afrique.",
+    "news": "Actualités & Presse",
+    "contacts": "Contacts",
+    "newsletter": "Infolettre",
+    "newsletterIntro": "Recevez les annonces et mises à jour du programme.",
+    "emailPlaceholder": "Votre adresse courriel",
+    "subscribe": "S'abonner",
+    "rights": "Tous droits réservés.",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité"
+  },
+  "forms": {
+    "name": "Nom complet",
+    "email": "Courriel",
+    "company": "Organisation",
+    "subject": "Objet",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi en cours…",
+    "successTitle": "Message envoyé",
+    "successBody": "Merci, notre équipe vous répondra sous peu.",
+    "errorTitle": "Échec de l'envoi",
+    "errorBody": "Une erreur est survenue. Réessayez plus tard.",
+    "required": "Ce champ est requis.",
+    "invalidEmail": "Adresse courriel invalide.",
+    "minMessage": "Veuillez saisir au moins 10 caractères."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "siteName": "A2M 2027",
+    "tagline": "Where African mineral wealth meets Canadian capital"
+  },
+  "common": {
+    "register": "Register",
+    "registerNow": "Register now",
+    "downloadProgram": "Download the program",
+    "learnMore": "Learn more",
+    "discover": "Discover",
+    "comingSoon": "Coming soon",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "french": "Français",
+    "english": "English",
+    "backToTop": "Back to top",
+    "skipToContent": "Skip to main content",
+    "breadcrumb": "Breadcrumb",
+    "sitemap": "Sitemap",
+    "home": "Home"
+  },
+  "home": {
+    "eventDates": "June 7–9, 2027",
+    "venue": "Centre Mont-Royal, Montréal",
+    "honoraryPatron": "Honorary Patron",
+    "kpiDelegates": "delegates",
+    "kpiMinisters": "ministers",
+    "kpiCompanies": "TSX companies",
+    "kpiMeetings": "B2B meetings"
+  },
+  "footer": {
+    "about": "A2M is North America's premier platform for mining investment in Africa.",
+    "news": "News & Press",
+    "contacts": "Contacts",
+    "newsletter": "Newsletter",
+    "newsletterIntro": "Get announcements and program updates.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved.",
+    "legal": "Legal notice",
+    "privacy": "Privacy"
+  },
+  "forms": {
+    "name": "Full name",
+    "email": "Email",
+    "company": "Organization",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending…",
+    "successTitle": "Message sent",
+    "successBody": "Thank you, our team will get back to you shortly.",
+    "errorTitle": "Submission failed",
+    "errorBody": "Something went wrong. Please try again later.",
+    "required": "This field is required.",
+    "invalidEmail": "Invalid email address.",
+    "minMessage": "Please enter at least 10 characters."
+  }
+}
