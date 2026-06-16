@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "../styles/theme.css";
+
+/* Variante de groupe pour les états ouverts (menus, accordéons) */
+@custom-variant open (&[data-state="open"]);
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.67;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Titres en serif display par défaut */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  /* Chiffres tabulaires pour les données */
+  .tnum {
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Anneau de focus accessible (émeraude, conforme au brand book) */
+  :focus-visible {
+    outline: 2px solid var(--color-emerald-cta);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: var(--color-mist);
+    color: var(--color-emerald-deep);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
