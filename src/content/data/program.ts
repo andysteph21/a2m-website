@@ -12,23 +12,8 @@ export interface ScheduleDay {
   sessions: ScheduleSession[];
 }
 
-/** Programme prévisionnel d'A2M 2027 (à confirmer). */
+/** Programme prévisionnel d'A2M 2027 — trois jours, du 7 au 9 juin (à confirmer). */
 export const schedule: ScheduleDay[] = [
-  {
-    date: { fr: "Dim. 6 juin", en: "Sun. June 6" },
-    location: { fr: "Fairmont Le Reine Elizabeth", en: "Fairmont The Queen Elizabeth" },
-    sessions: [
-      {
-        time: "09:00",
-        title: { fr: "Table ronde ministérielle", en: "Ministerial Round Table" },
-        tag: { fr: "Sur invitation", en: "By invitation" },
-      },
-      {
-        time: "19:00",
-        title: { fr: "Dîner de gala", en: "Gala dinner" },
-      },
-    ],
-  },
   {
     date: { fr: "Lun. 7 juin", en: "Mon. June 7" },
     location: { fr: "Centre Mont-Royal", en: "Centre Mont-Royal" },
@@ -39,15 +24,24 @@ export const schedule: ScheduleDay[] = [
         tag: { fr: "Sur invitation", en: "By invitation" },
       },
       {
-        time: "09:30",
+        time: "09:00",
+        title: { fr: "Table ronde ministérielle", en: "Ministerial Round Table" },
+        tag: { fr: "Sur invitation", en: "By invitation" },
+      },
+      {
+        time: "10:30",
         title: { fr: "Cérémonie d'ouverture & keynotes", en: "Opening ceremony & keynotes" },
       },
       {
-        time: "11:00",
+        time: "11:30",
         title: {
           fr: "Ouverture du salon & maillage B2B",
           en: "Exhibition opens & B2B matchmaking",
         },
+      },
+      {
+        time: "19:00",
+        title: { fr: "Dîner de gala", en: "Gala dinner" },
       },
     ],
   },
