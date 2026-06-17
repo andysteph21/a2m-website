@@ -62,6 +62,14 @@ export const exhibitSponsorPages: PageContent[] = [
           en: "A space dedicated to junior and early-stage companies, in an accessible format to maximise visibility.",
         },
       },
+      {
+        type: "image",
+        label: {
+          fr: "Plan du salon / rendu d'un stand standard 2×3",
+          en: "Trade-show floor plan / standard 2×3 booth render",
+        },
+        ratio: "16/9",
+      },
     ],
   },
   {

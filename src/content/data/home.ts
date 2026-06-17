@@ -4,6 +4,8 @@ export interface HeroSlide {
   eyebrow: Localized;
   title: Localized;
   text: Localized;
+  /** Description de l'image de fond attendue (placeholder). */
+  image: Localized;
 }
 
 export interface Kpi {
@@ -33,6 +35,10 @@ export const heroSlides: HeroSlide[] = [
       fr: "La plateforme nord-américaine de référence reliant les projets miniers africains aux investisseurs, aux marchés et à l'expertise du Canada.",
       en: "North America's premier platform connecting African mining projects with Canadian investors, markets and expertise.",
     },
+    image: {
+      fr: "Image de fond : mine / minéraux critiques africains",
+      en: "Background image: African mine / critical minerals",
+    },
   },
   {
     eyebrow: { fr: "1 500+ délégués · 35 pays", en: "1,500+ delegates · 35 countries" },
@@ -44,6 +50,10 @@ export const heroSlides: HeroSlide[] = [
       fr: "Ministres, dirigeants miniers, investisseurs institutionnels et fournisseurs réunis pour bâtir les partenariats de demain.",
       en: "Ministers, mining executives, institutional investors and suppliers gather to build tomorrow's partnerships.",
     },
+    image: {
+      fr: "Image de fond : Montréal / Centre Mont-Royal (capital canadien)",
+      en: "Background image: Montréal / Centre Mont-Royal (Canadian capital)",
+    },
   },
   {
     eyebrow: { fr: "Minéraux critiques", en: "Critical minerals" },
@@ -54,6 +64,10 @@ export const heroSlides: HeroSlide[] = [
     text: {
       fr: "Cobalt, lithium, cuivre, terres rares : accédez aux ressources stratégiques de l'Afrique via le plus grand marché de financement minier au monde.",
       en: "Cobalt, lithium, copper, rare earths: access Africa's strategic resources through the world's leading mining finance market.",
+    },
+    image: {
+      fr: "Image de fond : salle de conférence / réseautage B2B",
+      en: "Background image: conference floor / B2B networking",
     },
   },
 ];

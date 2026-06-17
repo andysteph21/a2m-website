@@ -28,6 +28,15 @@ export const planYourVisitPages: PageContent[] = [
           },
         ],
       },
+      {
+        type: "image",
+        label: {
+          fr: "Photo du Centre Mont-Royal + plan d'accès / transports",
+          en: "Centre Mont-Royal photo + access map / transit",
+        },
+        ratio: "16/9",
+        columns: 2,
+      },
     ],
   },
   {
@@ -47,6 +56,14 @@ export const planYourVisitPages: PageContent[] = [
           en: "Preferential rates will be offered to delegates. Details to come.",
         },
       },
+      {
+        type: "image",
+        label: {
+          fr: "Photo du Fairmont Le Reine Elizabeth (façade ou hall)",
+          en: "Fairmont The Queen Elizabeth photo (façade or lobby)",
+        },
+        ratio: "16/9",
+      },
     ],
   },
   {
@@ -65,6 +82,15 @@ export const planYourVisitPages: PageContent[] = [
           fr: "Profitez de votre séjour pour explorer les quartiers, festivals et restaurants qui font la réputation de la ville.",
           en: "Make the most of your stay to explore the neighbourhoods, festivals and restaurants the city is known for.",
         },
+      },
+      {
+        type: "image",
+        label: {
+          fr: "Visuels de Montréal (skyline, Vieux-Montréal, gastronomie, festivals)",
+          en: "Montréal visuals (skyline, Old Montréal, food, festivals)",
+        },
+        ratio: "3/2",
+        columns: 3,
       },
     ],
   },

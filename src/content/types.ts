@@ -16,12 +16,16 @@ export interface NavSection extends NavLink {
   children?: NavLink[];
 }
 
+/** Format d'image attendu (ratio d'aspect du placeholder). */
+export type ImageRatio = "16/9" | "21/9" | "4/5" | "1/1" | "3/2";
+
 /** Blocs de contenu éditorial pour les pages intérieures (rendu par ContentRenderer). */
 export type ContentBlock =
   | { type: "paragraph"; text: Localized }
   | { type: "heading"; text: Localized }
   | { type: "list"; items: Localized[] }
-  | { type: "callout"; title?: Localized; text: Localized };
+  | { type: "callout"; title?: Localized; text: Localized }
+  | { type: "image"; label: Localized; ratio?: ImageRatio; columns?: 1 | 2 | 3 };
 
 /** Contenu d'une page intérieure pilotée par le registre. */
 export interface PageContent {

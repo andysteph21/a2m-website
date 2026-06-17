@@ -97,6 +97,15 @@ export const programPages: PageContent[] = [
     },
     blocks: [
       {
+        type: "image",
+        label: {
+          fr: "Photos d'identité des conférenciers (nom, organisation, sujet)",
+          en: "Speaker headshots (name, organisation, topic)",
+        },
+        ratio: "1/1",
+        columns: 3,
+      },
+      {
         type: "callout",
         title: { fr: "Bientôt disponible", en: "Coming soon" },
         text: {

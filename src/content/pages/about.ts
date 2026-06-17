@@ -58,6 +58,14 @@ export const aboutPages: PageContent[] = [
           en: 'The Honorary Patron of A2M 2027 will be announced soon. This prestigious role replaces the former "honorary country" concept and reflects the human and diplomatic dimension of the event.',
         },
       },
+      {
+        type: "image",
+        label: {
+          fr: "Portrait officiel du patron d'honneur (nom + titre)",
+          en: "Official portrait of the Honorary Patron (name + title)",
+        },
+        ratio: "4/5",
+      },
     ],
   },
   {
@@ -77,6 +85,15 @@ export const aboutPages: PageContent[] = [
           en: "The composition of the advisory board will be published as members are confirmed.",
         },
       },
+      {
+        type: "image",
+        label: {
+          fr: "Photos d'identité des membres (fond neutre uniforme)",
+          en: "Member headshots (uniform neutral background)",
+        },
+        ratio: "1/1",
+        columns: 3,
+      },
     ],
   },
   {
@@ -89,6 +106,15 @@ export const aboutPages: PageContent[] = [
       en: "A2M is built on a network of institutional, financial and industrial partners who share its vision of a responsible mining sector.",
     },
     blocks: [
+      {
+        type: "image",
+        label: {
+          fr: "Logos des partenaires (versions sur fond clair)",
+          en: "Partner logos (light-background versions)",
+        },
+        ratio: "3/2",
+        columns: 3,
+      },
       {
         type: "callout",
         title: { fr: "Devenir partenaire", en: "Become a partner" },

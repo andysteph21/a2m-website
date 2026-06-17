@@ -2,6 +2,14 @@ import { Check } from "lucide-react";
 import type { ContentBlock } from "@/content/types";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
+import { cn } from "@/lib/utils";
+import { ImagePlaceholder } from "./image-placeholder";
+
+const gridColumns: Record<1 | 2 | 3, string> = {
+  1: "grid-cols-1",
+  2: "grid-cols-1 sm:grid-cols-2",
+  3: "grid-cols-1 xs:grid-cols-2 sm:grid-cols-3",
+};
 
 /** Rend une liste de blocs de contenu éditorial dans la locale courante. */
 export function ContentRenderer({ blocks, locale }: { blocks: ContentBlock[]; locale: Locale }) {
@@ -11,12 +19,9 @@ export function ContentRenderer({ blocks, locale }: { blocks: ContentBlock[]; lo
         switch (block.type) {
           case "heading":
             return (
-              <h2
-                key={block.text.en}
-                className="mt-4 font-display font-bold text-h2 text-ink tracking-[-0.01em]"
-              >
+              <h3 key={block.text.en} className="mt-4 font-display font-semibold text-h3 text-ink">
                 {pick(block.text, locale)}
-              </h2>
+              </h3>
             );
           case "paragraph":
             return (
@@ -49,6 +54,21 @@ export function ContentRenderer({ blocks, locale }: { blocks: ContentBlock[]; lo
                 <p className="text-body text-muted">{pick(block.text, locale)}</p>
               </div>
             );
+          case "image": {
+            const cols = block.columns ?? 1;
+            const label = pick(block.label, locale);
+            const tiles = Array.from({ length: cols }, (_, i) => ({
+              key: `${label}-${i + 1}`,
+              label: cols > 1 ? `${label} (${i + 1})` : label,
+            }));
+            return (
+              <div key={`img-${label}`} className={cn("grid gap-4", gridColumns[cols])}>
+                {tiles.map((tile) => (
+                  <ImagePlaceholder key={tile.key} label={tile.label} ratio={block.ratio} />
+                ))}
+              </div>
+            );
+          }
           default:
             return null;
         }
