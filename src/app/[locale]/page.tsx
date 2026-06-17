@@ -28,9 +28,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           eyebrow: pick(s.eyebrow, locale),
           title: pick(s.title, locale),
           text: pick(s.text, locale),
+          image: pick(s.image, locale),
         }))}
         registerLabel={t("register")}
-        registerUrl={siteConfig.registerUrl}
         programLabel={t("downloadProgram")}
         programUrl={siteConfig.programPdf}
         prevLabel="←"
@@ -107,10 +107,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         }
         text={
           locale === "fr"
-            ? "Inscriptions ouvertes. Profitez des tarifs Early Bird."
-            : "Registration is open. Take advantage of Early Bird pricing."
+            ? "Les inscriptions ouvriront prochainement — consultez les tarifs Early Bird."
+            : "Registration opens soon — preview the Early Bird pricing."
         }
-        primary={{ label: t("registerNow"), href: siteConfig.registerUrl, external: true }}
+        primary={{ label: t("registerNow"), register: true }}
         secondary={{ label: t("downloadProgram"), href: siteConfig.programPdf }}
       />
 

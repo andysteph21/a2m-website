@@ -1,22 +1,23 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { RegisterButton } from "./register-button";
 
 export interface HeroSlideView {
   eyebrow: string;
   title: string;
   text: string;
+  image: string;
 }
 
 interface HeroSliderProps {
   slides: HeroSlideView[];
   registerLabel: string;
-  registerUrl: string;
   programLabel: string;
   programUrl: string;
   prevLabel: string;
@@ -26,7 +27,6 @@ interface HeroSliderProps {
 export function HeroSlider({
   slides,
   registerLabel,
-  registerUrl,
   programLabel,
   programUrl,
   prevLabel,
@@ -42,10 +42,34 @@ export function HeroSlider({
     const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onSelect);
     onSelect();
-    const id = setInterval(() => emblaApi.scrollNext(), 7000);
+
+    // Défilement automatique uniquement lorsque l'onglet est visible ET au premier
+    // plan — évite le « rattrapage » rapide au retour de focus.
+    let timer: ReturnType<typeof setInterval> | null = null;
+    const stop = () => {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    };
+    const start = () => {
+      stop();
+      if (document.visibilityState === "visible" && document.hasFocus()) {
+        timer = setInterval(() => emblaApi.scrollNext(), 7000);
+      }
+    };
+
+    start();
+    document.addEventListener("visibilitychange", start);
+    window.addEventListener("focus", start);
+    window.addEventListener("blur", stop);
+
     return () => {
-      clearInterval(id);
+      stop();
       emblaApi.off("select", onSelect);
+      document.removeEventListener("visibilitychange", start);
+      window.removeEventListener("focus", start);
+      window.removeEventListener("blur", stop);
     };
   }, [emblaApi]);
 
@@ -60,12 +84,22 @@ export function HeroSlider({
           {slides.map((slide, i) => (
             <div
               key={slide.title}
-              className="min-w-0 flex-[0_0_100%]"
+              className="relative min-w-0 flex-[0_0_100%]"
               role="group"
               aria-roledescription="slide"
               aria-label={`${i + 1} / ${slides.length}`}
             >
-              <Container className="flex min-h-[460px] flex-col justify-center py-20 lg:min-h-[560px]">
+              {/* Emplacement d'image de fond (placeholder) */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-3 rounded-sm border border-champagne/20 border-dashed"
+              />
+              <span className="absolute top-4 right-4 z-10 inline-flex max-w-[60vw] items-center gap-1.5 rounded-sm border border-champagne/40 border-dashed bg-emerald-deep/50 px-2.5 py-1 font-semibold text-[10px] text-champagne/90 uppercase tracking-[0.12em] sm:max-w-[320px]">
+                <ImageIcon className="size-3.5 shrink-0" />
+                <span className="truncate">{slide.image}</span>
+              </span>
+
+              <Container className="relative flex min-h-[460px] flex-col justify-center py-20 lg:min-h-[560px]">
                 <span className="font-semibold text-[11px] text-champagne uppercase tracking-[0.28em]">
                   {slide.eyebrow}
                 </span>
@@ -74,12 +108,7 @@ export function HeroSlider({
                 </h1>
                 <p className="mt-5 max-w-[620px] text-lead text-champagne/85">{slide.text}</p>
                 <div className="mt-8 flex flex-wrap gap-4">
-                  <Button asChild variant="prestige" size="lg">
-                    <a href={registerUrl} target="_blank" rel="noopener noreferrer">
-                      {registerLabel}
-                      <ExternalLink />
-                    </a>
-                  </Button>
+                  <RegisterButton label={registerLabel} variant="prestige" size="lg" />
                   <Button
                     asChild
                     variant="secondary"
@@ -104,9 +133,9 @@ export function HeroSlider({
               type="button"
               onClick={() => scrollTo(i)}
               aria-label={`${i + 1}`}
-              aria-current={i === selected}
+              aria-current={i === selected ? "true" : undefined}
               className={cn(
-                "h-1.5 rounded-full transition-all duration-300",
+                "h-1.5 rounded-full transition-all duration-300 focus-visible:outline-2 focus-visible:outline-champagne focus-visible:outline-offset-4",
                 i === selected ? "w-8 bg-champagne" : "w-4 bg-champagne/40 hover:bg-champagne/70",
               )}
             />
@@ -117,7 +146,7 @@ export function HeroSlider({
             type="button"
             onClick={() => emblaApi?.scrollPrev()}
             aria-label={prevLabel}
-            className="inline-flex size-10 items-center justify-center rounded-sm border border-champagne/40 text-champagne transition-colors hover:bg-champagne hover:text-emerald-deep"
+            className="inline-flex size-10 items-center justify-center rounded-sm border border-champagne/40 text-champagne transition-colors hover:bg-champagne hover:text-emerald-deep focus-visible:outline-2 focus-visible:outline-champagne focus-visible:outline-offset-2"
           >
             <ChevronLeft className="size-5" />
           </button>
@@ -125,7 +154,7 @@ export function HeroSlider({
             type="button"
             onClick={() => emblaApi?.scrollNext()}
             aria-label={nextLabel}
-            className="inline-flex size-10 items-center justify-center rounded-sm border border-champagne/40 text-champagne transition-colors hover:bg-champagne hover:text-emerald-deep"
+            className="inline-flex size-10 items-center justify-center rounded-sm border border-champagne/40 text-champagne transition-colors hover:bg-champagne hover:text-emerald-deep focus-visible:outline-2 focus-visible:outline-champagne focus-visible:outline-offset-2"
           >
             <ChevronRight className="size-5" />
           </button>
