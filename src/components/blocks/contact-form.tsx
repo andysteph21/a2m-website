@@ -6,8 +6,8 @@ import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
+import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 const schema = z.object({
@@ -48,32 +48,45 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate className="max-w-[560px]">
+    <form onSubmit={handleSubmit(onSubmit)} noValidate className="w-full max-w-[560px]">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <div>
-          <Label htmlFor="name">{t("name")}</Label>
-          <Input id="name" aria-invalid={!!errors.name} {...register("name")} />
-          {errors.name && <p className="mt-1.5 text-[12px] text-deepred">{t("required")}</p>}
-        </div>
-        <div>
-          <Label htmlFor="email">{t("email")}</Label>
-          <Input id="email" type="email" aria-invalid={!!errors.email} {...register("email")} />
-          {errors.email && <p className="mt-1.5 text-[12px] text-deepred">{t("invalidEmail")}</p>}
-        </div>
-        <div>
-          <Label htmlFor="company">{t("company")}</Label>
+        <Field id="name" label={t("name")} error={errors.name && t("required")}>
+          <Input
+            id="name"
+            aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "name-error" : undefined}
+            {...register("name")}
+          />
+        </Field>
+        <Field id="email" label={t("email")} error={errors.email && t("invalidEmail")}>
+          <Input
+            id="email"
+            type="email"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "email-error" : undefined}
+            {...register("email")}
+          />
+        </Field>
+        <Field id="company" label={t("company")}>
           <Input id="company" {...register("company")} />
-        </div>
-        <div>
-          <Label htmlFor="subject">{t("subject")}</Label>
+        </Field>
+        <Field id="subject" label={t("subject")}>
           <Input id="subject" {...register("subject")} />
-        </div>
+        </Field>
       </div>
-      <div className="mt-5">
-        <Label htmlFor="message">{t("message")}</Label>
-        <Textarea id="message" aria-invalid={!!errors.message} {...register("message")} />
-        {errors.message && <p className="mt-1.5 text-[12px] text-deepred">{t("minMessage")}</p>}
-      </div>
+      <Field
+        id="message"
+        label={t("message")}
+        error={errors.message && t("minMessage")}
+        className="mt-5"
+      >
+        <Textarea
+          id="message"
+          aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "message-error" : undefined}
+          {...register("message")}
+        />
+      </Field>
       <Button type="submit" size="lg" className="mt-6" disabled={isSubmitting}>
         {isSubmitting ? t("sending") : t("send")}
       </Button>

@@ -8,17 +8,20 @@ import { cn } from "@/lib/utils";
  * primary (émeraude), prestige (or), secondary (contour), ghost, danger.
  */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm font-sans font-semibold uppercase tracking-[0.06em] transition-all duration-[250ms] ease-discret active:translate-y-px disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        primary: "bg-emerald-cta text-white hover:bg-emerald-deep hover:shadow-emerald",
-        prestige: "bg-gold text-anthracite hover:bg-champagne hover:shadow-gold",
+        primary:
+          "bg-emerald-cta text-white hover:bg-emerald-deep hover:shadow-emerald focus-visible:outline-emerald-deep",
+        prestige:
+          "bg-gold text-anthracite hover:bg-champagne hover:shadow-gold focus-visible:outline-anthracite",
         secondary:
-          "border border-emerald-cta bg-transparent text-emerald-cta hover:bg-emerald-cta hover:text-white",
-        ghost: "bg-transparent text-muted hover:bg-anthracite/5 hover:text-anthracite",
+          "border border-emerald-cta bg-transparent text-emerald-cta hover:bg-emerald-cta hover:text-white focus-visible:outline-emerald-cta",
+        ghost:
+          "bg-transparent text-muted hover:bg-anthracite/5 hover:text-anthracite focus-visible:outline-emerald-cta",
         danger:
-          "border border-deepred/45 bg-transparent text-deepred hover:bg-deepred hover:text-white",
+          "border border-deepred/45 bg-transparent text-deepred hover:bg-deepred hover:text-white focus-visible:outline-deepred",
       },
       size: {
         default: "h-12 px-7 text-[12px]",
