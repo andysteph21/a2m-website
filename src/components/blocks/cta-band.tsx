@@ -1,11 +1,14 @@
 import { ExternalLink } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
+import { RegisterButton } from "./register-button";
 
 export interface CtaAction {
   label: string;
-  href: string;
+  href?: string;
   external?: boolean;
+  /** Action d'inscription : ouvre le popup « bientôt » au lieu d'un lien. */
+  register?: boolean;
 }
 
 interface CtaBandProps {
@@ -25,16 +28,20 @@ export function CtaBand({ title, text, primary, secondary }: CtaBandProps) {
           {text && <p className="mt-3 text-lead text-mist/90">{text}</p>}
         </div>
         <div className="flex flex-wrap gap-4">
-          <Button asChild variant="prestige" size="lg">
-            <a
-              href={primary.href}
-              target={primary.external ? "_blank" : undefined}
-              rel={primary.external ? "noopener noreferrer" : undefined}
-            >
-              {primary.label}
-              {primary.external && <ExternalLink />}
-            </a>
-          </Button>
+          {primary.register ? (
+            <RegisterButton label={primary.label} variant="prestige" size="lg" />
+          ) : (
+            <Button asChild variant="prestige" size="lg">
+              <a
+                href={primary.href}
+                target={primary.external ? "_blank" : undefined}
+                rel={primary.external ? "noopener noreferrer" : undefined}
+              >
+                {primary.label}
+                {primary.external && <ExternalLink />}
+              </a>
+            </Button>
+          )}
           {secondary && (
             <Button
               asChild

@@ -6,7 +6,9 @@ export const siteConfig = {
   eventStart: "2027-06-07",
   eventEnd: "2027-06-09",
   venue: "Centre Mont-Royal, Montréal",
-  /** Plateforme d'inscription externe (lien sortant). */
+  /** Les inscriptions ne sont pas encore ouvertes : la CTA affiche un message. */
+  registrationOpen: false,
+  /** Plateforme d'inscription externe (lien sortant, utilisé une fois ouvert). */
   registerUrl: "https://example.com/a2m-2027/register",
   /** Programme téléchargeable (placeholder à remplacer). */
   programPdf: "/program/a2m-2027-program.pdf",

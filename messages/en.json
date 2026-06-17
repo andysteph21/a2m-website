@@ -6,6 +6,10 @@
   "common": {
     "register": "Register",
     "registerNow": "Register now",
+    "registerSoonTitle": "Registration opening soon",
+    "registerSoonBody": "Registration for A2M 2027 will open soon. Subscribe to the newsletter at the bottom of the page to be notified as soon as it opens.",
+    "close": "Close",
+    "onThisPage": "On this page",
     "downloadProgram": "Download the program",
     "learnMore": "Learn more",
     "discover": "Discover",

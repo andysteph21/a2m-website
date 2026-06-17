@@ -1,7 +1,5 @@
-import { ExternalLink } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
+import { RegisterButton } from "@/components/blocks/register-button";
 import { mainNav } from "@/content/navigation";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -42,12 +40,7 @@ export async function Header({ locale }: { locale: string }) {
 
         <div className="flex items-center gap-3">
           <LanguageSwitcher className="hidden sm:inline-flex" />
-          <Button asChild size="sm" className="hidden sm:inline-flex">
-            <a href={siteConfig.registerUrl} target="_blank" rel="noopener noreferrer">
-              {t("register")}
-              <ExternalLink />
-            </a>
-          </Button>
+          <RegisterButton label={t("register")} className="hidden sm:inline-flex" />
           <MobileNav sections={sections} />
         </div>
       </Container>

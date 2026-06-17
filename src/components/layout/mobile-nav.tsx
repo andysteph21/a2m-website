@@ -1,17 +1,16 @@
 "use client";
 
-import { ExternalLink, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { RegisterButton } from "@/components/blocks/register-button";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { siteConfig } from "@/config/site";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./language-switcher";
 import type { ResolvedNavSection } from "./nav-types";
@@ -64,12 +63,7 @@ export function MobileNav({ sections }: { sections: ResolvedNavSection[] }) {
         </Accordion>
 
         <div className="mt-6 flex flex-col gap-4">
-          <Button asChild size="lg" className="w-full">
-            <a href={siteConfig.registerUrl} target="_blank" rel="noopener noreferrer">
-              {t("registerNow")}
-              <ExternalLink />
-            </a>
-          </Button>
+          <RegisterButton label={t("registerNow")} size="lg" className="w-full" />
           <div className="flex items-center justify-between border-hairline border-t pt-4">
             <span className="font-semibold text-[11px] text-muted uppercase tracking-[0.1em]">
               {t("language")}

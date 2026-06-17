@@ -1,7 +1,7 @@
-import { Check, ExternalLink } from "lucide-react";
+import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { RegisterButton } from "./register-button";
 
 export interface PricingTierView {
   name: string;
@@ -14,12 +14,11 @@ export interface PricingTierView {
 interface PricingTiersProps {
   tiers: PricingTierView[];
   ctaLabel: string;
-  ctaUrl: string;
   popularLabel: string;
 }
 
 /** Grille de paliers tarifaires (cartes empilées sur mobile). */
-export function PricingTiers({ tiers, ctaLabel, ctaUrl, popularLabel }: PricingTiersProps) {
+export function PricingTiers({ tiers, ctaLabel, popularLabel }: PricingTiersProps) {
   return (
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {tiers.map((tier) => (
@@ -50,12 +49,12 @@ export function PricingTiers({ tiers, ctaLabel, ctaUrl, popularLabel }: PricingT
               </li>
             ))}
           </ul>
-          <Button asChild variant={tier.featured ? "primary" : "secondary"} className="w-full">
-            <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
-              {ctaLabel}
-              <ExternalLink />
-            </a>
-          </Button>
+          <RegisterButton
+            label={ctaLabel}
+            variant={tier.featured ? "primary" : "secondary"}
+            className="w-full"
+            withIcon={false}
+          />
         </Card>
       ))}
     </div>

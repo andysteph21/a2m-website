@@ -6,6 +6,10 @@
   "common": {
     "register": "S'inscrire",
     "registerNow": "S'inscrire maintenant",
+    "registerSoonTitle": "Inscriptions bientôt ouvertes",
+    "registerSoonBody": "Les inscriptions à A2M 2027 ouvriront prochainement. Abonnez-vous à l'infolettre en bas de page pour être informé dès l'ouverture.",
+    "close": "Fermer",
+    "onThisPage": "Sur cette page",
     "downloadProgram": "Télécharger le programme",
     "learnMore": "En savoir plus",
     "discover": "Découvrir",
