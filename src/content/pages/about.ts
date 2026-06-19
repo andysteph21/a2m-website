@@ -7,15 +7,27 @@ export const aboutPages: PageContent[] = [
     eyebrow: { fr: "À propos", en: "About" },
     title: { fr: "La conférence A2M", en: "The A2M Conference" },
     lead: {
-      fr: "A2M (Africa Mining in Montréal) est la plateforme nord-américaine de référence pour l'investissement minier en Afrique : un pont entre les ressources africaines et le capital, l'expertise et l'innovation du Canada.",
-      en: "A2M (Africa Mining in Montréal) is North America's premier platform for mining investment in Africa — a bridge between African resources and Canadian capital, expertise and innovation.",
+      fr: "A2M 2027 est la première plateforme nord-américaine dédiée exclusivement à l'investissement, au deal-making et au dialogue politique de haut niveau entre le Canada et l'Afrique dans les minéraux critiques.",
+      en: "A2M 2027 is the first North American platform dedicated exclusively to investment, deal-making and high-level political dialogue between Canada and Africa in critical minerals.",
     },
     blocks: [
       {
+        type: "stats",
+        items: [
+          { value: "1 500+", label: { fr: "délégués · 35 pays", en: "delegates · 35 countries" } },
+          { value: "30+", label: { fr: "ministres africains", en: "African ministers" } },
+          {
+            value: "100+",
+            label: { fr: "sociétés cotées (TSX/TSX-V)", en: "listed companies (TSX/TSX-V)" },
+          },
+          { value: "3 000+", label: { fr: "rencontres B2B", en: "B2B meetings" } },
+        ],
+      },
+      {
         type: "paragraph",
         text: {
-          fr: "Du 7 au 9 juin 2027, au Centre Mont-Royal de Montréal, A2M réunit ministres, dirigeants miniers, investisseurs institutionnels, fournisseurs et acheteurs autour d'un objectif commun : accélérer le développement responsable des minéraux de demain.",
-          en: "From June 7 to 9, 2027, at the Centre Mont-Royal in Montréal, A2M brings together ministers, mining executives, institutional investors, suppliers and buyers around a shared goal: accelerating the responsible development of tomorrow's minerals.",
+          fr: "Trois jours, une ville, un objectif commun : forger le partenariat stratégique que le Canada et l'Afrique bâtissent séparément depuis des années — un partenariat qu'aucun des deux ne peut pleinement réaliser seul.",
+          en: "Three days, one city, one shared purpose: to forge the strategic partnership that Canada and Africa have been building separately for years — one neither can fully realize alone.",
         },
       },
       {
@@ -23,48 +35,98 @@ export const aboutPages: PageContent[] = [
         text: { fr: "Notre mission", en: "Our mission" },
       },
       {
-        type: "list",
+        type: "features",
+        columns: 2,
         items: [
           {
-            fr: "Connecter les projets miniers africains aux marchés de financement nord-américains.",
-            en: "Connect African mining projects with North American financing markets.",
+            title: { fr: "Connecter", en: "Connect" },
+            text: {
+              fr: "Identifier précisément qui doit se rencontrer et créer les moments propices à ces conversations.",
+              en: "Identify precisely who needs to meet and engineer the right moments for those conversations.",
+            },
           },
           {
-            fr: "Faciliter des partenariats durables et créateurs de valeur partagée.",
-            en: "Facilitate sustainable partnerships that create shared value.",
+            title: { fr: "Faciliter", en: "Facilitate" },
+            text: {
+              fr: "Structurer sessions, tables rondes et salles de deals pour passer de l'introduction à la négociation concrète.",
+              en: "Structure sessions, roundtables and deal rooms to move from introduction to concrete negotiation.",
+            },
           },
           {
-            fr: "Sécuriser l'accès aux minéraux critiques de la transition énergétique.",
-            en: "Secure access to the critical minerals of the energy transition.",
+            title: { fr: "Légitimer", en: "Legitimise" },
+            text: {
+              fr: "Le succès commercial exige un cadre politique : la table ronde ministérielle aligne les politiques au plus haut niveau.",
+              en: "Commercial success requires political enablement: the Ministerial Roundtable aligns policy at the highest level.",
+            },
+          },
+          {
+            title: { fr: "Inscrire dans la durée", en: "Build continuity" },
+            text: {
+              fr: "A2M est une plateforme pérenne : suivi des projets, bilans annuels, mesure des résultats.",
+              en: "A2M is an enduring platform: project tracking, annual reporting, measured outcomes.",
+            },
           },
         ],
       },
     ],
   },
   {
-    slug: "about/honorary-patron",
+    slug: "about/why-participate",
     section: "/about",
     eyebrow: { fr: "À propos", en: "About" },
-    title: { fr: "Patron d'honneur", en: "Honorary Patron" },
+    title: { fr: "Pourquoi participer ?", en: "Why Participate?" },
     lead: {
-      fr: "Chaque édition d'A2M met à l'honneur une personnalité de premier plan dont l'engagement incarne les valeurs de la conférence.",
-      en: "Each A2M edition honours a leading figure whose commitment embodies the conference's values.",
+      fr: "Quel que soit votre profil, A2M offre un accès direct aux décideurs, au capital et aux opportunités du secteur minier africain.",
+      en: "Whatever your profile, A2M offers direct access to the decision-makers, capital and opportunities of the African mining sector.",
     },
     blocks: [
       {
-        type: "paragraph",
-        text: {
-          fr: "Le patron d'honneur d'A2M 2027 sera annoncé prochainement. Ce rôle prestigieux remplace le concept de « pays d'honneur » et reflète la dimension humaine et diplomatique de l'événement.",
-          en: 'The Honorary Patron of A2M 2027 will be announced soon. This prestigious role replaces the former "honorary country" concept and reflects the human and diplomatic dimension of the event.',
-        },
-      },
-      {
-        type: "image",
-        label: {
-          fr: "Portrait officiel du patron d'honneur (nom + titre)",
-          en: "Official portrait of the Honorary Patron (name + title)",
-        },
-        ratio: "4/5",
+        type: "features",
+        columns: 3,
+        items: [
+          {
+            title: { fr: "Majors & mid-tiers", en: "Majors & mid-tier" },
+            text: {
+              fr: "Vos opérations africaines reposent sur des relations — gérez-les au plus haut niveau (ministres, IFD, intelligence réglementaire).",
+              en: "Your African operations run on relationships — manage them at the highest level (ministers, DFIs, regulatory intelligence).",
+            },
+          },
+          {
+            title: { fr: "Juniors & exploration", en: "Juniors & exploration" },
+            text: {
+              fr: "Investment Showcase, Capital Markets Lounge et Deal Flow Package diffusé à 40+ investisseurs qualifiés avant l'événement.",
+              en: "Investment Showcase, Capital Markets Lounge and a Deal Flow Package shared with 40+ qualified investors before the event.",
+            },
+          },
+          {
+            title: { fr: "Investisseurs & IFD", en: "Investors & DFIs" },
+            text: {
+              fr: "Projets pré-sélectionnés, Déjeuner des investisseurs à huis clos et inscription gratuite pour les investisseurs qualifiés.",
+              en: "Pre-screened projects, closed-door Investors' Breakfast and complimentary registration for qualified investors.",
+            },
+          },
+          {
+            title: { fr: "Fournisseurs & technologies", en: "Service providers & tech" },
+            text: {
+              fr: "Les contrats qui financeront votre croissance africaine s'attribuent ici : rencontres ciblées et stand au cœur des flux.",
+              en: "The contracts that will fund your Africa growth are awarded here: targeted meetings and a stand at the heart of the flow.",
+            },
+          },
+          {
+            title: { fr: "Gouvernements & ministères", en: "Governments & ministries" },
+            text: {
+              fr: "Rencontrez les dirigeants du TSX qui ont votre pays sur leur liste et devenez membre fondateur du cadre Canada-Afrique.",
+              en: "Meet the TSX executives with your country on their shortlist and become a founding member of the Canada-Africa framework.",
+            },
+          },
+          {
+            title: { fr: "Acheteurs & négociants", en: "Buyers & traders" },
+            text: {
+              fr: "Réunissez les trois parties d'une négociation d'offtake au même endroit, au même moment.",
+              en: "Assemble all three parties to an offtake negotiation in one place, at one time.",
+            },
+          },
+        ],
       },
     ],
   },
@@ -79,20 +141,12 @@ export const aboutPages: PageContent[] = [
     },
     blocks: [
       {
-        type: "paragraph",
-        text: {
-          fr: "La composition du comité consultatif sera publiée à mesure des confirmations.",
-          en: "The composition of the advisory board will be published as members are confirmed.",
-        },
-      },
-      {
-        type: "image",
+        type: "speakers",
+        count: 8,
         label: {
-          fr: "Photos d'identité des membres (fond neutre uniforme)",
-          en: "Member headshots (uniform neutral background)",
+          fr: "Membres du comité consultatif — profils à venir",
+          en: "Advisory board members — profiles to be announced",
         },
-        ratio: "1/1",
-        columns: 3,
       },
     ],
   },
@@ -107,20 +161,19 @@ export const aboutPages: PageContent[] = [
     },
     blocks: [
       {
-        type: "image",
+        type: "logos",
+        count: 8,
         label: {
-          fr: "Logos des partenaires (versions sur fond clair)",
-          en: "Partner logos (light-background versions)",
+          fr: "Partenaires & soutiens — logos à venir",
+          en: "Partners & endorsements — logos coming soon",
         },
-        ratio: "3/2",
-        columns: 3,
       },
       {
         type: "callout",
         title: { fr: "Devenir partenaire", en: "Become a partner" },
         text: {
-          fr: "Votre organisation souhaite s'associer à A2M ? Écrivez-nous à partners@a2m2027.com.",
-          en: "Would your organisation like to partner with A2M? Write to us at partners@a2m2027.com.",
+          fr: "Votre organisation souhaite s'associer à A2M ? Écrivez-nous à info@a2mevent.com.",
+          en: "Would your organisation like to partner with A2M? Write to us at info@a2mevent.com.",
         },
       },
     ],
@@ -131,33 +184,45 @@ export const aboutPages: PageContent[] = [
     eyebrow: { fr: "À propos", en: "About" },
     title: { fr: "Programme de durabilité", en: "Sustainability Programme" },
     lead: {
-      fr: "La durabilité est au cœur d'A2M, du contenu de la programmation jusqu'à l'organisation de l'événement.",
-      en: "Sustainability is at the heart of A2M, from the programming content to the way the event itself is run.",
+      fr: "Un événement d'investissement minier responsable a le devoir de créer une valeur durable pour les communautés africaines et l'industrie.",
+      en: "A responsible mining investment event has a duty to deliver lasting value to African communities and the industry.",
     },
     blocks: [
       {
-        type: "paragraph",
+        type: "callout",
+        title: { fr: "Jusqu'à 10 % des revenus", en: "Up to 10% of revenues" },
         text: {
-          fr: "A2M consacre une part de ses revenus à des initiatives à fort impact, notamment l'éducation des femmes en Afrique, en cohérence avec le Forum Femmes & Mines.",
-          en: "A2M dedicates a share of its revenues to high-impact initiatives, notably women's education in Africa, in line with the Women in Mining Forum.",
+          fr: "À chaque édition, A2M s'engage à allouer jusqu'à 10 % des revenus à des programmes à fort impact en Afrique.",
+          en: "With each edition, A2M commits up to 10% of revenues to high-impact programmes across Africa.",
         },
       },
       {
-        type: "list",
+        type: "features",
+        columns: 2,
         items: [
           {
-            fr: "Engagement environnemental dans l'organisation de l'événement.",
-            en: "Environmental commitment in how the event is organised.",
+            title: { fr: "Éducation des enfants", en: "Children's education" },
+            text: {
+              fr: "Soutien aux organisations communautaires locales et aux programmes de formation technique.",
+              en: "Support for local community organisations and technical training programmes.",
+            },
           },
           {
-            fr: "Promotion de pratiques minières responsables (ESG).",
-            en: "Promotion of responsible mining practices (ESG).",
-          },
-          {
-            fr: "Soutien à l'inclusion et à la diversité dans le secteur.",
-            en: "Support for inclusion and diversity in the sector.",
+            title: { fr: "Autonomisation des femmes", en: "Women's empowerment" },
+            text: {
+              fr: "Programmes de développement des compétences minières, en cohérence avec le Forum Femmes & Mines.",
+              en: "Mining skills development programmes, in line with the Women in Mining Forum.",
+            },
           },
         ],
+      },
+      {
+        type: "callout",
+        title: { fr: "Rejoignez la cause", en: "Join the cause" },
+        text: {
+          fr: "Associez-vous à nous pour bâtir un avenir plus durable et inclusif pour les communautés minières d'Afrique.",
+          en: "Partner with us to build a more sustainable and inclusive future for Africa's mining communities.",
+        },
       },
     ],
   },

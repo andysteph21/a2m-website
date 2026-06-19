@@ -1,6 +1,5 @@
 import type { PageContent } from "../types";
 import { aboutPages } from "./about";
-import { attendPages } from "./attend";
 import { exhibitSponsorPages } from "./exhibit-sponsor";
 import { partnerPages } from "./partner";
 import { planYourVisitPages } from "./plan-your-visit";
@@ -10,7 +9,6 @@ import { programPages } from "./program";
 export const allPages: PageContent[] = [
   ...aboutPages,
   ...programPages,
-  ...attendPages,
   ...exhibitSponsorPages,
   ...planYourVisitPages,
   ...partnerPages,

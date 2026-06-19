@@ -44,7 +44,7 @@ export const sections: SectionDef[] = [
     },
     subsections: [
       { id: "conference", kind: "content", contentSlug: "about" },
-      { id: "honorary-patron", kind: "content", contentSlug: "about/honorary-patron" },
+      { id: "why-participate", kind: "content", contentSlug: "about/why-participate" },
       { id: "advisory-board", kind: "content", contentSlug: "about/advisory-board" },
       { id: "strategic-partners", kind: "content", contentSlug: "about/strategic-partners" },
       { id: "sustainability", kind: "content", contentSlug: "about/sustainability" },
@@ -61,6 +61,8 @@ export const sections: SectionDef[] = [
     },
     subsections: [
       { id: "schedule", kind: "schedule", title: { fr: "Calendrier", en: "Schedule" } },
+      { id: "honorary-patron", kind: "content", contentSlug: "program/honorary-patron" },
+      { id: "sessions", kind: "content", contentSlug: "program/sessions" },
       {
         id: "ministerial-round-table",
         kind: "content",
@@ -69,29 +71,12 @@ export const sections: SectionDef[] = [
       { id: "women-in-mining", kind: "content", contentSlug: "program/women-in-mining" },
       { id: "investors-breakfast", kind: "content", contentSlug: "program/investors-breakfast" },
       { id: "networking", kind: "content", contentSlug: "program/networking" },
-      { id: "speakers", kind: "content", contentSlug: "program/speakers" },
-    ],
-  },
-  {
-    href: "/attend",
-    eyebrow: { fr: "Participer", en: "Attend" },
-    title: { fr: "Participer", en: "Attend" },
-    lead: {
-      fr: "Pourquoi participer, comment maximiser vos rencontres et comment vous inscrire.",
-      en: "Why attend, how to make the most of your meetings and how to register.",
-    },
-    subsections: [
-      { id: "why-participate", kind: "content", contentSlug: "attend" },
       {
         id: "matchmaking",
         kind: "matchmaking",
         title: { fr: "Maillage d'affaires", en: "Business Matchmaking" },
       },
-      {
-        id: "register",
-        kind: "register",
-        title: { fr: "S'inscrire comme délégué", en: "Register as a Delegate" },
-      },
+      { id: "speakers", kind: "content", contentSlug: "program/speakers" },
     ],
   },
   {
@@ -123,6 +108,11 @@ export const sections: SectionDef[] = [
       en: "Venue, accommodation, discovering Montréal and practical information for delegates.",
     },
     subsections: [
+      {
+        id: "register",
+        kind: "register",
+        title: { fr: "S'inscrire comme délégué", en: "Register as a Delegate" },
+      },
       { id: "venue", kind: "content", contentSlug: "plan-your-visit" },
       { id: "where-to-stay", kind: "content", contentSlug: "plan-your-visit/where-to-stay" },
       {
