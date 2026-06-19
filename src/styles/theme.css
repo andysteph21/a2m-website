@@ -1,16 +1,18 @@
 /**
- * A2M — Thème « Mineral » (v1.1)
+ * A2M — Thème « Institutionnel Vert » (v1.1)
  * Source de vérité du design system, traduite du brand book en tokens Tailwind v4.
+ * Même palette que « Mineral » ; la voix d'affichage passe en grotesque Archivo.
  * Les noms d'utilitaires sont dérivés des tokens : --color-gold -> bg-gold/text-gold, etc.
  */
 
 @theme {
-  /* ----- Couleurs : socle minéral ----- */
+  /* ----- Couleurs : socle institutionnel ----- */
   --color-ivory: #ffffff;
-  --color-surface: #eef3ec;
+  --color-surface: #e9efe6;
   --color-card: #ffffff;
   --color-anthracite: #1f1f1f;
   --color-taupe: #8b7d5f;
+  --color-sand: #e0d5bd;
 
   /* Gamme or (prestige) */
   --color-champagne: #e8d9a8;
@@ -39,9 +41,9 @@
 
   /* ----- Typographie ----- */
   --font-sans: var(--font-inter), "Inter", -apple-system, system-ui, sans-serif;
-  --font-display: var(--font-source-serif), "Source Serif 4", Georgia, serif;
+  --font-display: var(--font-archivo), "Archivo", -apple-system, system-ui, sans-serif;
 
-  /* Échelle display (Source Serif 4) */
+  /* Échelle display (Archivo) */
   --text-display: 3rem; /* 48px */
   --text-display--line-height: 1;
   --text-display--letter-spacing: -0.015em;

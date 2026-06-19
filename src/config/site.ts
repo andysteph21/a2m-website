@@ -12,12 +12,8 @@ export const siteConfig = {
   registerUrl: "https://example.com/a2m-2027/register",
   /** Programme téléchargeable (placeholder à remplacer). */
   programPdf: "/program/a2m-2027-program.pdf",
-  emails: {
-    sales: "sales@a2m2027.com",
-    partners: "partners@a2m2027.com",
-    programming: "programming@a2m2027.com",
-    media: "media@a2m2027.com",
-  },
+  /** Courriel de contact unique. */
+  contactEmail: "info@a2mevent.com",
   social: {
     linkedin: "https://www.linkedin.com/company/a2m2027",
     x: "https://x.com/a2m2027",

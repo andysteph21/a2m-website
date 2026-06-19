@@ -52,16 +52,14 @@ export async function Footer({ locale }: { locale: string }) {
             {t("contacts")}
           </h2>
           <ul className="flex flex-col gap-2">
-            {Object.values(siteConfig.emails).map((email) => (
-              <li key={email}>
-                <a
-                  href={`mailto:${email}`}
-                  className="text-small text-muted transition-colors hover:text-emerald-cta"
-                >
-                  {email}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href={`mailto:${siteConfig.contactEmail}`}
+                className="text-small text-muted transition-colors hover:text-emerald-cta"
+              >
+                {siteConfig.contactEmail}
+              </a>
+            </li>
           </ul>
         </div>
 

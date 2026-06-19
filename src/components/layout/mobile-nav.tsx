@@ -14,6 +14,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./language-switcher";
 import type { ResolvedNavSection } from "./nav-types";
+import { TextSizeToggle } from "./text-size-toggle";
 
 export function MobileNav({ sections }: { sections: ResolvedNavSection[] }) {
   const t = useTranslations("common");
@@ -68,7 +69,10 @@ export function MobileNav({ sections }: { sections: ResolvedNavSection[] }) {
             <span className="font-semibold text-[11px] text-muted uppercase tracking-[0.1em]">
               {t("language")}
             </span>
-            <LanguageSwitcher />
+            <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+              <TextSizeToggle />
+            </div>
           </div>
         </div>
       </SheetContent>
