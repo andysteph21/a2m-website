@@ -76,7 +76,7 @@ export const kpis: Kpi[] = [
   { value: "1 500+", label: { fr: "délégués", en: "delegates" } },
   { value: "30+", label: { fr: "ministres", en: "ministers" } },
   { value: "100+", label: { fr: "sociétés au TSX", en: "TSX companies" } },
-  { value: "5 000+", label: { fr: "rencontres B2B", en: "B2B meetings" } },
+  { value: "3 000+", label: { fr: "rencontres B2B", en: "B2B meetings" } },
 ];
 
 export const pillars: Pillar[] = [

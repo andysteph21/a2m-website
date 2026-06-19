@@ -12,21 +12,36 @@ export const partnerPages: PageContent[] = [
     },
     blocks: [
       {
-        type: "list",
+        type: "features",
+        columns: 3,
         items: [
           {
-            fr: "Devenir conférencier — partagez votre expertise (programming@a2m2027.com).",
-            en: "Become a Speaker — share your expertise (programming@a2m2027.com).",
+            title: { fr: "Conférencier", en: "Speaker" },
+            text: {
+              fr: "Partagez votre expertise en keynote ou en panel devant un public de décideurs.",
+              en: "Share your expertise in a keynote or panel before an audience of decision-makers.",
+            },
           },
           {
-            fr: "Devenir partenaire stratégique — associez votre organisation (partners@a2m2027.com).",
-            en: "Become a Strategic Partner — align your organisation (partners@a2m2027.com).",
+            title: { fr: "Partenaire stratégique", en: "Strategic partner" },
+            text: {
+              fr: "Associez votre organisation à l'événement minier de référence Canada-Afrique.",
+              en: "Align your organisation with the flagship Canada-Africa mining event.",
+            },
           },
           {
-            fr: "Devenir partenaire média — couvrez l'événement (media@a2m2027.com).",
-            en: "Become a Media Partner — cover the event (media@a2m2027.com).",
+            title: { fr: "Partenaire média", en: "Media partner" },
+            text: {
+              fr: "Couvrez l'événement avec un accès privilégié au programme et aux intervenants.",
+              en: "Cover the event with privileged access to the programme and speakers.",
+            },
           },
         ],
+      },
+      {
+        type: "callout",
+        title: { fr: "Nous joindre", en: "Get in touch" },
+        text: { fr: "info@a2mevent.com", en: "info@a2mevent.com" },
       },
     ],
   },
@@ -44,8 +59,8 @@ export const partnerPages: PageContent[] = [
         type: "callout",
         title: { fr: "Soumettre une proposition", en: "Submit a proposal" },
         text: {
-          fr: "Écrivez à programming@a2m2027.com avec votre biographie et le sujet proposé.",
-          en: "Write to programming@a2m2027.com with your biography and proposed topic.",
+          fr: "Écrivez à info@a2mevent.com avec votre biographie et le sujet proposé.",
+          en: "Write to info@a2mevent.com with your biography and proposed topic.",
         },
       },
     ],
@@ -63,7 +78,7 @@ export const partnerPages: PageContent[] = [
       {
         type: "callout",
         title: { fr: "Nous joindre", en: "Get in touch" },
-        text: { fr: "partners@a2m2027.com", en: "partners@a2m2027.com" },
+        text: { fr: "info@a2mevent.com", en: "info@a2mevent.com" },
       },
     ],
   },
@@ -80,7 +95,7 @@ export const partnerPages: PageContent[] = [
       {
         type: "callout",
         title: { fr: "Accréditation", en: "Accreditation" },
-        text: { fr: "media@a2m2027.com", en: "media@a2m2027.com" },
+        text: { fr: "info@a2mevent.com", en: "info@a2mevent.com" },
       },
     ],
   },

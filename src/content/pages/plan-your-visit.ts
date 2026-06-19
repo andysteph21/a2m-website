@@ -7,24 +7,34 @@ export const planYourVisitPages: PageContent[] = [
     eyebrow: { fr: "Préparer votre visite", en: "Plan Your Visit" },
     title: { fr: "Lieu & accessibilité", en: "Venue & Accessibility" },
     lead: {
-      fr: "A2M 2027 se tient au Centre Mont-Royal, au cœur du centre-ville de Montréal, facilement accessible en transport en commun.",
-      en: "A2M 2027 takes place at the Centre Mont-Royal, in the heart of downtown Montréal, easily reachable by public transit.",
+      fr: "A2M 2027 se tient au Centre Mont-Royal, au cœur du centre-ville de Montréal, à quelques pas des hôtels, restaurants et sites culturels.",
+      en: "A2M 2027 takes place at the Centre Mont-Royal, in the heart of downtown Montréal, steps from hotels, restaurants and cultural sites.",
     },
     blocks: [
       {
-        type: "list",
+        type: "features",
+        columns: 3,
         items: [
           {
-            fr: "À quelques minutes des principales stations de métro.",
-            en: "Minutes from major metro stations.",
+            title: { fr: "En métro", en: "By metro" },
+            text: {
+              fr: "À courte distance de la station Peel (ligne verte) ; lignes de bus 144 et 150.",
+              en: "A short walk from Peel Station (Green Line); bus routes 144 and 150.",
+            },
           },
           {
-            fr: "Infrastructure entièrement accessible.",
-            en: "Fully accessible venue.",
+            title: { fr: "En voiture", en: "By car" },
+            text: {
+              fr: "Depuis l'autoroute 40, sortie boul. René-Lévesque ; stationnement avec valet à l'hôtel.",
+              en: "From Highway 40, René-Lévesque Blvd exit; valet parking at the hotel.",
+            },
           },
           {
-            fr: "À proximité immédiate des hôtels partenaires.",
-            en: "Within immediate reach of partner hotels.",
+            title: { fr: "En avion", en: "By air" },
+            text: {
+              fr: "Aéroport Montréal-Trudeau (YUL) à ≈ 20 km ; taxi et navette disponibles.",
+              en: "Montréal-Trudeau Airport (YUL) ≈ 20 km away; taxi and shuttle available.",
+            },
           },
         ],
       },
@@ -45,17 +55,10 @@ export const planYourVisitPages: PageContent[] = [
     eyebrow: { fr: "Préparer votre visite", en: "Plan Your Visit" },
     title: { fr: "Où loger", en: "Where to Stay" },
     lead: {
-      fr: "L'hôtel officiel d'A2M 2027 est le Fairmont Le Reine Elizabeth, hôte de la table ronde ministérielle et du dîner de gala.",
-      en: "The official hotel of A2M 2027 is the Fairmont The Queen Elizabeth, host of the Ministerial Round Table and gala dinner.",
+      fr: "L'hôtel recommandé est le Fairmont Le Reine Elizabeth — hôtel emblématique du centre-ville qui accueille dirigeants et délégations internationales depuis 1958.",
+      en: "The recommended hotel is the Fairmont The Queen Elizabeth — a landmark downtown hotel welcoming leaders and international delegations since 1958.",
     },
     blocks: [
-      {
-        type: "paragraph",
-        text: {
-          fr: "Des tarifs préférentiels seront proposés aux délégués. Détails à venir.",
-          en: "Preferential rates will be offered to delegates. Details to come.",
-        },
-      },
       {
         type: "image",
         label: {
@@ -63,6 +66,14 @@ export const planYourVisitPages: PageContent[] = [
           en: "Fairmont The Queen Elizabeth photo (façade or lobby)",
         },
         ratio: "16/9",
+      },
+      {
+        type: "callout",
+        title: { fr: "Tarifs préférentiels", en: "Preferential rates" },
+        text: {
+          fr: "Des tarifs préférentiels seront proposés aux délégués — lien de réservation à venir.",
+          en: "Preferential rates will be offered to delegates — booking link to come.",
+        },
       },
     ],
   },
@@ -72,16 +83,36 @@ export const planYourVisitPages: PageContent[] = [
     eyebrow: { fr: "Préparer votre visite", en: "Plan Your Visit" },
     title: { fr: "Découvrir Montréal", en: "Discover Montréal" },
     lead: {
-      fr: "Métropole bilingue et créative, Montréal allie effervescence culturelle, gastronomie et qualité de vie.",
-      en: "A bilingual, creative metropolis, Montréal combines cultural energy, gastronomy and quality of life.",
+      fr: "Métropole bilingue et créative, Montréal allie charme européen, énergie nord-américaine et joie de vivre québécoise. Juin marque le début de la saison des festivals.",
+      en: "A bilingual, creative metropolis, Montréal blends European charm, North American energy and Quebecois joie de vivre. June kicks off festival season.",
     },
     blocks: [
       {
-        type: "paragraph",
-        text: {
-          fr: "Profitez de votre séjour pour explorer les quartiers, festivals et restaurants qui font la réputation de la ville.",
-          en: "Make the most of your stay to explore the neighbourhoods, festivals and restaurants the city is known for.",
-        },
+        type: "features",
+        columns: 3,
+        items: [
+          {
+            title: { fr: "Quartiers", en: "Neighbourhoods" },
+            text: {
+              fr: "Vieux-Montréal, Plateau Mont-Royal et Quartier des Spectacles.",
+              en: "Old Montréal, Plateau Mont-Royal and the Quartier des Spectacles.",
+            },
+          },
+          {
+            title: { fr: "Festivals de juin", en: "June festivals" },
+            text: {
+              fr: "Francofolies, Festival international de jazz, MURAL (art urbain).",
+              en: "Francofolies, Montréal International Jazz Festival, MURAL (street art).",
+            },
+          },
+          {
+            title: { fr: "Plein air & gastronomie", en: "Outdoors & food" },
+            text: {
+              fr: "Parc du Mont-Royal, canal de Lachine, marchés publics et scène gastronomique.",
+              en: "Mount Royal Park, Lachine Canal, public markets and a vibrant food scene.",
+            },
+          },
+        ],
       },
       {
         type: "image",
@@ -100,16 +131,16 @@ export const planYourVisitPages: PageContent[] = [
     eyebrow: { fr: "Préparer votre visite", en: "Plan Your Visit" },
     title: { fr: "Délégués internationaux — visa", en: "International Delegates — Visa" },
     lead: {
-      fr: "Informations pratiques pour les délégués internationaux : visa, AVE (eTA) et lettres d'invitation officielles.",
-      en: "Practical information for international delegates: visas, eTA and official invitation letters.",
+      fr: "La plupart des visiteurs ont besoin d'un visa de résident temporaire (VRT) ou d'une AVE (eTA). Vérifiez vos exigences sur le site officiel du gouvernement du Canada (IRCC) bien à l'avance.",
+      en: "Most visitors need a Temporary Resident Visa (TRV) or an eTA. Verify your requirements on the official Government of Canada (IRCC) website well in advance.",
     },
     blocks: [
       {
         type: "callout",
         title: { fr: "Lettre d'invitation", en: "Invitation letter" },
         text: {
-          fr: "Une lettre d'invitation officielle peut être fournie sur demande aux délégués inscrits pour appuyer une demande de visa.",
-          en: "An official invitation letter can be provided on request to registered delegates to support a visa application.",
+          fr: "Une lettre d'invitation officielle peut être fournie sur demande aux délégués inscrits. A2M ne peut garantir l'obtention des visas.",
+          en: "An official invitation letter can be provided on request to registered delegates. A2M cannot guarantee visa issuance.",
         },
       },
     ],
@@ -120,19 +151,17 @@ export const planYourVisitPages: PageContent[] = [
     eyebrow: { fr: "Préparer votre visite", en: "Plan Your Visit" },
     title: { fr: "Informations utiles", en: "Useful Information" },
     lead: {
-      fr: "Météo, devise, fuseau horaire et contacts d'urgence pour préparer sereinement votre déplacement.",
-      en: "Weather, currency, time zone and emergency contacts to plan your trip with peace of mind.",
+      fr: "Devise, fuseau horaire et météo pour préparer sereinement votre déplacement.",
+      en: "Currency, time zone and weather to plan your trip with peace of mind.",
     },
     blocks: [
       {
-        type: "list",
+        type: "stats",
         items: [
-          { fr: "Devise : dollar canadien (CAD).", en: "Currency: Canadian dollar (CAD)." },
-          { fr: "Fuseau horaire : heure de l'Est (ET).", en: "Time zone: Eastern Time (ET)." },
-          {
-            fr: "Météo de juin : douce et agréable (15–25 °C).",
-            en: "June weather: mild and pleasant (15–25 °C).",
-          },
+          { value: "CAD", label: { fr: "dollar canadien", en: "Canadian dollar" } },
+          { value: "ET", label: { fr: "heure de l'Est", en: "Eastern Time" } },
+          { value: "15–25 °C", label: { fr: "météo de juin", en: "June weather" } },
+          { value: "FR / EN", label: { fr: "langues", en: "languages" } },
         ],
       },
     ],

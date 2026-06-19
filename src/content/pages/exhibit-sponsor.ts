@@ -7,24 +7,34 @@ export const exhibitSponsorPages: PageContent[] = [
     eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
     title: { fr: "Pourquoi exposer", en: "Why Exhibit" },
     lead: {
-      fr: "Présentez votre organisation devant un public qualifié d'investisseurs, d'acheteurs et de décideurs du secteur minier.",
-      en: "Showcase your organisation before a qualified audience of investors, buyers and decision-makers in mining.",
+      fr: "Trois jours de contact direct avec celles et ceux qui décident de ce qui se construit, se finance et s'opère dans la mine africaine.",
+      en: "Three days of face time with the people who decide what gets built, financed and operated in African mining.",
     },
     blocks: [
       {
-        type: "list",
+        type: "features",
+        columns: 3,
         items: [
           {
-            fr: "Visibilité de marque auprès de 1 500+ délégués de 35 pays.",
-            en: "Brand visibility before 1,500+ delegates from 35 countries.",
+            title: { fr: "Visibilité de marque", en: "Brand visibility" },
+            text: {
+              fr: "Devant 1 500+ délégués de 35 pays, tous parties prenantes de la mine africaine.",
+              en: "Before 1,500+ delegates from 35 countries, all with a stake in African mining.",
+            },
           },
           {
-            fr: "Génération de prospects qualifiés et rencontres B2B.",
-            en: "Qualified lead generation and B2B meetings.",
+            title: { fr: "Prospects qualifiés", en: "Qualified leads" },
+            text: {
+              fr: "Génération de prospects et rencontres B2B ciblées via la plateforme de maillage.",
+              en: "Lead generation and targeted B2B meetings via the matchmaking platform.",
+            },
           },
           {
-            fr: "Positionnement au cœur du marché des minéraux critiques.",
-            en: "Positioning at the heart of the critical-minerals market.",
+            title: { fr: "Positionnement stratégique", en: "Strategic positioning" },
+            text: {
+              fr: "Au cœur du marché des minéraux critiques et de l'alliance Canada-Afrique.",
+              en: "At the heart of the critical-minerals market and the Canada-Africa alliance.",
+            },
           },
         ],
       },
@@ -36,31 +46,29 @@ export const exhibitSponsorPages: PageContent[] = [
     eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
     title: { fr: "Opportunités d'exposition", en: "Exhibition Opportunities" },
     lead: {
-      fr: "Du salon professionnel au Village des explorateurs, choisissez le format adapté à vos objectifs.",
-      en: "From the trade show to the Explorer Village, choose the format that fits your objectives.",
+      fr: "Du A2M Marketplace au Village des explorateurs, choisissez le format adapté à vos objectifs.",
+      en: "From the A2M Marketplace to the Explorer Village, choose the format that fits your objectives.",
     },
     blocks: [
       {
-        type: "heading",
-        text: { fr: "Salon professionnel", en: "Trade Show" },
-      },
-      {
-        type: "paragraph",
-        text: {
-          fr: "Stands standards équipés (éclairage, comptoir d'accueil, mobilier, présentoir à brochures) au cœur des flux de la conférence.",
-          en: "Equipped standard booths (lighting, reception counter, furniture, brochure holder) in the heart of the conference flow.",
-        },
-      },
-      {
-        type: "heading",
-        text: { fr: "Village des explorateurs", en: "Explorer Village" },
-      },
-      {
-        type: "paragraph",
-        text: {
-          fr: "Un espace dédié aux sociétés juniors et en démarrage, à un format accessible pour maximiser la visibilité.",
-          en: "A space dedicated to junior and early-stage companies, in an accessible format to maximise visibility.",
-        },
+        type: "features",
+        columns: 2,
+        items: [
+          {
+            title: { fr: "A2M Marketplace — stand 2 × 3 m", en: "A2M Marketplace — 2 × 3 m stand" },
+            text: {
+              fr: "Stand équipé avec nom et logo en fronton, profil dans le magazine officiel (2 000 ex.), 2 passes délégués offerts (+50 % sur 2 autres), accès complet et plateforme de maillage.",
+              en: "Furnished stand with name and logo on the fascia, profile in the official magazine (2,000 copies), 2 complimentary delegate passes (+50% off 2 more), full access and matchmaking platform.",
+            },
+          },
+          {
+            title: { fr: "Village des explorateurs — 1 × 1 m", en: "Explorer Village — 1 × 1 m" },
+            text: {
+              fr: "Stand équipé pour sociétés juniors/non cotées, profil au magazine, 1 passe délégué offert, accès complet. Places limitées.",
+              en: "Furnished booth for junior/unlisted companies, magazine profile, 1 complimentary delegate pass, full access. Limited spaces.",
+            },
+          },
+        ],
       },
       {
         type: "image",
@@ -78,16 +86,50 @@ export const exhibitSponsorPages: PageContent[] = [
     eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
     title: { fr: "Pourquoi commanditer", en: "Why Sponsor" },
     lead: {
-      fr: "Associez votre marque à l'événement minier de référence et démultipliez votre visibilité.",
-      en: "Associate your brand with the flagship mining event and amplify your visibility.",
+      fr: "Commanditer A2M 2027, ce n'est pas une dépense marketing : c'est un positionnement stratégique sur le marché qui définira la mine africaine pour vingt ans.",
+      en: "Sponsoring A2M 2027 is not a marketing expense: it is strategic positioning in the market that will define African mining for the next twenty years.",
     },
     blocks: [
       {
-        type: "paragraph",
-        text: {
-          fr: "Les commandites offrent une présence premium : keynotes, réceptions, signalétique, contenus et bien plus.",
-          en: "Sponsorships offer a premium presence: keynotes, receptions, signage, content and much more.",
-        },
+        type: "features",
+        columns: 3,
+        items: [
+          {
+            title: { fr: "Leadership de marque", en: "Brand leadership" },
+            text: {
+              fr: "Premier arrivé sur un marché structurel — un avantage qui se cumule dans le temps.",
+              en: "First-mover advantage in a structural market — it compounds over time.",
+            },
+          },
+          {
+            title: { fr: "Accès aux ministres", en: "Access to ministers" },
+            text: {
+              fr: "Proximité avec les ministres qui contrôlent licences, permis et régimes fiscaux.",
+              en: "Proximity to the ministers who control licensing, permits and fiscal regimes.",
+            },
+          },
+          {
+            title: { fr: "Flux de transactions", en: "Deal flow" },
+            text: {
+              fr: "Accès prioritaire à des sessions privées avec les porteurs de projets pré-sélectionnés.",
+              en: "Priority access to private sessions with pre-screened project holders.",
+            },
+          },
+          {
+            title: { fr: "Crédibilité croisée", en: "Two-way credibility" },
+            text: {
+              fr: "Crédibilité diplomatique (table ronde) et commerciale (qualité des commanditaires) qui se renforcent.",
+              en: "Diplomatic (roundtable) and commercial (sponsor quality) credibility reinforcing each other.",
+            },
+          },
+          {
+            title: { fr: "Visibilité post-événement", en: "Post-event visibility" },
+            text: {
+              fr: "Présence dans les rapports, suivis de deals et couvertures médias pendant des années.",
+              en: "Presence in reports, deal-tracking and media coverage for years.",
+            },
+          },
+        ],
       },
     ],
   },
@@ -105,8 +147,8 @@ export const exhibitSponsorPages: PageContent[] = [
         type: "callout",
         title: { fr: "Discutons", en: "Let's talk" },
         text: {
-          fr: "Contactez sales@a2m2027.com pour construire une offre adaptée à vos objectifs.",
-          en: "Contact sales@a2m2027.com to build an offer tailored to your goals.",
+          fr: "Contactez info@a2mevent.com pour construire une offre adaptée à vos objectifs.",
+          en: "Contact info@a2mevent.com to build an offer tailored to your goals.",
         },
       },
     ],

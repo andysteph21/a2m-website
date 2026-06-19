@@ -20,8 +20,8 @@ export function RegisterSection({ locale }: { locale: Locale }) {
       />
       <p className="max-w-[680px] text-small text-subtle">
         {locale === "fr"
-          ? "Les tarifs sont indiqués en dollars canadiens (CAD), hors taxes applicables. Les inscriptions ouvriront prochainement."
-          : "Prices are shown in Canadian dollars (CAD), excluding applicable taxes. Registration will open soon."}
+          ? "Tarifs en dollars canadiens (CAD), hors TPS (5 %) et TVQ (9,975 %). Les investisseurs qualifiés participent gratuitement. Les inscriptions ouvriront prochainement."
+          : "Prices in Canadian dollars (CAD), excluding GST (5%) and QST (9.975%). Qualified investors attend complimentary. Registration will open soon."}
       </p>
     </div>
   );

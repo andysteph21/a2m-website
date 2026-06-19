@@ -3,17 +3,39 @@ import type { Locale } from "@/i18n/routing";
 
 const steps = {
   fr: [
-    { title: "Profil", text: "Créez votre profil et précisez vos objectifs d'affaires." },
+    { title: "Profil", text: "Créez votre profil en 5 minutes : objectifs, projets, pays cibles." },
     {
-      title: "Match",
-      text: "Notre moteur propulsé par l'IA propose des correspondances pertinentes.",
+      title: "Suggestions IA",
+      text: "L'algorithme analyse la liste et propose les contreparties les plus pertinentes.",
     },
-    { title: "Rencontre", text: "Confirmez vos rendez-vous B2B de 15 minutes avant l'événement." },
+    {
+      title: "Demandes",
+      text: "Envoyez et acceptez des demandes de rencontre, planifiées automatiquement.",
+    },
+    {
+      title: "Agenda complet",
+      text: "Arrivez avec un calendrier de rendez-vous B2B de 20 minutes confirmés.",
+    },
+    {
+      title: "Rencontre & suivi",
+      text: "Rencontrez, documentez et assurez le suivi dans les espaces dédiés.",
+    },
   ],
   en: [
-    { title: "Profile", text: "Create your profile and define your business objectives." },
-    { title: "Match", text: "Our AI-powered engine suggests relevant matches." },
-    { title: "Meet", text: "Confirm your 15-minute B2B meetings ahead of the event." },
+    {
+      title: "Profile",
+      text: "Build your profile in 5 minutes: objectives, projects, target countries.",
+    },
+    {
+      title: "AI matches",
+      text: "The algorithm analyses the list and surfaces the most relevant counterparts.",
+    },
+    {
+      title: "Requests",
+      text: "Send and accept meeting requests, auto-scheduled into your agenda.",
+    },
+    { title: "Full agenda", text: "Arrive with a confirmed schedule of 20-minute B2B meetings." },
+    { title: "Meet & follow up", text: "Meet, document and follow up in the dedicated areas." },
   ],
 } as const;
 

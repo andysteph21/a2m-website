@@ -26,7 +26,7 @@ export function SponsorshipSection({ locale }: { locale: Locale }) {
             : "Customisable packages: our team will help you craft a tailored offer."}
         </p>
         <Button asChild variant="secondary" size="sm" className="shrink-0">
-          <a href={`mailto:${siteConfig.emails.sales}`}>
+          <a href={`mailto:${siteConfig.contactEmail}`}>
             <Mail />
             {locale === "fr" ? "Contacter les ventes" : "Contact sales"}
           </a>
