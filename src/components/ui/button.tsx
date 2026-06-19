@@ -13,9 +13,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-emerald-cta text-white hover:bg-emerald-deep hover:shadow-emerald focus-visible:outline-emerald-deep",
+          "bg-emerald-cta text-white hover:-translate-y-0.5 hover:bg-emerald-deep hover:shadow-emerald focus-visible:outline-emerald-deep",
         prestige:
-          "bg-gold text-anthracite hover:bg-champagne hover:shadow-gold focus-visible:outline-anthracite",
+          "bg-gold text-anthracite hover:-translate-y-0.5 hover:bg-champagne hover:shadow-gold focus-visible:outline-anthracite",
         secondary:
           "border border-emerald-cta bg-transparent text-emerald-cta hover:bg-emerald-cta hover:text-white focus-visible:outline-emerald-cta",
         ghost:

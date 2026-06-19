@@ -21,8 +21,8 @@ interface CtaBandProps {
 /** Bandeau d'appel à l'action pleine largeur. */
 export function CtaBand({ title, text, primary, secondary }: CtaBandProps) {
   return (
-    <section className="bg-emerald-cta text-ivory">
-      <Container className="flex flex-col items-start gap-6 py-14 lg:flex-row lg:items-center lg:justify-between">
+    <section className="a2m-motif relative overflow-hidden bg-emerald-cta text-ivory">
+      <Container className="relative z-10 flex flex-col items-start gap-6 py-14 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-[640px]">
           <h2 className="font-display font-bold text-h2 text-ivory">{title}</h2>
           {text && <p className="mt-3 text-lead text-mist/90">{text}</p>}

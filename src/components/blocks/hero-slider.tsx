@@ -75,11 +75,11 @@ export function HeroSlider({
 
   return (
     <section
-      className="relative overflow-hidden bg-emerald-deep text-ivory"
+      className="a2m-aurora relative overflow-hidden bg-emerald-deep text-ivory"
       aria-roledescription="carousel"
       aria-label="A2M 2027"
     >
-      <div ref={emblaRef} className="overflow-hidden">
+      <div ref={emblaRef} className="relative z-10 overflow-hidden">
         <div className="flex">
           {slides.map((slide, i) => (
             <div
@@ -99,7 +99,7 @@ export function HeroSlider({
                 <span className="truncate">{slide.image}</span>
               </span>
 
-              <Container className="relative flex min-h-[460px] flex-col justify-center py-20 lg:min-h-[560px]">
+              <Container className="a2m-cinema relative flex min-h-[460px] flex-col justify-center py-20 lg:min-h-[560px]">
                 <span className="font-semibold text-[11px] text-champagne uppercase tracking-[0.28em]">
                   {slide.eyebrow}
                 </span>
@@ -125,7 +125,7 @@ export function HeroSlider({
       </div>
 
       {/* Contrôles */}
-      <Container className="pointer-events-none absolute inset-x-0 bottom-8 flex items-center justify-between">
+      <Container className="pointer-events-none absolute inset-x-0 bottom-8 z-20 flex items-center justify-between">
         <div className="pointer-events-auto flex gap-2">
           {slides.map((slide, i) => (
             <button

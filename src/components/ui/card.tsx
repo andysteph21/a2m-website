@@ -11,7 +11,7 @@ const cardVariants = cva("rounded-sm border transition-all duration-[250ms] ease
       ghost: "border-transparent bg-transparent",
     },
     interactive: {
-      true: "hover:-translate-y-1 hover:shadow-card-hover",
+      true: "hover:-translate-y-1 hover:border-gold hover:shadow-card-hover",
       false: "",
     },
   },

@@ -64,7 +64,10 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
         <section
           key={sub.id}
           id={sub.id}
-          className={cn("scroll-mt-20 py-14 lg:scroll-mt-32 lg:py-16", i % 2 === 1 && "bg-surface")}
+          className={cn(
+            "a2m-reveal scroll-mt-20 py-14 lg:scroll-mt-32 lg:py-16",
+            i % 2 === 1 && "bg-surface",
+          )}
         >
           <Container>
             <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
