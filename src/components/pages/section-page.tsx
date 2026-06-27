@@ -72,7 +72,7 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
             key={sub.id}
             id={sub.id}
             className={cn(
-              "a2m-reveal scroll-mt-20 py-14 lg:scroll-mt-32 lg:py-16",
+              "a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-40 lg:py-16",
               surface && "a2m-motif-light relative overflow-hidden bg-surface",
             )}
           >

@@ -52,8 +52,9 @@ export function SectionNav({ items, label }: { items: SectionNavItem[]; label: s
 
   return (
     <>
-      {/* Desktop : sous-barre collante sous l'en-tête principal */}
-      <div className="sticky top-16 z-30 hidden border-hairline border-b bg-ivory/95 backdrop-blur lg:top-20 lg:block">
+      {/* Desktop : sous-barre collante sous l'en-tête principal (hauteur en-tête
+          ≈ 7rem avec les actions empilées). */}
+      <div className="sticky top-24 z-30 hidden border-hairline border-b bg-ivory/95 backdrop-blur lg:top-28 lg:block">
         <Container className="flex items-center gap-4">
           <span className="shrink-0 font-semibold text-[10px] text-taupe uppercase tracking-[0.18em]">
             {label} :
