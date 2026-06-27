@@ -4,7 +4,7 @@ export const exhibitSponsorPages: PageContent[] = [
   {
     slug: "exhibit-sponsor",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
     title: { fr: "Pourquoi exposer", en: "Why Exhibit" },
     lead: {
       fr: "Trois jours de contact direct avec celles et ceux qui décident de ce qui se construit, se finance et s'opère dans la mine africaine.",
@@ -64,17 +64,40 @@ export const exhibitSponsorPages: PageContent[] = [
   {
     slug: "exhibit-sponsor/exhibition",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
-    title: { fr: "Opportunités d'exposition", en: "Exhibition Opportunities" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
+    title: { fr: "Opportunités d'exposition", en: "Exhibition opportunities" },
     lead: {
       fr: "Du A2M Marketplace au Village des explorateurs, choisissez le format adapté à vos objectifs.",
-      en: "From the A2M Marketplace to the Explorer Village, choose the format that fits your objectives.",
+      en: "From the A2M Marketplace to the Explorers' Village, choose the format that fits your objectives.",
     },
     blocks: [
       {
-        type: "heading",
-        text: { fr: "A2M Marketplace", en: "A2M Marketplace" },
+        type: "paragraph",
+        text: {
+          fr: "A2M propose deux formats d'exposition complémentaires. Le A2M Marketplace est le plancher principal où les entreprises canadiennes et les entités africaines présentent leurs capacités et leurs opportunités ; le Village des explorateurs offre aux sociétés d'exploration en phase précoce une vitrine ciblée auprès des investisseurs et des financiers. Choisissez le format adapté à vos objectifs ci-dessous.",
+          en: "A2M offers two complementary exhibition formats. The A2M Marketplace is the main floor where Canadian companies and African entities showcase capabilities and opportunities; the Explorers' Village gives early-stage exploration companies a targeted showcase to investors and financiers. Choose the format that fits your objectives below.",
+        },
       },
+      {
+        type: "image",
+        label: {
+          fr: "Plan du salon / rendu d'un stand standard 2×3",
+          en: "Trade-show floor plan / standard 2×3 booth render",
+        },
+        ratio: "16/9",
+      },
+    ],
+  },
+  {
+    slug: "exhibit-sponsor/marketplace",
+    section: "/exhibit-sponsor",
+    eyebrow: { fr: "Opportunités d'exposition", en: "Exhibition opportunities" },
+    title: { fr: "A2M Marketplace", en: "A2M Marketplace" },
+    lead: {
+      fr: "Le point de rencontre du secteur où les entreprises canadiennes et les entités africaines se présentent, se découvrent et concluent.",
+      en: "The industry's meeting point where Canadian companies and African entities showcase, discover and close.",
+    },
+    blocks: [
       {
         type: "callout",
         title: {
@@ -158,15 +181,23 @@ export const exhibitSponsorPages: PageContent[] = [
           en: "Contact info@a2mevent.com to book your space at the A2M Marketplace.",
         },
       },
-      {
-        type: "heading",
-        text: { fr: "Village des explorateurs", en: "Explorers' Village" },
-      },
+    ],
+  },
+  {
+    slug: "exhibit-sponsor/explorers-village",
+    section: "/exhibit-sponsor",
+    eyebrow: { fr: "Opportunités d'exposition", en: "Exhibition opportunities" },
+    title: { fr: "Village des explorateurs", en: "Explorers' Village" },
+    lead: {
+      fr: "Une vitrine à haute visibilité pour les sociétés d'exploration en phase précoce, face aux investisseurs et aux négociateurs internationaux.",
+      en: "A high-visibility showcase for early-stage exploration companies, in front of international investors and deal-makers.",
+    },
+    blocks: [
       {
         type: "paragraph",
         text: {
           fr: "Tracez des voies de croissance : connectez-vous, présentez-vous et nouez des partenariats au Village des explorateurs. Le Village des explorateurs d'A2M est une porte d'entrée vers des partenariats transformateurs et la croissance dans le secteur minier africain. Cette plateforme dynamique réunit les sociétés d'exploration en phase précoce et non cotées avec un public soigneusement sélectionné d'investisseurs internationaux, de financiers, de dirigeants miniers et de négociateurs, offrant une visibilité élevée et un accès ciblé pour faire avancer leurs projets.",
-          en: "Forge Pathways to Growth: Connect, Showcase, and Partner at the Explorer Village. The Explorer Village at A2M is a gateway to transformative partnerships and growth in Africa's mining sector. This dynamic platform unites early-stage development and unlisted exploration companies with a curated audience of international investors, financiers, mining executives, and deal-makers, providing high-visibility exposure and targeted access to advance their projects.",
+          en: "Forge Pathways to Growth: Connect, Showcase, and Partner at the Explorers' Village. The Explorers' Village at A2M is a gateway to transformative partnerships and growth in Africa's mining sector. This dynamic platform unites early-stage development and unlisted exploration companies with a curated audience of international investors, financiers, mining executives, and deal-makers, providing high-visibility exposure and targeted access to advance their projects.",
         },
       },
       {
@@ -194,7 +225,7 @@ export const exhibitSponsorPages: PageContent[] = [
         type: "heading",
         text: {
           fr: "Le forfait Village des explorateurs comprend :",
-          en: "Explorer Village package includes:",
+          en: "Explorers' Village package includes:",
         },
       },
       {
@@ -222,23 +253,15 @@ export const exhibitSponsorPages: PageContent[] = [
         type: "callout",
         text: {
           fr: "Places limitées dans le cadre du programme du Village des explorateurs. Communiquez avec notre équipe pour rejoindre le prochain Village des explorateurs.",
-          en: "Limited spaces available under the Explorer's Village program. Connect with our team to join the next Explorer Village.",
+          en: "Limited spaces available under the Explorers' Village program. Connect with our team to join the next Explorers' Village.",
         },
-      },
-      {
-        type: "image",
-        label: {
-          fr: "Plan du salon / rendu d'un stand standard 2×3",
-          en: "Trade-show floor plan / standard 2×3 booth render",
-        },
-        ratio: "16/9",
       },
     ],
   },
   {
     slug: "exhibit-sponsor/why-sponsor",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
     title: { fr: "Pourquoi commanditer", en: "Why Sponsor" },
     lead: {
       fr: "Commanditer A2M 2027, ce n'est pas une dépense marketing : c'est un positionnement stratégique sur le marché qui définira la mine africaine pour vingt ans.",
@@ -409,9 +432,44 @@ export const exhibitSponsorPages: PageContent[] = [
     ],
   },
   {
+    slug: "exhibit-sponsor/exhibitors-sponsors",
+    section: "/exhibit-sponsor",
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
+    title: { fr: "Exposants & commanditaires", en: "Exhibitors & Sponsors" },
+    lead: {
+      fr: "Les organisations qui s'associent à A2M 2027 — la liste des exposants et commanditaires sera dévoilée progressivement.",
+      en: "The organisations aligning with A2M 2027 — the exhibitor and sponsor line-up will be revealed progressively.",
+    },
+    blocks: [
+      {
+        type: "paragraph",
+        text: {
+          fr: "A2M 2027 réunit des gouvernements, des sociétés minières, des investisseurs et des fournisseurs de services de premier plan. Les logos des exposants et commanditaires confirmés seront affichés ici à mesure que la programmation se précise.",
+          en: "A2M 2027 brings together leading governments, mining companies, investors and service providers. Confirmed exhibitor and sponsor logos will be displayed here as the line-up takes shape.",
+        },
+      },
+      {
+        type: "logos",
+        count: 10,
+        label: {
+          fr: "Exposants & commanditaires 2027 — logos à venir",
+          en: "2027 exhibitors & sponsors — logos coming soon",
+        },
+      },
+      {
+        type: "callout",
+        title: { fr: "Rejoindre la liste", en: "Join the line-up" },
+        text: {
+          fr: "Contactez info@a2mevent.com pour figurer parmi les exposants et commanditaires d'A2M 2027.",
+          en: "Contact info@a2mevent.com to be featured among the A2M 2027 exhibitors and sponsors.",
+        },
+      },
+    ],
+  },
+  {
     slug: "exhibit-sponsor/associate-your-brand",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
     title: { fr: "Associer votre marque", en: "Associate Your Brand" },
     lead: {
       fr: "Des opportunités sur mesure pour gouvernements, sociétés minières, fournisseurs et investisseurs.",
@@ -539,18 +597,6 @@ export const exhibitSponsorPages: PageContent[] = [
             },
           },
         ],
-      },
-      {
-        type: "heading",
-        text: { fr: "Exposants & commanditaires 2027", en: "2027 Exhibitors & Sponsors" },
-      },
-      {
-        type: "logos",
-        count: 10,
-        label: {
-          fr: "Exposants & commanditaires 2027 — logos à venir",
-          en: "2027 exhibitors & sponsors — logos coming soon",
-        },
       },
       {
         type: "callout",

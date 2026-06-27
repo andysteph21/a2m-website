@@ -1,16 +1,22 @@
 import { getTranslations } from "next-intl/server";
 import { ContentRenderer } from "@/components/blocks/content-renderer";
+import { NewsletterForm } from "@/components/blocks/newsletter-form";
 import { Container } from "@/components/layout/container";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionNav } from "@/components/layout/section-nav";
 import { ContactSection } from "@/components/sections/contact-section";
 import { MatchmakingSection } from "@/components/sections/matchmaking-section";
-import { NewsSection } from "@/components/sections/news-section";
+import { type NewsCategory, NewsSection } from "@/components/sections/news-section";
 import { RegisterSection } from "@/components/sections/register-section";
 import { ScheduleSection } from "@/components/sections/schedule-section";
 import { SponsorshipSection } from "@/components/sections/sponsorship-section";
 import { getPageContent } from "@/content/pages";
-import { type SectionDef, type SubsectionDef, subsectionTitle } from "@/content/sections";
+import {
+  flattenSubsections,
+  type SectionDef,
+  type SubsectionDef,
+  subsectionTitle,
+} from "@/content/sections";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -28,7 +34,18 @@ function SubsectionBody({ sub, locale }: { sub: SubsectionDef; locale: Locale })
     case "schedule":
       return <ScheduleSection locale={locale} />;
     case "news":
-      return <NewsSection locale={locale} />;
+      return <NewsSection locale={locale} category={sub.variant as NewsCategory | undefined} />;
+    case "newsletter":
+      return (
+        <div className="flex max-w-[620px] flex-col gap-4">
+          <p className="text-lead text-muted">
+            {locale === "fr"
+              ? "Abonnez-vous pour recevoir les annonces, le programme et les actualités d'A2M 2027."
+              : "Subscribe to receive A2M 2027 announcements, the programme and the latest news."}
+          </p>
+          <NewsletterForm />
+        </div>
+      );
     default: {
       const content = sub.contentSlug ? getPageContent(sub.contentSlug) : undefined;
       if (!content) return null;
@@ -44,12 +61,14 @@ function SubsectionBody({ sub, locale }: { sub: SubsectionDef; locale: Locale })
   }
 }
 
-/** Page de section : agrège toutes les sous-sections (ancrées) + widget flottant. */
+/** Page de section : agrège les sous-sections (ancrées, jusqu'à 3 niveaux) + widget flottant. */
 export async function SectionPage({ section, locale }: { section: SectionDef; locale: Locale }) {
   const t = await getTranslations("common");
-  const navItems = section.subsections.map((sub) => ({
+  const flat = flattenSubsections(section.subsections);
+  const navItems = flat.map(({ sub, depth }) => ({
     id: sub.id,
     label: pick(subsectionTitle(sub), locale),
+    depth,
   }));
 
   return (
@@ -63,10 +82,27 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
 
       <SectionNav items={navItems} label={t("onThisPage")} />
 
-      {section.subsections.map((sub, i) => {
-        // Bandes claires alternées : signature topographique discrète (même
-        // traitement que la page d'accueil).
-        const surface = i % 2 === 1;
+      {flat.map(({ sub, depth }, i) => {
+        const isGroup = !!sub.children?.length && !sub.kind && !sub.contentSlug;
+        // Bandes claires alternées : signature topographique discrète (sauf en-têtes de groupe).
+        const surface = !isGroup && i % 2 === 1;
+
+        if (isGroup) {
+          return (
+            <section
+              key={sub.id}
+              id={sub.id}
+              className="a2m-reveal scroll-mt-24 pt-14 sm:scroll-mt-32 lg:scroll-mt-40 lg:pt-16"
+            >
+              <Container>
+                <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
+                  {pick(subsectionTitle(sub), locale)}
+                </h2>
+              </Container>
+            </section>
+          );
+        }
+
         return (
           <section
             key={sub.id}
@@ -77,7 +113,12 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
             )}
           >
             <Container className={cn(surface && "relative z-10")}>
-              <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
+              <h2
+                className={cn(
+                  "font-display font-bold text-ink tracking-[-0.01em]",
+                  depth > 0 ? "text-h3" : "text-h2",
+                )}
+              >
                 {pick(subsectionTitle(sub), locale)}
               </h2>
               <div className="mt-8">

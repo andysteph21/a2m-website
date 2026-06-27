@@ -8,6 +8,8 @@ import { Container } from "./container";
 export interface SectionNavItem {
   id: string;
   label: string;
+  /** Niveau d'imbrication (0 = top, 1 = sous-élément d'un groupe). */
+  depth?: number;
 }
 
 /**
@@ -105,7 +107,8 @@ export function SectionNav({ items, label }: { items: SectionNavItem[]; label: s
                     onClick={() => setOpen(false)}
                     aria-current={item.id === active ? "true" : undefined}
                     className={cn(
-                      "flex items-center gap-2.5 rounded-sm px-3 py-2 text-small transition-colors",
+                      "flex items-center gap-2.5 rounded-sm py-2 pr-3 text-small transition-colors",
+                      item.depth ? "pl-8" : "pl-3",
                       item.id === active
                         ? "bg-mist font-semibold text-emerald-deep"
                         : "text-muted hover:bg-anthracite/5 hover:text-anthracite",
