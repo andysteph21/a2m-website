@@ -30,8 +30,8 @@ export const heroSlides: HeroSlide[] = [
   {
     eyebrow: { fr: "7–9 juin 2027 · Montréal", en: "June 7–9, 2027 · Montréal" },
     title: {
-      fr: "Là où la richesse minérale africaine rencontre le capital canadien",
-      en: "Where African mineral wealth meets Canadian capital",
+      fr: "Là où la richesse minérale africaine rencontre le capital, l'expertise et le savoir-faire canadiens",
+      en: "Where African mineral wealth meets Canadian capital, expertise and know how",
     },
     text: {
       fr: "La plateforme nord-américaine de référence reliant les projets miniers africains aux investisseurs, aux marchés et à l'expertise du Canada.",
@@ -46,8 +46,8 @@ export const heroSlides: HeroSlide[] = [
   {
     eyebrow: { fr: "1 500+ délégués · 35 pays", en: "1,500+ delegates · 35 countries" },
     title: {
-      fr: "Trois jours pour investir, conclure et décider",
-      en: "Three days to invest, deal and decide",
+      fr: "Bâtissez les partenariats qui alimenteront la transition vers l'énergie propre",
+      en: "Build the partnerships that will power the clean energy transition",
     },
     text: {
       fr: "Ministres, dirigeants miniers, investisseurs institutionnels et fournisseurs réunis pour bâtir les partenariats de demain.",
@@ -62,8 +62,8 @@ export const heroSlides: HeroSlide[] = [
   {
     eyebrow: { fr: "Minéraux critiques", en: "Critical minerals" },
     title: {
-      fr: "Sécuriser les minéraux de la transition énergétique",
-      en: "Securing the minerals of the energy transition",
+      fr: "Rejoignez la plateforme de conclusion d'affaires qui transforme le secteur minier africain",
+      en: "Join the deal-making platform transforming African mining",
     },
     text: {
       fr: "Cobalt, lithium, cuivre, terres rares : accédez aux ressources stratégiques de l'Afrique via le plus grand marché de financement minier au monde.",
@@ -77,11 +77,74 @@ export const heroSlides: HeroSlide[] = [
   },
 ];
 
+/** Sous-titre du hero (V4) — phrase de positionnement complète. */
+export const heroSubHeadline: Localized = {
+  fr: "A2M 2027 — African Mining in Montreal : la première plateforme internationale d'investissement d'Amérique du Nord exclusivement dédiée au secteur minier africain. Avec des conférences, des vitrines d'investissement, de la conclusion d'affaires, du dialogue ministériel et du réseautage à fort impact.",
+  en: "A2M 2027 — African Mining in Montreal - North America's Premier International Investment Platform Exclusively Dedicated to African Mining. Featuring keynotes, investment showcases, deal-making, ministerial dialogue and high-impact networking.",
+};
+
+/** Bandeau de détails de l'événement (V4). */
+export const eventDetails: { label: Localized; value: Localized }[] = [
+  {
+    label: { fr: "Dates", en: "Dates" },
+    value: { fr: "7 – 9 juin 2027", en: "June 7 – 9, 2027" },
+  },
+  {
+    label: { fr: "Lieu", en: "Venue" },
+    value: {
+      fr: "Centre Mont-Royal, Montréal, Québec, Canada",
+      en: "Centre Mont-Royal, Montréal, Québec, Canada",
+    },
+  },
+  {
+    label: { fr: "Pays à l'honneur", en: "Honorary Country" },
+    value: { fr: "Côte d'Ivoire", en: "Côte d'Ivoire" },
+  },
+];
+
+/** Paragraphe d'introduction « Unlocking Africa's Mining Potential » (V4). */
+export const introBand: { eyebrow: Localized; title: Localized; text: Localized } = {
+  eyebrow: { fr: "Secteurs représentés", en: "Sectors represented" },
+  title: {
+    fr: "Libérer le potentiel minier de l'Afrique à Montréal",
+    en: "Unlocking Africa's Mining Potential in Montreal",
+  },
+  text: {
+    fr: "African Mining in Montreal (A2M) réunit à Montréal, au Canada, les figures de proue de l'industrie minière africaine — responsables gouvernementaux, visionnaires de l'industrie, financiers, investisseurs et fournisseurs de services — pour explorer le vaste potentiel minier de l'Afrique et débloquer des opportunités transformatrices. Cet événement phare propose des présentations magistrales de leaders d'opinion reconnus de l'industrie, des tables rondes interactives, des vitrines d'investissement et des occasions de réseautage exclusives.",
+    en: "African Mining in Montreal (A2M) brings together the leading figures of the African mining industry in Montreal, Canada — government officials, industry visionaries, financiers, investors, and service providers — to explore Africa's vast mining potential and unlock transformative opportunities. This flagship event features keynote presentations from renowned industry thought leaders, interactive panel discussions, investment showcases and exclusive networking opportunities.",
+  },
+};
+
+/** Paragraphe d'introduction de la page d'accueil (V4). */
+export const homeIntro: { eyebrow: Localized; title: Localized; text: Localized } = {
+  eyebrow: {
+    fr: "La plateforme d'investissement minier africain de référence en Amérique du Nord",
+    en: "North America's Premier African Mining Investment Platform",
+  },
+  title: {
+    fr: "La plateforme d'investissement minier africain de référence en Amérique du Nord",
+    en: "North America's Premier African Mining Investment Platform",
+  },
+  text: {
+    fr: "Rejoignez la révolution minière à African Mining in Montreal (A2M) — là où la vaste richesse minérale de l'Afrique rencontre le capital, l'innovation et l'expertise du Canada. Forgez des partenariats à fort impact, débloquez de nouvelles opportunités d'affaires et participez à l'environnement de conclusion d'affaires qui façonne l'avenir de l'exploitation minière responsable de la région minière la plus dynamique au monde.",
+    en: "Join the mining revolution at African Mining in Montreal (A2M) — where Africa's vast mineral wealth meets capital, innovation, and expertise in Canada. Forge high-impact partnerships, unlock new business opportunities, and be part of the deal-making environment shaping the future of responsible mining of the world's most dynamic mining region.",
+  },
+};
+
 export const kpis: Kpi[] = [
-  { value: "1 500+", label: { fr: "délégués", en: "delegates" } },
-  { value: "30+", label: { fr: "ministres", en: "ministers" } },
-  { value: "100+", label: { fr: "sociétés au TSX", en: "TSX companies" } },
-  { value: "3 000+", label: { fr: "rencontres B2B", en: "B2B meetings" } },
+  { value: "1 500+", label: { fr: "délégués · 35 pays", en: "delegates · 35 countries" } },
+  { value: "30+", label: { fr: "ministres africains", en: "African Ministers" } },
+  {
+    value: "100+",
+    label: {
+      fr: "sociétés minières cotées au TSX, TSX-V et autres grandes bourses",
+      en: "TSX, TSX-V and other major securities-listed mining companies",
+    },
+  },
+  {
+    value: "3 000+",
+    label: { fr: "rencontres sur la plateforme B2B", en: "B2B Meetings Platform" },
+  },
 ];
 
 export const pillars: Pillar[] = [
@@ -89,119 +152,137 @@ export const pillars: Pillar[] = [
     key: "invest",
     title: { fr: "Investir", en: "Invest" },
     text: {
-      fr: "Rencontrez les sociétés minières et d'exploration africaines à la recherche de capitaux, du stade junior aux majors.",
-      en: "Meet African mining and exploration companies seeking capital, from junior explorers to majors.",
+      fr: "Connectez-vous à des projets à fort potentiel, à des institutions de premier plan et à des décideurs gouvernementaux clés. Le tout sur une seule plateforme puissante. Accédez à un flux d'opportunités sélectionnées et préqualifiées.",
+      en: "Connect with high-potential projects, leading institutions, and key government decision-makers. All in one powerful platform. Gain access to a curated deal flow of vetted opportunities.",
     },
   },
   {
     key: "deal",
     title: { fr: "Conclure", en: "Deal" },
     text: {
-      fr: "Plus de 5 000 rencontres B2B préprogrammées via une plateforme de maillage d'affaires propulsée par l'IA.",
-      en: "Over 5,000 pre-scheduled B2B meetings through an AI-powered business matchmaking platform.",
+      fr: "Présentez vos projets, produits ou services au A2M Marketplace et au moyen de rencontres structurées à fort impact. A2M est conçu pour produire des résultats — repartez avec de vraies ententes et des partenariats concrets, pas seulement des cartes de visite.",
+      en: "Showcase your projects, products or services at A2M Marketplace and through high-impact, structured meetings. A2M is engineered for results - Leave with real deals and concrete partnerships, not just business cards.",
     },
   },
   {
     key: "decide",
     title: { fr: "Décider", en: "Decide" },
     text: {
-      fr: "Un dialogue de haut niveau avec plus de 30 ministres africains et les décideurs du secteur.",
-      en: "High-level dialogue with 30+ African ministers and the sector's key decision-makers.",
+      fr: "Rencontrez les ministres des Mines africains et les responsables gouvernementaux canadiens. La délégation du Pays à l'honneur. Tous les décideurs critiques dans une même salle, au même moment.",
+      en: "Meet African Mining Ministers. and Canadian government officials. The Honorary Country delegation. All the critical decision-makers in one room, at one time.",
     },
   },
 ];
 
 export const whyDifferent: { canada: FeatureItem; africa: FeatureItem } = {
   canada: {
-    title: { fr: "L'avantage canadien", en: "Canada's competitive edge" },
+    title: { fr: "L'avantage concurrentiel du Canada", en: "Canada's competitive edge" },
     text: {
-      fr: "Montréal est la capitale mondiale du financement minier junior. Le TSX et le TSX-V cotent la majorité des sociétés minières actives en Afrique, avec 100+ sièges canadiens sur le continent et plus de 45 G$ CA d'actifs déployés. À A2M, vous rencontrez le capital qui finance les mines africaines — sur son propre terrain.",
-      en: "Montréal is the world's junior mining finance capital. The TSX and TSX-V list the majority of mining companies active across Africa, with 100+ Canadian head offices on the continent and CAD 45B+ in assets deployed. At A2M, you meet the money that funds Africa's mines — on its home turf.",
+      fr: "Montréal est la capitale mondiale du financement minier junior. La Bourse de Toronto (TSX et TSX-V) cote la majorité des sociétés minières actives à travers l'Afrique. Plus de 100 sièges sociaux canadiens opèrent sur le continent, avec plus de 45 milliards de dollars canadiens d'actifs déployés. Lorsque vous venez à A2M, vous rencontrez le capital qui finance les mines de l'Afrique — sur son propre terrain.",
+      en: "Montreal is the world's junior mining finance capital. The Toronto Stock Exchange (TSX and TSX-V) lists the majority of mining companies active across Africa. Over 100 Canadian head offices operate on the continent, with CAD 45+ billion in assets deployed. When you come to A2M, you are meeting the money that funds Africa's mines — on their home turf.",
     },
   },
   africa: {
     title: { fr: "La position stratégique de l'Afrique", en: "Africa's strategic position" },
     text: {
-      fr: "L'Afrique détient 30 % des réserves minérales mondiales — dont 70 % du cobalt, 60 % du manganèse et 20 % de l'uranium. La transition énergétique est impossible sans les minéraux africains. A2M positionne l'Afrique non comme un fournisseur passif, mais comme un partenaire stratégique qui fixe les termes de l'alliance.",
-      en: "Africa holds 30% of the world's mineral reserves — including 70% of cobalt, 60% of manganese and 20% of uranium. The clean-energy transition is impossible without African minerals. A2M positions Africa not as a passive supplier, but as a strategic partner that sets the terms of the alliance.",
+      fr: "L'Afrique détient 30 % des réserves minérales mondiales — dont 70 % du cobalt, 60 % du manganèse et 20 % de l'uranium. La transition vers l'énergie propre est impossible sans les minéraux africains. A2M positionne l'Afrique non pas comme un fournisseur passif, mais comme un partenaire stratégique disposant du levier nécessaire pour fixer les termes de l'alliance.",
+      en: "Africa holds 30% of the world's mineral reserves — including 70% of cobalt, 60% of manganese and 20% of uranium. The clean energy transition is impossible without African minerals. A2M positions Africa not as a passive supplier, but as a strategic partner with the leverage to set the terms of the alliance.",
     },
   },
 };
 
-/** Qui participe — secteurs représentés (page d'accueil). */
+/** Qui participe — secteurs représentés (page d'accueil, V4 : 5 types). */
 export const whoAttends: FeatureItem[] = [
   {
-    title: { fr: "Gouvernements & régulateurs", en: "Governments & regulators" },
+    title: {
+      fr: "Gouvernements et organismes de réglementation",
+      en: "Governments and regulatory bodies",
+    },
     text: {
-      fr: "Ministres des Mines et hauts fonctionnaires des juridictions minières africaines.",
-      en: "Ministers of Mines and senior officials from African mining jurisdictions.",
+      fr: "Ministres des Mines, hauts fonctionnaires.",
+      en: "Ministers of Mines, Senior officials.",
     },
   },
   {
-    title: { fr: "Sociétés minières & d'exploration", en: "Mining & exploration companies" },
+    title: { fr: "Sociétés minières et d'exploration", en: "Mining and exploration companies" },
     text: {
-      fr: "Sociétés cotées (TSX, TSX-V, CSE) et privées, des juniors aux majors.",
-      en: "Listed (TSX, TSX-V, CSE) and private companies, from juniors to majors.",
+      fr: "Sociétés cotées au TSX, TSX-V, CSE et autres grandes bourses de valeurs, ainsi que sociétés privées.",
+      en: "TSX, TSX-V, CSE and other major securities-listed and private.",
     },
   },
   {
     title: {
-      fr: "Institutions financières & investisseurs",
-      en: "Financial institutions & investors",
+      fr: "Institutions financières et investisseurs",
+      en: "Financial institutions and investors",
     },
     text: {
-      fr: "Banques, IFD, capital-investissement et family offices.",
-      en: "Banks, DFIs, private equity and family offices.",
+      fr: "Banques, institutions de financement du développement (IFD), capital-investissement, family offices.",
+      en: "Banks, DFIs, private equity, family offices.",
     },
   },
   {
-    title: { fr: "Technologies & fournisseurs", en: "Technology & service providers" },
+    title: {
+      fr: "Fournisseurs de technologies et de services",
+      en: "Technology and service providers",
+    },
     text: {
       fr: "Forage, ingénierie, équipements, exploration et logiciels.",
       en: "Drilling, engineering, equipment, exploration and software.",
     },
   },
   {
-    title: { fr: "Cabinets juridiques & conseil", en: "Legal, consulting & advisory firms" },
+    title: {
+      fr: "Cabinets juridiques, de conseil et d'advisory",
+      en: "Legal, consulting and advisory firms",
+    },
     text: {
-      fr: "Conseillers juridiques, consultants et firmes d'advisory du secteur.",
+      fr: "Conseillers juridiques, consultants et firmes d'advisory au service du secteur.",
       en: "Legal advisors, consultants and advisory firms serving the sector.",
     },
   },
 ];
 
-/** Ce qu'ils viennent chercher (page d'accueil). */
+/** Ce qu'ils viennent chercher (page d'accueil, V4 : 5 motifs). */
 export const whatTheyComeFor: FeatureItem[] = [
   {
-    title: { fr: "Nouveaux marchés & cibles", en: "New markets & targets" },
+    title: {
+      fr: "Nouveaux marchés et cibles d'investissement",
+      en: "New markets and investment targets",
+    },
     text: {
-      fr: "Accès à de nouveaux marchés et cibles d'investissement.",
+      fr: "Accès à de nouveaux marchés et à de nouvelles cibles d'investissement.",
       en: "Access to new markets and investment targets.",
     },
   },
   {
-    title: { fr: "Décideurs gouvernementaux", en: "Government decision-makers" },
+    title: { fr: "Décideurs gouvernementaux africains", en: "African government decision-makers" },
     text: {
       fr: "Rencontres directes avec les décideurs gouvernementaux africains.",
-      en: "Direct meetings with African government decision-makers.",
+      en: "Direct meetings with African government decision makers.",
     },
   },
   {
-    title: { fr: "Co-investissement", en: "Co-investment" },
+    title: { fr: "Co-investissement avec les IFD", en: "Co-investment with DFIs" },
     text: {
-      fr: "Opportunités de co-investissement avec les IFD canadiennes et africaines.",
-      en: "Co-investment opportunities with Canadian and African DFIs.",
+      fr: "Opportunités de co-investissement avec le Canada et les institutions de financement du développement (IFD) africaines.",
+      en: "Co-investment opportunities with Canada and African DFIs.",
     },
   },
   {
-    title: { fr: "Partenariats technologiques", en: "Technology partnerships" },
+    title: {
+      fr: "Partenariats technologiques et de services",
+      en: "Technology and service partnerships",
+    },
     text: {
       fr: "Transfert de technologie et partenariats de services.",
       en: "Technology transfer and service partnerships.",
     },
   },
   {
-    title: { fr: "Cadres ESG & communautés", en: "ESG & community frameworks" },
+    title: {
+      fr: "Cadres ESG et d'engagement communautaire",
+      en: "ESG and community engagement frameworks",
+    },
     text: {
       fr: "Bonnes pratiques ESG et cadres d'engagement communautaire.",
       en: "ESG best practices and community engagement frameworks.",
@@ -214,8 +295,8 @@ export const honoraryCountry = {
   eyebrow: { fr: "Pays à l'honneur 2027", en: "Honorary Country 2027" },
   title: { fr: "Côte d'Ivoire", en: "Côte d'Ivoire" },
   text: {
-    fr: "Première destination de l'exploration aurifère en Afrique de l'Ouest, la Côte d'Ivoire conduira une délégation de haut niveau à Montréal pour présenter ses projets phares aux investisseurs canadiens.",
-    en: "The #1 gold exploration destination in West Africa, Côte d'Ivoire will lead a high-level delegation to Montréal to present its flagship projects to Canadian investors.",
+    fr: "Découvrez la Côte d'Ivoire — première destination de l'exploration aurifère en Afrique de l'Ouest. Plus de 20 sociétés minières canadiennes cotées au TSX y opèrent déjà. 58 tonnes d'or produites en 2024. Objectif : 100 tonnes par an d'ici 2030. La Côte d'Ivoire conduira une délégation de haut niveau à Montréal pour présenter ses projets phares aux investisseurs canadiens.",
+    en: "Discover Côte d'Ivoire — the #1 gold exploration destination in West Africa. 20+ Canadian TSX mining companies already operating. 58 tonnes of gold produced in 2024. Target: 100 tonnes/year by 2030. Côte d'Ivoire will lead a high-level delegation to Montréal to present its flagship projects to Canadian investors.",
   },
   stats: [
     {
@@ -292,47 +373,51 @@ export const exhibitionPreview: FeatureItem[] = [
   },
 ];
 
+/** Principales raisons de participer (V4 : 6 raisons détaillées). */
 export const topReasons: FeatureItem[] = [
   {
-    title: { fr: "Accès au capital", en: "Access to capital" },
+    title: { fr: "Rencontrez les décideurs", en: "Meet the Decision-Makers" },
     text: {
-      fr: "Connectez-vous aux investisseurs institutionnels et aux marchés de financement minier.",
-      en: "Connect with institutional investors and mining finance markets.",
+      fr: "Réseautez avec plus de 30 ministres des Mines africains, des responsables gouvernementaux canadiens, des PDG de sociétés minières cotées au TSX, TSX-V et autres grandes bourses de valeurs, ainsi que des dirigeants d'institutions de financement du développement.",
+      en: "Network with 30+ African Mining Ministers, Canadian government officials, TSX, TSX-V, and other major securities-listed mining companies CEOs, and development finance institution leaders.",
     },
   },
   {
-    title: { fr: "Maillage d'affaires", en: "Business matchmaking" },
+    title: { fr: "Constituez votre pipeline", en: "Build Your Pipeline" },
     text: {
-      fr: "Un agenda de rencontres B2B confirmées, ciblées sur vos objectifs.",
-      en: "A confirmed B2B meeting agenda targeted to your objectives.",
+      fr: "La Vitrine d'investissement présente aux investisseurs des projets africains présélectionnés. Le Salon des marchés financiers (Capital Markets Lounge) offre un espace de négociation privé. Le maillage propulsé par l'IA d'A2M génère votre agenda B2B stratégique.",
+      en: "The Investment Showcase presents pre-screened African projects to investors. Capital Markets Lounge offers private negotiation space. A2M AI-powered matching generates your strategic B2B agenda.",
     },
   },
   {
-    title: { fr: "Dialogue gouvernemental", en: "Government dialogue" },
+    title: { fr: "Façonnez l'avenir", en: "Shape the Future" },
     text: {
-      fr: "Échangez avec les ministres et agences de promotion des investissements.",
-      en: "Engage with ministers and investment-promotion agencies.",
+      fr: "Co-créez le premier instrument politique bilatéral Canada-Afrique sur les minéraux critiques — aux côtés de 30 ministres africains et du gouvernement canadien.",
+      en: "Co-create the first bilateral Canada-Africa political instrument on critical minerals — alongside 30 African ministers and the Canadian government.",
     },
   },
   {
-    title: { fr: "Visibilité de marque", en: "Brand visibility" },
+    title: { fr: "Découvrez la Côte d'Ivoire", en: "Discover Côte d'Ivoire" },
     text: {
-      fr: "Exposez et commanditez devant un public d'acheteurs et de décideurs qualifiés.",
-      en: "Exhibit and sponsor before an audience of qualified buyers and decision-makers.",
+      fr: "Explorez la première destination de l'exploration aurifère en Afrique de l'Ouest. Plus de 20 sociétés minières canadiennes cotées au TSX y opèrent déjà. 58 tonnes d'or produites en 2024. Objectif : 100 tonnes par an d'ici 2030.",
+      en: "Explore the #1 gold exploration destination in West Africa. 20+ Canadian TSX mining and companies already operating. 58 tonnes of gold produced in 2024. Target: 100 tonnes/year by 2030.",
     },
   },
   {
-    title: { fr: "Intelligence de marché", en: "Market intelligence" },
+    title: { fr: "Accédez au capital africain", en: "Access African Capital" },
     text: {
-      fr: "Panels, keynotes et données sur les juridictions et minéraux critiques.",
-      en: "Panels, keynotes and data on jurisdictions and critical minerals.",
+      fr: "Rencontrez les principaux banquiers et financiers africains — les institutions qui co-financent la prochaine génération de mines de l'Afrique.",
+      en: "Meet key African bankers and financiers — the institutions co-financing Africa's next generation of mines.",
     },
   },
   {
-    title: { fr: "Réseautage ciblé", en: "Targeted networking" },
+    title: {
+      fr: "Tirez parti de la plateforme diplomatique",
+      en: "Leverage the Diplomatic Platform",
+    },
     text: {
-      fr: "Réceptions, dîner de gala et événements sociaux à haute valeur ajoutée.",
-      en: "Receptions, gala dinner and high-value social events.",
+      fr: "La structure ministérielle d'A2M signifie que vos conversations d'investissement se déroulent dans un cadre qui réduit le risque politique et réglementaire — des deux côtés de l'Atlantique.",
+      en: "A2M's ministerial structure means your investment conversations happen within a framework that reduces political and regulatory risk — on both sides of the Atlantic.",
     },
   },
 ];

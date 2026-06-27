@@ -14,9 +14,13 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import {
+  eventDetails,
   exhibitionPreview,
   heroSlides,
+  heroSubHeadline,
+  homeIntro,
   honoraryCountry,
+  introBand,
   kpis,
   pillars,
   programPreview,
@@ -133,7 +137,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(rawLocale);
 
   const t = await getTranslations("common");
-  const th = await getTranslations("home");
   const c = COPY[locale];
 
   const p = c.previews;
@@ -156,16 +159,29 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         nextLabel="→"
       />
 
+      <Section className="py-10 lg:py-12">
+        <p className="mx-auto max-w-[860px] text-center text-lead text-muted">
+          {pick(heroSubHeadline, locale)}
+        </p>
+      </Section>
+
       <EventBandeau
-        items={[
-          { label: th("eventDates"), value: th("eventDates") },
-          { label: th("venue"), value: siteConfig.venue },
-          {
-            label: locale === "fr" ? "Pays à l'honneur" : "Honorary Country",
-            value: pick(honoraryCountry.title, locale),
-          },
-        ]}
+        items={eventDetails.map((d) => ({
+          label: pick(d.label, locale),
+          value: pick(d.value, locale),
+        }))}
       />
+
+      <Section className="bg-surface" motif="contours-light">
+        <SectionHeading
+          align="center"
+          eyebrow={pick(homeIntro.eyebrow, locale)}
+          title={pick(homeIntro.title, locale)}
+        />
+        <p className="mx-auto mt-6 max-w-[820px] text-center text-lead text-muted">
+          {pick(homeIntro.text, locale)}
+        </p>
+      </Section>
 
       <Section>
         <SectionHeading
@@ -187,17 +203,24 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <Section>
         <SectionHeading
-          eyebrow={c.sectorsEyebrow}
-          title={c.sectorsTitle}
-          description={c.sectorsDesc}
+          eyebrow={pick(introBand.eyebrow, locale)}
+          title={pick(introBand.title, locale)}
         />
-        <FeatureGrid
-          className="mt-12"
-          items={whoAttends.map((s) => ({
-            title: pick(s.title, locale),
-            text: pick(s.text, locale),
-          }))}
-        />
+        <p className="mt-6 max-w-[820px] text-lead text-muted">{pick(introBand.text, locale)}</p>
+        <div className="mt-16">
+          <SectionHeading
+            eyebrow={c.sectorsEyebrow}
+            title={c.sectorsTitle}
+            description={c.sectorsDesc}
+          />
+          <FeatureGrid
+            className="mt-12"
+            items={whoAttends.map((s) => ({
+              title: pick(s.title, locale),
+              text: pick(s.text, locale),
+            }))}
+          />
+        </div>
         <div className="mt-16">
           <SectionHeading eyebrow={c.attendEyebrow} title={c.comeForTitle} />
           <FeatureGrid
