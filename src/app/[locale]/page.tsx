@@ -210,7 +210,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </Section>
 
-      <Section className="bg-surface">
+      <Section className="bg-surface" motif="contours-light">
         <SectionHeading eyebrow={c.whyEyebrow} title={c.whyTitle} />
         <div className="mt-10">
           <TwoColumnFeature
@@ -264,7 +264,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </Section>
 
-      <Section className="bg-surface">
+      <Section className="bg-surface" motif="contours-light">
         <SectionHeading eyebrow={c.attendEyebrow} title={c.attendTitle} />
         <FeatureGrid
           className="mt-12"
@@ -293,6 +293,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <PreviewSection
         className="bg-surface"
+        motif="contours-light"
         eyebrow={p.speakersEyebrow}
         title={p.speakersTitle}
         description={p.speakersDesc}
@@ -320,6 +321,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <PreviewSection
         className="bg-surface"
+        motif="contours-light"
         eyebrow={p.sponsorsEyebrow}
         title={p.sponsorsTitle}
         description={p.sponsorsDesc}
@@ -362,6 +364,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <PreviewSection
         className="bg-surface"
+        motif="contours-light"
         eyebrow={p.newsEyebrow}
         title={p.newsTitle}
         description={p.newsDesc}

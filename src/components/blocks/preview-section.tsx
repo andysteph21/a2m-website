@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
-import { Section, SectionHeading } from "@/components/layout/section";
+import { Section, SectionHeading, type SectionMotif } from "@/components/layout/section";
 import { Link } from "@/i18n/navigation";
 
 interface PreviewSectionProps {
@@ -10,6 +10,7 @@ interface PreviewSectionProps {
   seeAllLabel: string;
   seeAllHref: string;
   className?: string;
+  motif?: SectionMotif;
   children: ReactNode;
 }
 
@@ -25,10 +26,11 @@ export function PreviewSection({
   seeAllLabel,
   seeAllHref,
   className,
+  motif,
   children,
 }: PreviewSectionProps) {
   return (
-    <Section className={className}>
+    <Section className={className} motif={motif}>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <SectionHeading eyebrow={eyebrow} title={title} description={description} />
         <Link
