@@ -1,19 +1,82 @@
 import { Check } from "lucide-react";
-import type { ContentBlock } from "@/content/types";
+import type { ContentBlock, ImageCredit } from "@/content/types";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
 import { cn } from "@/lib/utils";
+import { A2MImage, type A2MImageCredit } from "./a2m-image";
+import { AccordionBlock } from "./accordion-block";
 import { FeatureGrid } from "./feature-grid";
-import { ImagePlaceholder } from "./image-placeholder";
 import { LogoWall } from "./logo-wall";
 import { MatchmakingFlow } from "./matchmaking-flow";
 import { SpeakerGrid } from "./speaker-grid";
+
+/** Résout une attribution localisée en chaînes prêtes à l'affichage. */
+function resolveCredit(
+  credit: ImageCredit | undefined,
+  locale: Locale,
+): A2MImageCredit | undefined {
+  if (!credit) return undefined;
+  return {
+    label: typeof credit.label === "string" ? credit.label : pick(credit.label, locale),
+    license: credit.license,
+    href: credit.href,
+  };
+}
 
 const imageColumns: Record<1 | 2 | 3, string> = {
   1: "grid-cols-1",
   2: "grid-cols-1 sm:grid-cols-2",
   3: "grid-cols-1 xs:grid-cols-2 sm:grid-cols-3",
 };
+
+type ImageBlock = Extract<ContentBlock, { type: "image" }>;
+type AccordionBlockData = Extract<ContentBlock, { type: "accordion" }>;
+
+/** Rend un bloc image (vraie image ou placeholder, 1 à 3 colonnes). */
+function renderImage(block: ImageBlock, locale: Locale, key: string) {
+  const cols = block.columns ?? 1;
+  const label = pick(block.label, locale);
+  const alt = block.alt ? pick(block.alt, locale) : label;
+  const credit = resolveCredit(block.credit, locale);
+  const tiles = Array.from({ length: cols }, (_, i) => ({
+    key: `${label}-${i + 1}`,
+    label: cols > 1 ? `${label} (${i + 1})` : label,
+    src: cols === 1 ? block.src : block.sources?.[i],
+  }));
+  return (
+    <div key={key} className={cn("grid gap-4", imageColumns[cols])}>
+      {tiles.map((tile) => (
+        <A2MImage
+          key={tile.key}
+          src={tile.src}
+          alt={alt}
+          label={tile.label}
+          ratio={block.ratio}
+          credit={tile.src ? credit : undefined}
+        />
+      ))}
+    </div>
+  );
+}
+
+/** Rend un accordéon dont chaque panneau contient des blocs imbriqués. */
+function renderAccordion(block: AccordionBlockData, locale: Locale, key: string) {
+  return (
+    <AccordionBlock
+      key={key}
+      multiple={block.multiple}
+      items={block.items.map((entry, i) => ({
+        value: `${entry.title.en}-${i}`,
+        title: pick(entry.title, locale),
+        content: (
+          <div className="flex flex-col gap-6">
+            {entry.blocks.map((b) => renderBlock(b, locale))}
+          </div>
+        ),
+      }))}
+    />
+  );
+}
 
 /** Clé stable dérivée du contenu (évite les clés basées sur l'index). */
 function blockKey(block: ContentBlock): string {
@@ -33,6 +96,8 @@ function blockKey(block: ContentBlock): string {
       return `features-${block.items.map((i) => i.title.en).join("|")}`;
     case "steps":
       return `steps-${block.items.map((i) => i.title.en).join("|")}`;
+    case "accordion":
+      return `accordion-${block.items.map((i) => i.title.en).join("|")}`;
     case "logos":
       return `logos-${block.label?.en ?? "default"}`;
     case "speakers":
@@ -106,6 +171,7 @@ function renderBlock(block: ContentBlock, locale: Locale) {
           items={block.items.map((i) => ({
             title: pick(i.title, locale),
             text: pick(i.text, locale),
+            href: i.href,
           }))}
         />
       );
@@ -119,6 +185,8 @@ function renderBlock(block: ContentBlock, locale: Locale) {
           }))}
         />
       );
+    case "accordion":
+      return renderAccordion(block, locale, key);
     case "logos":
       return (
         <LogoWall
@@ -147,21 +215,8 @@ function renderBlock(block: ContentBlock, locale: Locale) {
           }
         />
       );
-    case "image": {
-      const cols = block.columns ?? 1;
-      const label = pick(block.label, locale);
-      const tiles = Array.from({ length: cols }, (_, i) => ({
-        key: `${label}-${i + 1}`,
-        label: cols > 1 ? `${label} (${i + 1})` : label,
-      }));
-      return (
-        <div key={key} className={cn("grid gap-4", imageColumns[cols])}>
-          {tiles.map((tile) => (
-            <ImagePlaceholder key={tile.key} label={tile.label} ratio={block.ratio} />
-          ))}
-        </div>
-      );
-    }
+    case "image":
+      return renderImage(block, locale, key);
     default:
       return null;
   }

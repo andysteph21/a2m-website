@@ -2,6 +2,7 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
@@ -12,7 +13,10 @@ export interface HeroSlideView {
   eyebrow: string;
   title: string;
   text: string;
+  /** Description du placeholder (affichée à défaut d'image réelle). */
   image: string;
+  /** Source réelle (chemin /public). Sans `src`, le placeholder est rendu. */
+  src?: string;
 }
 
 interface HeroSliderProps {
@@ -89,17 +93,34 @@ export function HeroSlider({
               aria-roledescription="slide"
               aria-label={`${i + 1} / ${slides.length}`}
             >
-              {/* Emplacement d'image de fond (placeholder) */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-3 rounded-sm border border-champagne/20 border-dashed"
-              />
-              <span className="absolute top-4 right-4 z-10 inline-flex max-w-[60vw] items-center gap-1.5 rounded-sm border border-champagne/40 border-dashed bg-emerald-deep/50 px-2.5 py-1 font-semibold text-[10px] text-champagne/90 uppercase tracking-[0.12em] sm:max-w-[320px]">
-                <ImageIcon className="size-3.5 shrink-0" />
-                <span className="truncate">{slide.image}</span>
-              </span>
+              {slide.src ? (
+                <>
+                  <Image
+                    src={slide.src}
+                    alt=""
+                    aria-hidden
+                    fill
+                    priority={i === 0}
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                  <div aria-hidden className="absolute inset-0 bg-emerald-deep/65" />
+                </>
+              ) : (
+                <>
+                  {/* Emplacement d'image de fond (placeholder) */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-3 rounded-sm border border-champagne/20 border-dashed"
+                  />
+                  <span className="absolute top-4 right-4 z-10 inline-flex max-w-[60vw] items-center gap-1.5 rounded-sm border border-champagne/40 border-dashed bg-emerald-deep/50 px-2.5 py-1 font-semibold text-[10px] text-champagne/90 uppercase tracking-[0.12em] sm:max-w-[320px]">
+                    <ImageIcon className="size-3.5 shrink-0" />
+                    <span className="truncate">{slide.image}</span>
+                  </span>
+                </>
+              )}
 
-              <Container className="a2m-cinema relative flex min-h-[460px] flex-col justify-center py-20 lg:min-h-[560px]">
+              <Container className="a2m-cinema relative z-[1] flex min-h-[460px] flex-col justify-center py-20 lg:min-h-[560px]">
                 <span className="font-semibold text-[11px] text-champagne uppercase tracking-[0.28em]">
                   {slide.eyebrow}
                 </span>

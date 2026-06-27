@@ -3,6 +3,7 @@
 import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { LoginButton } from "@/components/blocks/login-button";
 import { RegisterButton } from "@/components/blocks/register-button";
 import {
   Accordion,
@@ -65,6 +66,7 @@ export function MobileNav({ sections }: { sections: ResolvedNavSection[] }) {
 
         <div className="mt-6 flex flex-col gap-4">
           <RegisterButton label={t("registerNow")} size="lg" className="w-full" />
+          <LoginButton label={t("login")} size="lg" className="w-full" />
           <div className="flex items-center justify-between border-hairline border-t pt-4">
             <span className="font-semibold text-[11px] text-muted uppercase tracking-[0.1em]">
               {t("language")}

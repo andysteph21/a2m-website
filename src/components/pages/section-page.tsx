@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { SectionNav } from "@/components/layout/section-nav";
 import { ContactSection } from "@/components/sections/contact-section";
 import { MatchmakingSection } from "@/components/sections/matchmaking-section";
+import { NewsSection } from "@/components/sections/news-section";
 import { RegisterSection } from "@/components/sections/register-section";
 import { ScheduleSection } from "@/components/sections/schedule-section";
 import { SponsorshipSection } from "@/components/sections/sponsorship-section";
@@ -26,6 +27,8 @@ function SubsectionBody({ sub, locale }: { sub: SubsectionDef; locale: Locale })
       return <SponsorshipSection locale={locale} />;
     case "schedule":
       return <ScheduleSection locale={locale} />;
+    case "news":
+      return <NewsSection locale={locale} />;
     default: {
       const content = sub.contentSlug ? getPageContent(sub.contentSlug) : undefined;
       if (!content) return null;

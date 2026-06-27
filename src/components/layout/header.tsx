@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { LoginButton } from "@/components/blocks/login-button";
 import { RegisterButton } from "@/components/blocks/register-button";
 import { siteConfig } from "@/config/site";
 import { mainNav } from "@/content/navigation";
@@ -29,7 +30,7 @@ export async function Header({ locale }: { locale: string }) {
 
   return (
     <header className="sticky top-0 z-40 border-hairline border-b bg-ivory/95 backdrop-blur supports-[backdrop-filter]:bg-ivory/80">
-      <div className="flex h-16 w-full items-center justify-between gap-4 px-4 sm:px-6 lg:h-20">
+      <div className="flex min-h-16 w-full items-center justify-between gap-4 px-4 pt-4 pb-2.5 sm:px-6 lg:min-h-20">
         {/* Logo + date/lieu de l'événement */}
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-baseline gap-1.5" aria-label="A2M 2027">
@@ -48,10 +49,24 @@ export async function Header({ locale }: { locale: string }) {
 
         <DesktopNav sections={sections} />
 
-        <div className="flex items-center gap-2">
-          <LanguageSwitcher className="hidden sm:inline-flex" />
-          <TextSizeToggle className="hidden sm:inline-flex" />
-          <RegisterButton label={t("register")} className="ml-1 hidden sm:inline-flex" />
+        <div className="flex items-center gap-3">
+          {/* Bureau : actions empilées — connexion + inscription au-dessus,
+              langue + accessibilité (même largeur, alignées) en dessous. */}
+          <div className="hidden flex-col items-stretch gap-2 sm:flex">
+            <div className="flex items-center justify-end gap-2">
+              <LoginButton label={t("login")} />
+              <RegisterButton label={t("register")} />
+            </div>
+            <div className="flex items-center">
+              <div className="flex flex-1 justify-center">
+                <LanguageSwitcher />
+              </div>
+              <span aria-hidden className="mx-2 h-5 w-px bg-hairline" />
+              <div className="flex flex-1 justify-center">
+                <TextSizeToggle />
+              </div>
+            </div>
+          </div>
           <MobileNav sections={sections} />
         </div>
       </div>

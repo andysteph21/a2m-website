@@ -10,6 +10,10 @@ export const siteConfig = {
   registrationOpen: false,
   /** Plateforme d'inscription externe (lien sortant, utilisé une fois ouvert). */
   registerUrl: "https://example.com/a2m-2027/register",
+  /** L'espace délégué (connexion) n'est pas encore ouvert : la CTA affiche un message. */
+  loginOpen: false,
+  /** Portail de connexion des délégués (lien sortant, utilisé une fois ouvert). */
+  loginUrl: "https://example.com/a2m-2027/login",
   /** Programme téléchargeable (placeholder à remplacer). */
   programPdf: "/program/a2m-2027-program.pdf",
   /** Courriel de contact unique. */

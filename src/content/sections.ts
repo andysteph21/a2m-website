@@ -8,7 +8,8 @@ export type SubsectionKind =
   | "matchmaking"
   | "contact"
   | "sponsorship"
-  | "schedule";
+  | "schedule"
+  | "news";
 
 export interface SubsectionDef {
   /** Ancre (#id) au sein de la page de section. */
@@ -46,6 +47,7 @@ export const sections: SectionDef[] = [
       { id: "conference", kind: "content", contentSlug: "about" },
       { id: "why-participate", kind: "content", contentSlug: "about/why-participate" },
       { id: "advisory-board", kind: "content", contentSlug: "about/advisory-board" },
+      { id: "meet-the-team", kind: "content", contentSlug: "about/meet-the-team" },
       { id: "strategic-partners", kind: "content", contentSlug: "about/strategic-partners" },
       { id: "sustainability", kind: "content", contentSlug: "about/sustainability" },
       { id: "contact", kind: "contact", title: { fr: "Nous joindre", en: "Contact Us" } },
@@ -62,11 +64,17 @@ export const sections: SectionDef[] = [
     subsections: [
       { id: "schedule", kind: "schedule", title: { fr: "Calendrier", en: "Schedule" } },
       { id: "honorary-patron", kind: "content", contentSlug: "program/honorary-patron" },
+      { id: "honorary-country", kind: "content", contentSlug: "program/honorary-country" },
       { id: "sessions", kind: "content", contentSlug: "program/sessions" },
       {
         id: "ministerial-round-table",
         kind: "content",
         contentSlug: "program/ministerial-round-table",
+      },
+      {
+        id: "canada-africa-strategy",
+        kind: "content",
+        contentSlug: "program/canada-africa-strategy",
       },
       { id: "women-in-mining", kind: "content", contentSlug: "program/women-in-mining" },
       { id: "investors-breakfast", kind: "content", contentSlug: "program/investors-breakfast" },
@@ -100,6 +108,21 @@ export const sections: SectionDef[] = [
     ],
   },
   {
+    href: "/partner",
+    eyebrow: { fr: "Devenir partenaire", en: "Partner with us" },
+    title: { fr: "Devenir partenaire", en: "Partner with us" },
+    lead: {
+      fr: "Conférencier, partenaire stratégique ou média : contribuez à A2M 2027.",
+      en: "Speaker, strategic partner or media: contribute to A2M 2027.",
+    },
+    subsections: [
+      { id: "overview", kind: "content", contentSlug: "partner" },
+      { id: "speaker", kind: "content", contentSlug: "partner/speaker" },
+      { id: "strategic", kind: "content", contentSlug: "partner/strategic" },
+      { id: "media", kind: "content", contentSlug: "partner/media" },
+    ],
+  },
+  {
     href: "/plan-your-visit",
     eyebrow: { fr: "Préparer votre visite", en: "Plan Your Visit" },
     title: { fr: "Préparer votre visite", en: "Plan Your Visit" },
@@ -125,19 +148,14 @@ export const sections: SectionDef[] = [
     ],
   },
   {
-    href: "/partner",
-    eyebrow: { fr: "Devenir partenaire", en: "Partner with us" },
-    title: { fr: "Devenir partenaire", en: "Partner with us" },
+    href: "/news",
+    eyebrow: { fr: "Actualités", en: "News" },
+    title: { fr: "Actualités", en: "News" },
     lead: {
-      fr: "Conférencier, partenaire stratégique ou média : contribuez à A2M 2027.",
-      en: "Speaker, strategic partner or media: contribute to A2M 2027.",
+      fr: "Annonces, articles et couverture médiatique autour d'A2M 2027.",
+      en: "Announcements, articles and media coverage around A2M 2027.",
     },
-    subsections: [
-      { id: "overview", kind: "content", contentSlug: "partner" },
-      { id: "speaker", kind: "content", contentSlug: "partner/speaker" },
-      { id: "strategic", kind: "content", contentSlug: "partner/strategic" },
-      { id: "media", kind: "content", contentSlug: "partner/media" },
-    ],
+    subsections: [{ id: "articles", kind: "news", title: { fr: "Actualités", en: "News" } }],
   },
 ];
 
