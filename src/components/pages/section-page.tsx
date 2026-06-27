@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/layout/page-header";
 import { SectionNav } from "@/components/layout/section-nav";
 import { ContactSection } from "@/components/sections/contact-section";
 import { MatchmakingSection } from "@/components/sections/matchmaking-section";
+import { NewsSection } from "@/components/sections/news-section";
 import { RegisterSection } from "@/components/sections/register-section";
 import { ScheduleSection } from "@/components/sections/schedule-section";
 import { SponsorshipSection } from "@/components/sections/sponsorship-section";
@@ -26,6 +27,8 @@ function SubsectionBody({ sub, locale }: { sub: SubsectionDef; locale: Locale })
       return <SponsorshipSection locale={locale} />;
     case "schedule":
       return <ScheduleSection locale={locale} />;
+    case "news":
+      return <NewsSection locale={locale} />;
     default: {
       const content = sub.contentSlug ? getPageContent(sub.contentSlug) : undefined;
       if (!content) return null;
@@ -60,25 +63,30 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
 
       <SectionNav items={navItems} label={t("onThisPage")} />
 
-      {section.subsections.map((sub, i) => (
-        <section
-          key={sub.id}
-          id={sub.id}
-          className={cn(
-            "a2m-reveal scroll-mt-20 py-14 lg:scroll-mt-32 lg:py-16",
-            i % 2 === 1 && "bg-surface",
-          )}
-        >
-          <Container>
-            <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
-              {pick(subsectionTitle(sub), locale)}
-            </h2>
-            <div className="mt-8">
-              <SubsectionBody sub={sub} locale={locale} />
-            </div>
-          </Container>
-        </section>
-      ))}
+      {section.subsections.map((sub, i) => {
+        // Bandes claires alternées : signature topographique discrète (même
+        // traitement que la page d'accueil).
+        const surface = i % 2 === 1;
+        return (
+          <section
+            key={sub.id}
+            id={sub.id}
+            className={cn(
+              "a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-40 lg:py-16",
+              surface && "a2m-motif-light relative overflow-hidden bg-surface",
+            )}
+          >
+            <Container className={cn(surface && "relative z-10")}>
+              <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
+                {pick(subsectionTitle(sub), locale)}
+              </h2>
+              <div className="mt-8">
+                <SubsectionBody sub={sub} locale={locale} />
+              </div>
+            </Container>
+          </section>
+        );
+      })}
     </>
   );
 }

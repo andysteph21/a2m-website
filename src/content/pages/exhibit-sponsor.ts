@@ -144,6 +144,115 @@ export const exhibitSponsorPages: PageContent[] = [
     },
     blocks: [
       {
+        type: "heading",
+        text: { fr: "Les avantages d'exposer", en: "Benefits of exhibiting" },
+      },
+      {
+        type: "features",
+        columns: 3,
+        items: [
+          {
+            title: { fr: "Visibilité & leadership", en: "Visibility & thought leadership" },
+            text: {
+              fr: "Accroissez votre notoriété et affirmez votre expertise.",
+              en: "Increase brand visibility and establish thought leadership.",
+            },
+          },
+          {
+            title: { fr: "Décideurs & acheteurs", en: "Decision-makers & buyers" },
+            text: {
+              fr: "Connectez-vous aux décideurs, investisseurs et acheteurs clés.",
+              en: "Connect with key decision-makers, investors and buyers.",
+            },
+          },
+          {
+            title: { fr: "Prospects qualifiés", en: "Quality leads" },
+            text: {
+              fr: "Générez des prospects de qualité et accélérez votre croissance.",
+              en: "Generate quality leads and accelerate business growth.",
+            },
+          },
+          {
+            title: { fr: "Tendances du secteur", en: "Industry trends" },
+            text: {
+              fr: "Gardez une longueur d'avance sur les tendances et bonnes pratiques.",
+              en: "Stay ahead of industry trends and best practices.",
+            },
+          },
+          {
+            title: { fr: "Partenariats stratégiques", en: "Strategic partnerships" },
+            text: {
+              fr: "Renforcez vos relations et nouez de nouveaux partenariats.",
+              en: "Strengthen relationships and build new strategic partnerships.",
+            },
+          },
+          {
+            title: { fr: "Réputation & crédibilité", en: "Reputation & credibility" },
+            text: {
+              fr: "Renforcez la réputation et la crédibilité de votre entreprise.",
+              en: "Enhance your company's reputation and credibility.",
+            },
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: { fr: "Les avantages de commanditer", en: "Benefits of sponsoring" },
+      },
+      {
+        type: "features",
+        columns: 3,
+        items: [
+          {
+            title: { fr: "Exposition de marque", en: "Brand exposure" },
+            text: {
+              fr: "Une visibilité de marque inégalée auprès du bon public.",
+              en: "Unparalleled brand exposure and visibility to the right audience.",
+            },
+          },
+          {
+            title: { fr: "Audience ciblée", en: "Targeted audience" },
+            text: {
+              fr: "Accès direct à un public de dirigeants et de décideurs.",
+              en: "Direct access to a targeted audience of leaders and decision-makers.",
+            },
+          },
+          {
+            title: { fr: "Leadership d'opinion", en: "Thought leadership" },
+            text: {
+              fr: "Mettez en valeur votre expertise et votre vision du secteur.",
+              en: "Showcase your thought leadership and expertise.",
+            },
+          },
+          {
+            title: { fr: "Réseautage à forte valeur", en: "High-value networking" },
+            text: {
+              fr: "Des opportunités de réseautage et de développement d'affaires.",
+              en: "High-value networking and business-development opportunities.",
+            },
+          },
+          {
+            title: { fr: "Association prestigieuse", en: "Premier association" },
+            text: {
+              fr: "Associez votre marque à l'événement minier panafricain de référence en Amérique du Nord.",
+              en: "Align your brand with the premier Pan-African mining event in North America.",
+            },
+          },
+        ],
+      },
+      {
+        type: "heading",
+        text: { fr: "Exposants & commanditaires 2027", en: "2027 Exhibitors & Sponsors" },
+      },
+      {
+        type: "logos",
+        count: 10,
+        label: {
+          fr: "Exposants & commanditaires 2027 — logos à venir",
+          en: "2027 exhibitors & sponsors — logos coming soon",
+        },
+      },
+      {
         type: "callout",
         title: { fr: "Discutons", en: "Let's talk" },
         text: {

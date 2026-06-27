@@ -152,6 +152,23 @@
   mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
 }
 
+/* Variante claire de la signature topographique — encre émeraude sur fond
+   « surface » (sections claires). Même masque/anchrage, opacité basse. */
+.a2m-motif-light::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-radial-gradient(
+    ellipse at 72% 32%,
+    transparent 0 13px,
+    rgba(22, 102, 73, 0.1) 13px 14.5px
+  );
+  -webkit-mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
+  mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
+}
+
 @keyframes a2m-reveal-in {
   from {
     opacity: 0;

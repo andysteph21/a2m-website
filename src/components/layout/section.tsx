@@ -2,16 +2,33 @@ import type * as React from "react";
 import { cn } from "@/lib/utils";
 import { Container } from "./container";
 
+/** Motifs de fond opt-in (signature discrète, voir globals.css). */
+export type SectionMotif = "contours" | "aurora" | "contours-light";
+
+const MOTIF_CLASS: Record<SectionMotif, string> = {
+  contours: "a2m-motif",
+  aurora: "a2m-aurora",
+  "contours-light": "a2m-motif-light",
+};
+
 /** Section verticale standard (rythme : 64px web). */
 export function Section({
   className,
   containerClassName,
+  motif,
   children,
   ...props
-}: React.HTMLAttributes<HTMLElement> & { containerClassName?: string }) {
+}: React.HTMLAttributes<HTMLElement> & { containerClassName?: string; motif?: SectionMotif }) {
   return (
-    <section className={cn("a2m-reveal py-14 lg:py-16", className)} {...props}>
-      <Container className={containerClassName}>{children}</Container>
+    <section
+      className={cn(
+        "a2m-reveal py-14 lg:py-16",
+        motif && ["relative overflow-hidden", MOTIF_CLASS[motif]],
+        className,
+      )}
+      {...props}
+    >
+      <Container className={cn(motif && "relative z-10", containerClassName)}>{children}</Container>
     </section>
   );
 }

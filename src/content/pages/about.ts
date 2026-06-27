@@ -31,6 +31,24 @@ export const aboutPages: PageContent[] = [
         },
       },
       {
+        type: "paragraph",
+        text: {
+          fr: "A2M n'est pas une énième conférence minière généraliste. C'est une plateforme conçue pour une relation précise : relier un continent qui détient 30 % des minéraux critiques du monde à un pays dont les sociétés, les marchés de capitaux et l'expertise technique comptent parmi les meilleurs au monde pour transformer une ressource en actif productif.",
+          en: "A2M is not another general mining conference. It is a purpose-built platform for a specific relationship: connecting a continent that holds 30% of the world's critical minerals with a country whose companies, capital markets and technical expertise are among the best in the world at turning resources into producing assets.",
+        },
+      },
+      {
+        type: "heading",
+        text: { fr: "Notre vision", en: "Our vision" },
+      },
+      {
+        type: "paragraph",
+        text: {
+          fr: "Un partenariat Canada-Afrique défini par l'équité, la transparence, le respect mutuel et la prospérité partagée — où le capital, l'expertise et les standards canadiens rencontrent l'extraordinaire dotation minérale africaine pour livrer un développement durable et inclusif des deux côtés de l'Atlantique.",
+          en: "A Canada-Africa partnership defined by equity, transparency, mutual respect and shared prosperity — where Canada's capital, expertise and standards meet Africa's extraordinary mineral endowment to deliver durable, inclusive development on both sides of the Atlantic.",
+        },
+      },
+      {
         type: "heading",
         text: { fr: "Notre mission", en: "Our mission" },
       },
@@ -128,6 +146,228 @@ export const aboutPages: PageContent[] = [
           },
         ],
       },
+      {
+        type: "heading",
+        text: { fr: "Votre profil en détail", en: "Your profile in detail" },
+      },
+      {
+        type: "accordion",
+        items: [
+          {
+            title: { fr: "Majors & sociétés mid-tier", en: "Majors & mid-tier companies" },
+            blocks: [
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Vos opérations africaines reposent sur des relations — et les plus importantes se gèrent dans des moments de proximité. A2M en crée trente simultanément : trente ministres des Mines réunis, une table ronde ministérielle au résultat politique concret, et un Investment Showcase qui expose votre équipe de développement à des projets pré-sélectionnés dans des juridictions voisines.",
+                  en: "Your African operations run on relationships — and the most important ones are managed in moments of proximity. A2M creates thirty of them simultaneously: thirty Mining Ministers in one building, a Ministerial Roundtable that produces a concrete political outcome, and an Investment Showcase that exposes your corporate-development team to pre-screened projects in adjacent jurisdictions.",
+                },
+              },
+              {
+                type: "list",
+                items: [
+                  {
+                    fr: "Rencontres bilatérales avec les ministres des Mines de vos pays d'opération",
+                    en: "Bilateral meetings with the Mining Ministers of your operating countries",
+                  },
+                  {
+                    fr: "Mises en relation de co-investissement avec les IFD actives dans vos régions",
+                    en: "Co-investment introductions from DFIs active in your regions",
+                  },
+                  {
+                    fr: "Intelligence de marché sur l'orientation réglementaire des juridictions africaines prioritaires",
+                    en: "Market intelligence on regulatory direction across priority African jurisdictions",
+                  },
+                  {
+                    fr: "Visibilité de marque comme partenaire engagé de long terme du secteur minier africain",
+                    en: "Brand visibility as a committed long-term partner of African mining",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: { fr: "Juniors & exploration", en: "Juniors & exploration" },
+            blocks: [
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Une semaine de roadshows ne bouclera pas votre tour de table — trois jours à A2M le pourraient. L'Investment Showcase présente des projets rigoureusement sélectionnés aux investisseurs institutionnels, sociétés de redevances et bureaux de ressources naturelles des banques ; le Capital Markets Lounge transforme l'intérêt en sessions privées le jour même ; et le Deal Flow Package diffuse votre résumé à quarante investisseurs qualifiés avant leur arrivée.",
+                  en: "One week of roadshows will not raise your round — three days at A2M might. The Investment Showcase presents rigorously screened projects to institutional investors, royalty companies and bank natural-resource desks; the Capital Markets Lounge turns interest into private same-day sessions; and the Deal Flow Package puts your summary in front of forty qualified investors before they land.",
+                },
+              },
+              {
+                type: "list",
+                items: [
+                  {
+                    fr: "Rencontres de suivi confirmées avec investisseurs institutionnels, sociétés de redevances et IFD ayant vu votre projet",
+                    en: "Confirmed follow-up meetings with institutional investors, royalty companies and DFIs who have seen your project",
+                  },
+                  {
+                    fr: "Mises en relation directes avec des partenaires de co-développement et des acheteurs d'offtake",
+                    en: "Direct introductions to potential co-development partners and offtake buyers",
+                  },
+                  {
+                    fr: "Contacts de relations gouvernementales dans votre juridiction d'opération",
+                    en: "Government-relations contacts in your operating jurisdiction",
+                  },
+                  {
+                    fr: "Couverture médiatique via le corps de presse accrédité de l'événement",
+                    en: "Media coverage through the event's accredited press corps",
+                  },
+                  {
+                    fr: "Un récit d'investissement validé par la crédibilité de la plateforme A2M",
+                    en: "A validated investment narrative built on the credibility of the A2M platform",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: { fr: "Investisseurs, banques & IFD", en: "Investors, banks & DFIs" },
+            blocks: [
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Le défi n'est pas de trouver des projets, mais d'en trouver des bancables, portés par des opérateurs crédibles et un profil ESG défendable. Les projets de l'Investment Showcase sont évalués selon des critères documentés et bénéficient de l'appui de leur gouvernement hôte, tandis que le Déjeuner des investisseurs à huis clos cartographie les mandats et les synergies de co-investissement. Les investisseurs qualifiés participent gratuitement.",
+                  en: "The challenge is not finding projects — it is finding bankable ones with credible operators and defensible ESG. Investment Showcase projects are screened against documented criteria and carry host-government endorsement, while the closed Investors' Breakfast maps mandates and co-investment synergies. Qualified investors attend on a complimentary basis.",
+                },
+              },
+              {
+                type: "list",
+                items: [
+                  {
+                    fr: "Un pipeline organisé de projets sélectionnés avec accès direct aux porteurs",
+                    en: "A curated pipeline of screened projects with direct access to project holders",
+                  },
+                  {
+                    fr: "Quarante relations de co-investisseurs aux mandats documentés",
+                    en: "Forty co-investor relationships with documented mandates",
+                  },
+                  {
+                    fr: "Intelligence réglementaire de niveau ministériel issue de trente juridictions africaines",
+                    en: "Ministerial-level regulatory intelligence from thirty African jurisdictions",
+                  },
+                  {
+                    fr: "Un Deal Flow Package quatre semaines avant l'arrivée, et des rapports de suivi post-événement",
+                    en: "A Deal Flow Package four weeks before arrival, plus post-event tracking reports",
+                  },
+                  {
+                    fr: "Accès prioritaire au Capital Markets Lounge pendant les trois jours",
+                    en: "Priority access to the Capital Markets Lounge for all three days",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: {
+              fr: "Fournisseurs, équipementiers & technologies",
+              en: "Service providers, suppliers & technology",
+            },
+            blocks: [
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Les contrats qui financeront votre croissance africaine sont attribués par les personnes présentes ici. Chaque société cotée active en Afrique est un client potentiel, et chaque gouvernement développant son programme de fournisseurs locaux cherche des partenaires québécois et canadiens. Vous arrivez avec un agenda de rencontres confirmé et repartez avec un pipeline que votre équipe convertira au trimestre suivant.",
+                  en: "The contracts that will fund your Africa growth are awarded by the people in this room. Every listed company developing in Africa is a potential client, and every government building a local-supplier programme is looking for Québec and Canadian partners. You arrive with a confirmed meeting agenda and leave with a pipeline your business-development team will spend the next quarter converting.",
+                },
+              },
+              {
+                type: "list",
+                items: [
+                  {
+                    fr: "Un pipeline confirmé de rencontres avec les sociétés du TSX en développement et production",
+                    en: "A confirmed pipeline of follow-up meetings with TSX development and production companies",
+                  },
+                  {
+                    fr: "Mises en relation avec des développeurs de projets africains qui ont besoin de vos services",
+                    en: "Introductions to African project developers who need your services",
+                  },
+                  {
+                    fr: "Relations avec les responsables des achats et du contenu local des gouvernements africains",
+                    en: "Relationships with African government procurement and local-content officials",
+                  },
+                  {
+                    fr: "Visibilité de marque avant, pendant et après l'événement",
+                    en: "Brand visibility before, during and after the event",
+                  },
+                  {
+                    fr: "Accès à l'annuaire des délégués post-événement pour un suivi durable",
+                    en: "Access to the post-event delegate directory for sustained follow-up",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: { fr: "Gouvernements & ministères", en: "Governments & ministries" },
+            blocks: [
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Plus de 120 sociétés cotées au TSX sont actives en Afrique, dotées du capital, de l'expertise et des standards ESG pour croître — ce qu'elles recherchent, c'est un dialogue crédible avec votre gouvernement. En trois jours, A2M offre cet engagement à grande échelle à votre délégation, et la table ronde ministérielle fait de votre pays un membre fondateur d'un cadre qui façonnera les relations minières Canada-Afrique pour des années.",
+                  en: "More than 120 TSX-listed companies are active in Africa, with the capital, expertise and ESG standards to grow — what they need is credible engagement with your government. In three days A2M gives your delegation that engagement at scale, and the Ministerial Roundtable makes your country a founding member of a framework shaping Canada-Africa mining ties for years.",
+                },
+              },
+              {
+                type: "list",
+                items: [
+                  {
+                    fr: "Relations directes avec les directions des sociétés du TSX actives dans votre juridiction",
+                    en: "Direct relationships with TSX company leadership teams active in your jurisdiction",
+                  },
+                  {
+                    fr: "Engagements de suivi confirmés avec les IFD et investisseurs examinant des projets dans votre pays",
+                    en: "Confirmed follow-up engagements with DFIs and institutional investors reviewing projects in your country",
+                  },
+                  {
+                    fr: "Mises en relation de partenariats techniques avec les firmes d'ingénierie et de services du Québec",
+                    en: "Technical-partnership introductions with Québec engineering and service firms",
+                  },
+                  {
+                    fr: "Visibilité médiatique via le corps de presse international accrédité",
+                    en: "Media visibility through the event's accredited international press corps",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            title: { fr: "Acheteurs & négociants", en: "Downstream buyers & traders" },
+            blocks: [
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Les minéraux qui alimentent votre chaîne d'approvisionnement viennent d'Afrique — et A2M réunit en un même lieu les trois parties d'une négociation d'offtake : les développeurs qui les produisent, les gouvernements qui les réglementent et les financiers qui en structurent le capital. La poussée de la ZLECAf vers la transformation locale fait de la compréhension de cet agenda une intelligence stratégique pour vos équipes d'approvisionnement.",
+                  en: "The minerals that power your supply chain come from Africa — and A2M assembles all three parties to an offtake negotiation in one place: the developers who produce them, the governments who regulate them, and the financiers who structure the capital. The AfCFTA's push toward local processing makes understanding where that agenda is heading strategic intelligence for your procurement teams.",
+                },
+              },
+              {
+                type: "list",
+                items: [
+                  {
+                    fr: "Relations directes avec les opérateurs et développeurs africains sur tout le spectre des minéraux critiques",
+                    en: "Direct relationships with African project operators and developers across the critical-minerals spectrum",
+                  },
+                  {
+                    fr: "Discussions d'offtake et d'accords d'approvisionnement amorcées au Capital Markets Lounge",
+                    en: "Offtake and supply-agreement discussions initiated in the Capital Markets Lounge",
+                  },
+                  {
+                    fr: "Intelligence réglementaire sur l'agenda de transformation de la ZLECAf et ses implications",
+                    en: "Regulatory intelligence on the AfCFTA transformation agenda and its supply-chain implications",
+                  },
+                  {
+                    fr: "Intelligence de marché issue des sessions thématiques, de la politique à la production",
+                    en: "Market intelligence from thematic sessions spanning policy to production",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -222,6 +462,26 @@ export const aboutPages: PageContent[] = [
         text: {
           fr: "Associez-vous à nous pour bâtir un avenir plus durable et inclusif pour les communautés minières d'Afrique.",
           en: "Partner with us to build a more sustainable and inclusive future for Africa's mining communities.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "about/meet-the-team",
+    section: "/about",
+    eyebrow: { fr: "À propos", en: "About" },
+    title: { fr: "L'équipe", en: "Meet the Team" },
+    lead: {
+      fr: "L'équipe d'A2M Events Inc. qui conçoit et orchestre la conférence, des contenus à la logistique des délégations.",
+      en: "The A2M Events Inc. team that designs and orchestrates the conference, from programming to delegation logistics.",
+    },
+    blocks: [
+      {
+        type: "speakers",
+        count: 6,
+        label: {
+          fr: "Membres de l'équipe — photos & profils à venir",
+          en: "Team members — photos & profiles to be announced",
         },
       },
     ],

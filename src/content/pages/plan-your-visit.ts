@@ -41,11 +41,20 @@ export const planYourVisitPages: PageContent[] = [
       {
         type: "image",
         label: {
-          fr: "Photo du Centre Mont-Royal + plan d'accès / transports",
-          en: "Centre Mont-Royal photo + access map / transit",
+          fr: "Montréal centre-ville — le Centre Mont-Royal se trouve à proximité",
+          en: "Downtown Montréal — the Centre Mont-Royal is nearby",
         },
         ratio: "16/9",
-        columns: 2,
+        src: "/images/plan/montreal-skyline.jpg",
+        alt: {
+          fr: "Panorama du centre-ville de Montréal au crépuscule",
+          en: "Downtown Montréal skyline at twilight",
+        },
+        credit: {
+          label: "Diliff — Wikimedia Commons",
+          license: "CC BY-SA 3.0",
+          href: "https://commons.wikimedia.org/wiki/File:Montreal_Twilight_Panorama_2006.jpg",
+        },
       },
     ],
   },
@@ -62,10 +71,20 @@ export const planYourVisitPages: PageContent[] = [
       {
         type: "image",
         label: {
-          fr: "Photo du Fairmont Le Reine Elizabeth (façade ou hall)",
-          en: "Fairmont The Queen Elizabeth photo (façade or lobby)",
+          fr: "Fairmont Le Reine Elizabeth — façade",
+          en: "Fairmont The Queen Elizabeth — façade",
         },
         ratio: "16/9",
+        src: "/images/plan/fairmont.jpg",
+        alt: {
+          fr: "Façade du Fairmont Le Reine Elizabeth à Montréal",
+          en: "Façade of the Fairmont The Queen Elizabeth in Montréal",
+        },
+        credit: {
+          label: "Wikimedia Commons",
+          license: "CC BY-SA 2.0",
+          href: "https://commons.wikimedia.org/wiki/File:Fairmont_The_Queen_Elizabeth,_Montreal,_Quebec_(29984173151).jpg",
+        },
       },
       {
         type: "callout",
@@ -117,11 +136,20 @@ export const planYourVisitPages: PageContent[] = [
       {
         type: "image",
         label: {
-          fr: "Visuels de Montréal (skyline, Vieux-Montréal, gastronomie, festivals)",
-          en: "Montréal visuals (skyline, Old Montréal, food, festivals)",
+          fr: "Basilique Notre-Dame, Vieux-Montréal",
+          en: "Notre-Dame Basilica, Old Montréal",
         },
-        ratio: "3/2",
-        columns: 3,
+        ratio: "16/9",
+        src: "/images/plan/discover-montreal.jpg",
+        alt: {
+          fr: "Intérieur de la basilique Notre-Dame de Montréal",
+          en: "Interior of the Notre-Dame Basilica in Montréal",
+        },
+        credit: {
+          label: "Diego Delso — Wikimedia Commons",
+          license: "CC BY-SA 4.0",
+          href: "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_Notre-Dame,_Montreal,_Canad%C3%A1,_2017-08-12,_DD_22-24_HDR.jpg",
+        },
       },
     ],
   },
