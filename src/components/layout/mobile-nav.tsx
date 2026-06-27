@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "./language-switcher";
 import type { ResolvedNavSection } from "./nav-types";
 import { TextSizeToggle } from "./text-size-toggle";
@@ -51,10 +52,28 @@ export function MobileNav({ sections }: { sections: ResolvedNavSection[] }) {
                         <Link
                           href={child.href}
                           onClick={() => setOpen(false)}
-                          className="block py-1.5 text-body text-muted transition-colors hover:text-emerald-cta"
+                          className={cn(
+                            "block py-1.5 text-body text-muted transition-colors hover:text-emerald-cta",
+                            child.children && "font-semibold text-anthracite",
+                          )}
                         >
                           {child.title}
                         </Link>
+                        {child.children && (
+                          <ul className="ml-2 flex flex-col gap-1 border-hairline border-l pl-3">
+                            {child.children.map((grand) => (
+                              <li key={grand.href}>
+                                <Link
+                                  href={grand.href}
+                                  onClick={() => setOpen(false)}
+                                  className="block py-1 text-small text-muted transition-colors hover:text-emerald-cta"
+                                >
+                                  {grand.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                     ))}
                   </ul>

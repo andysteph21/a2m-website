@@ -3,9 +3,9 @@
 import { ChevronDown } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-import type { ResolvedNavSection } from "./nav-types";
+import type { ResolvedNavLink, ResolvedNavSection } from "./nav-types";
 
-/** Navigation principale (desktop) avec menus déroulants accessibles au survol et au focus. */
+/** Navigation principale (desktop) avec menus déroulants à 3 niveaux (survol/focus). */
 export function DesktopNav({ sections }: { sections: ResolvedNavSection[] }) {
   const pathname = usePathname();
 
@@ -41,10 +41,27 @@ export function DesktopNav({ sections }: { sections: ResolvedNavSection[] }) {
                       <li key={child.href}>
                         <Link
                           href={child.href}
-                          className="block px-4 py-2 text-body text-muted transition-colors hover:bg-mist hover:text-emerald-deep"
+                          className={cn(
+                            "block px-4 py-2 text-body text-muted transition-colors hover:bg-mist hover:text-emerald-deep",
+                            child.children && "font-semibold text-ink",
+                          )}
                         >
                           {child.title}
                         </Link>
+                        {child.children && (
+                          <ul className="pb-1">
+                            {child.children.map((grand: ResolvedNavLink) => (
+                              <li key={grand.href}>
+                                <Link
+                                  href={grand.href}
+                                  className="block py-1.5 pr-4 pl-8 text-small text-muted transition-colors hover:bg-mist hover:text-emerald-deep"
+                                >
+                                  {grand.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </li>
                     ))}
                   </ul>

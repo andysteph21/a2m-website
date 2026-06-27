@@ -1,27 +1,30 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { LoginButton } from "@/components/blocks/login-button";
 import { RegisterButton } from "@/components/blocks/register-button";
 import { siteConfig } from "@/config/site";
 import { mainNav } from "@/content/navigation";
+import type { NavLink } from "@/content/types";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { DesktopNav } from "./desktop-nav";
 import { LanguageSwitcher } from "./language-switcher";
 import { MobileNav } from "./mobile-nav";
-import type { ResolvedNavSection } from "./nav-types";
+import type { ResolvedNavLink, ResolvedNavSection } from "./nav-types";
 import { TextSizeToggle } from "./text-size-toggle";
 
+/** Résout récursivement un lien de nav (jusqu'à 3 niveaux) dans la locale. */
+function resolveLink(link: NavLink, locale: Locale): ResolvedNavLink {
+  return {
+    title: link.title[locale],
+    href: link.href,
+    external: link.external,
+    children: link.children?.map((child) => resolveLink(child, locale)),
+  };
+}
+
 function resolveNav(locale: Locale): ResolvedNavSection[] {
-  return mainNav.map((section) => ({
-    title: section.title[locale],
-    href: section.href,
-    external: section.external,
-    children: section.children?.map((child) => ({
-      title: child.title[locale],
-      href: child.href,
-      external: child.external,
-    })),
-  }));
+  return mainNav.map((section) => resolveLink(section, locale));
 }
 
 export async function Header({ locale }: { locale: string }) {
@@ -33,11 +36,15 @@ export async function Header({ locale }: { locale: string }) {
       <div className="flex min-h-16 w-full items-center justify-between gap-4 px-4 pt-4 pb-2.5 sm:px-6 lg:min-h-20">
         {/* Logo + date/lieu de l'événement */}
         <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-baseline gap-1.5" aria-label="A2M 2027">
-            <span className="font-display font-extrabold text-[22px] text-anthracite leading-none tracking-[0.28em]">
-              A2M
-            </span>
-            <span className="font-semibold text-[11px] text-copper tracking-[0.2em]">2027</span>
+          <Link href="/" className="flex items-center" aria-label="A2M 2027">
+            <Image
+              src="/images/brand/a2m-logo.png"
+              alt="A2M 2027"
+              width={360}
+              height={142}
+              priority
+              className="h-9 w-auto lg:h-10"
+            />
           </Link>
           <span className="hidden border-hairline border-l pl-4 text-[11px] text-muted leading-tight md:block">
             <span className="block font-semibold text-anthracite uppercase tracking-[0.08em]">
