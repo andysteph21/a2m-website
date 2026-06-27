@@ -115,12 +115,7 @@ export const sections: SectionDef[] = [
       fr: "Conférencier, partenaire stratégique ou média : contribuez à A2M 2027.",
       en: "Speaker, strategic partner or media: contribute to A2M 2027.",
     },
-    subsections: [
-      { id: "overview", kind: "content", contentSlug: "partner" },
-      { id: "speaker", kind: "content", contentSlug: "partner/speaker" },
-      { id: "strategic", kind: "content", contentSlug: "partner/strategic" },
-      { id: "media", kind: "content", contentSlug: "partner/media" },
-    ],
+    subsections: [{ id: "overview", kind: "content", contentSlug: "partner" }],
   },
   {
     href: "/plan-your-visit",
