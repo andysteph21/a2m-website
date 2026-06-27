@@ -7,8 +7,8 @@ export const partnerPages: PageContent[] = [
     eyebrow: { fr: "Devenir partenaire", en: "Partner with us" },
     title: { fr: "Devenir partenaire d'A2M", en: "Partner with A2M" },
     lead: {
-      fr: "Conférencier, partenaire stratégique ou partenaire média : il existe une façon de contribuer à A2M qui vous correspond. Quelle que soit la formule, une seule adresse — notre équipe vous répond.",
-      en: "Speaker, strategic partner or media partner: there is a way to contribute to A2M that fits you. Whichever it is, there's a single point of contact — our team handles it.",
+      fr: "Conférencier, partenaire stratégique ou partenaire média : il existe une façon de contribuer à A2M qui vous correspond. Quelle que soit la formule, chaque rôle a son point de contact dédié — et notre équipe se réjouit de collaborer avec vous pour bâtir un partenariat adapté à vos objectifs.",
+      en: "Speaker, strategic partner or media partner: there is a way to contribute to A2M that fits you. Whichever it is, each role has its own dedicated point of contact — and our team looks forward to collaborating with you to build a partnership tailored to your objectives.",
     },
     blocks: [
       {
@@ -44,6 +44,7 @@ export const partnerPages: PageContent[] = [
       },
       {
         type: "accordion",
+        multiple: true,
         items: [
           {
             title: { fr: "Devenir conférencier", en: "Become a speaker" },
@@ -51,8 +52,22 @@ export const partnerPages: PageContent[] = [
               {
                 type: "paragraph",
                 text: {
-                  fr: "A2M offre aux experts et leaders d'opinion une tribune pour partager leurs connaissances à travers des keynotes et des panels. Les conférenciers sont sélectionnés sur leur expertise et leur capacité à offrir des interventions engageantes et instructives ; le processus est compétitif et les propositions sont évaluées sur leur pertinence, leur originalité et leur qualité.",
-                  en: "A2M offers experts and thought leaders a platform to share their knowledge through keynote presentations and panel discussions. Speakers are selected on their expertise and their ability to deliver engaging, informative sessions; the process is competitive, and proposals are evaluated on relevance, originality and overall quality.",
+                  fr: "La conférence A2M offre une tribune aux experts et aux leaders d'opinion pour partager leurs connaissances et leurs perspectives à travers des présentations en keynote et des discussions en panel.",
+                  en: "The A2M conference offers a platform for experts and thought leaders to share their knowledge and insights through keynote presentations and panel discussions.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Les conférenciers sont sélectionnés en fonction de leur expertise et de leur capacité à livrer des présentations engageantes et instructives qui contribuent à l'avancement de l'industrie. Le processus de sélection est compétitif, et les propositions sont évaluées sur leur pertinence, leur originalité et leur qualité globale.",
+                  en: "Speakers are selected based on their expertise and ability to deliver engaging and informative presentations that contribute to the advancement of the industry. The selection process is competitive, and proposals are evaluated on their relevance, originality, and overall quality.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Veuillez soumettre votre proposition à programming@africanmininginmontreal.com si vous souhaitez rejoindre notre programmation de conférenciers de renom.",
+                  en: "Please submit your proposal to programming@africanmininginmontreal.com if you are interested to join our lineup of esteemed speakers.",
                 },
               },
               {
@@ -63,12 +78,16 @@ export const partnerPages: PageContent[] = [
                     en: "A platform via keynotes and panel discussions",
                   },
                   {
-                    fr: "Sélection sur l'expertise, l'originalité et la qualité",
-                    en: "Selected on expertise, originality and quality",
+                    fr: "Sélection sur l'expertise, la pertinence, l'originalité et la qualité",
+                    en: "Selected on expertise, relevance, originality and quality",
                   },
                   {
-                    fr: "Soumettez une proposition avec votre biographie et le sujet",
-                    en: "Submit a proposal with your biography and topic",
+                    fr: "Processus compétitif d'évaluation des propositions",
+                    en: "A competitive proposal-evaluation process",
+                  },
+                  {
+                    fr: "Soumettez votre proposition à programming@africanmininginmontreal.com",
+                    en: "Submit your proposal to programming@africanmininginmontreal.com",
                   },
                 ],
               },
@@ -80,24 +99,56 @@ export const partnerPages: PageContent[] = [
               {
                 type: "paragraph",
                 text: {
-                  fr: "Rejoignez le cercle des partenaires stratégiques d'A2M — une plateforme exclusive et sur mesure pour le leadership d'opinion, l'amplification de marque et le réseautage de haut niveau. En vous associant à A2M, vous accédez à un public trié sur le volet de décideurs, d'innovateurs et d'experts du secteur ; nos programmes sur mesure favorisent la croissance, les connexions de valeur et la mise en avant de votre expertise.",
-                  en: "Join the elite group of A2M Strategic Partners — an exclusive, tailored platform for thought leadership, brand amplification and high-level networking. Partnering with A2M gives you unparalleled access to a curated audience of decision-makers, innovators and industry experts, and our bespoke programmes are designed to drive growth, foster meaningful connections and showcase your expertise.",
+                  fr: "Rehaussez le profil et l'influence de votre organisation en rejoignant le cercle restreint des partenaires stratégiques d'A2M. Cette opportunité exclusive offre une plateforme sur mesure pour le leadership d'opinion, l'amplification de marque et le réseautage de haut niveau.",
+                  en: "Elevate your organization's profile and influence by joining the elite group of A2M Strategic Partners. This exclusive opportunity offers a tailored platform for thought leadership, brand amplification, and high-level networking.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "En vous associant à A2M, vous obtiendrez un accès inégalé à un public trié sur le volet de décideurs, d'innovateurs et d'experts du secteur. Nos programmes de partenariat sur mesure sont conçus pour stimuler la croissance des affaires, favoriser des connexions significatives et mettre en valeur l'expertise de votre organisation.",
+                  en: "By partnering with A2M, you'll gain unparalleled access to a curated audience of decision-makers, innovators, and industry experts. Our bespoke partnership programs are designed to drive business growth, foster meaningful connections, and showcase your organization's expertise.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Saisissez cette occasion de briller aux côtés des meilleurs de l'industrie et de laisser une empreinte durable sur la communauté A2M.",
+                  en: "Seize this chance to shine alongside the best in the industry and make a lasting impact on the A2M community.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Pour en savoir plus sur la manière de devenir partenaire de l'événement, veuillez nous contacter par courriel à partners@africanmininginmontreal.com.",
+                  en: "For more information on how to become a partner of the event, please contact us by email at partners@africanmininginmontreal.com.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Notre équipe se réjouit de collaborer avec vous et de créer un partenariat personnalisé qui répond aux besoins et objectifs uniques de votre organisation.",
+                  en: "Our team looks forward to collaborating with you and creating a customized partnership that meets your organization's unique needs and objectives.",
                 },
               },
               {
                 type: "list",
                 items: [
                   {
-                    fr: "Leadership d'opinion et amplification de marque",
-                    en: "Thought leadership and brand amplification",
+                    fr: "Leadership d'opinion, amplification de marque et réseautage de haut niveau",
+                    en: "Thought leadership, brand amplification and high-level networking",
                   },
                   {
-                    fr: "Accès à un public trié de décideurs et d'innovateurs",
-                    en: "Access to a curated audience of decision-makers and innovators",
+                    fr: "Accès inégalé à un public trié de décideurs, d'innovateurs et d'experts",
+                    en: "Unparalleled access to a curated audience of decision-makers, innovators and experts",
                   },
                   {
-                    fr: "Programmes de partenariat sur mesure",
-                    en: "Bespoke, tailored partnership programmes",
+                    fr: "Programmes de partenariat sur mesure pour stimuler la croissance des affaires",
+                    en: "Bespoke partnership programmes designed to drive business growth",
+                  },
+                  {
+                    fr: "Contactez-nous à partners@africanmininginmontreal.com",
+                    en: "Contact us at partners@africanmininginmontreal.com",
                   },
                 ],
               },
@@ -109,24 +160,46 @@ export const partnerPages: PageContent[] = [
               {
                 type: "paragraph",
                 text: {
-                  fr: "En tant que partenaire média, vous bénéficiez d'un accès exclusif au programme, aux conférenciers et aux participants — autant d'occasions d'entrevues, de couverture et de création de contenu. A2M accrédite les journalistes professionnels couvrant les industries minières africaine et canadienne ; les médias accrédités reçoivent un laissez-passer média gratuit. L'accréditation est réservée aux membres de la rédaction.",
-                  en: "As a Media Partner you gain exclusive access to the programme, speakers and attendees — valuable opportunities for interviews, coverage and content creation. A2M accredits professional journalists reporting on the African and Canadian mining industries; accredited media receive a complimentary Media Pass. Accreditation is reserved for editorial staff members.",
+                  fr: "En tant que partenaire média, vous bénéficierez d'un accès exclusif à notre programme de conférence, à nos conférenciers et à nos participants, ce qui vous offrira de précieuses occasions d'entrevues, de couverture et de création de contenu.",
+                  en: "As a Media Partner, you'll gain exclusive access to our conference program, speakers, and attendees, providing valuable opportunities for interviews, coverage, and content creation.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Nous accordons une accréditation aux journalistes professionnels qui couvrent les industries minières africaine et canadienne, et les médias accrédités recevront un laissez-passer média gratuit pour A2M. Pour être admissibles à l'accréditation média, les candidats doivent être membres de la rédaction.",
+                  en: "We offer accreditation to professional journalists who report on the African and Canadian mining industries, and accredited media will receive a complimentary Media Pass to A2M. To be eligible for media accreditation, applicants must be editorial staff members.",
+                },
+              },
+              {
+                type: "paragraph",
+                text: {
+                  fr: "Si vous souhaitez devenir partenaire média ou demander une accréditation média, veuillez nous contacter par courriel à : media@africanmininginmontreal.com.",
+                  en: "If you're interested in becoming a Media Partner or applying for media accreditation, please contact us by email: media@africanmininginmontreal.com.",
                 },
               },
               {
                 type: "list",
                 items: [
                   {
-                    fr: "Accès au programme, aux conférenciers et aux participants",
-                    en: "Access to the programme, speakers and attendees",
+                    fr: "Accès exclusif au programme, aux conférenciers et aux participants",
+                    en: "Exclusive access to the programme, speakers and attendees",
                   },
                   {
-                    fr: "Laissez-passer média gratuit pour les accrédités",
+                    fr: "Occasions d'entrevues, de couverture et de création de contenu",
+                    en: "Opportunities for interviews, coverage and content creation",
+                  },
+                  {
+                    fr: "Laissez-passer média gratuit pour les médias accrédités",
                     en: "Complimentary Media Pass for accredited media",
                   },
                   {
-                    fr: "Réservé aux journalistes professionnels de la rédaction",
-                    en: "Open to professional editorial journalists",
+                    fr: "Réservé aux membres de la rédaction couvrant les mines africaines et canadiennes",
+                    en: "Reserved for editorial staff reporting on African and Canadian mining",
+                  },
+                  {
+                    fr: "Contactez-nous à media@africanmininginmontreal.com",
+                    en: "Contact us at media@africanmininginmontreal.com",
                   },
                 ],
               },
@@ -138,8 +211,8 @@ export const partnerPages: PageContent[] = [
         type: "callout",
         title: { fr: "Nous joindre", en: "Get in touch" },
         text: {
-          fr: "Quel que soit le rôle qui vous correspond — conférencier, partenaire stratégique ou média — écrivez à notre équipe à info@a2mevent.com.",
-          en: "Whatever role fits you — speaker, strategic partner or media — write to our team at info@a2mevent.com.",
+          fr: "Chaque rôle a son point de contact dédié : conférenciers — programming@africanmininginmontreal.com ; partenaires stratégiques — partners@africanmininginmontreal.com ; partenaires médias et accréditation — media@africanmininginmontreal.com. Notre équipe se réjouit de collaborer avec vous et de créer un partenariat personnalisé qui répond aux besoins uniques de votre organisation.",
+          en: "Each role has its own dedicated contact: speakers — programming@africanmininginmontreal.com; strategic partners — partners@africanmininginmontreal.com; media partners and accreditation — media@africanmininginmontreal.com. Our team looks forward to collaborating with you and creating a customized partnership that meets your organization's unique needs.",
         },
       },
     ],
