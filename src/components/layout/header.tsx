@@ -43,7 +43,7 @@ export async function Header({ locale }: { locale: string }) {
               width={764}
               height={301}
               priority
-              className="h-12 w-auto lg:h-[3.75rem]"
+              className="h-16 w-auto lg:h-[130px]"
             />
           </Link>
           <span className="hidden border-hairline border-l pl-4 text-[11px] text-muted leading-tight md:block">
