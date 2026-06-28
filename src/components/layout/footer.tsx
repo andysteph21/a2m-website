@@ -24,7 +24,7 @@ export async function Footer({ locale }: { locale: string }) {
             alt="A2M 2027"
             width={764}
             height={301}
-            className="h-12 w-auto"
+            className="h-16 w-auto"
           />
           <p className="mt-4 text-small text-muted">{t("about")}</p>
         </div>
