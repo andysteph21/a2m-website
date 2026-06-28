@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import type { ResolvedNavLink, ResolvedNavSection } from "./nav-types";
@@ -36,34 +36,44 @@ export function DesktopNav({ sections }: { sections: ResolvedNavSection[] }) {
 
               {section.children && (
                 <div className="pointer-events-none absolute top-full left-0 z-50 min-w-[260px] pt-2 opacity-0 transition-opacity duration-200 ease-discret group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
-                  <ul className="overflow-hidden rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
-                    {section.children.map((child) => (
-                      <li key={child.href}>
-                        <Link
-                          href={child.href}
-                          className={cn(
-                            "block px-4 py-2 text-body text-muted transition-colors hover:bg-mist hover:text-emerald-deep",
-                            child.children && "font-semibold text-ink",
-                          )}
-                        >
-                          {child.title}
-                        </Link>
-                        {child.children && (
-                          <ul className="pb-1">
-                            {child.children.map((grand: ResolvedNavLink) => (
-                              <li key={grand.href}>
-                                <Link
-                                  href={grand.href}
-                                  className="block py-1.5 pr-4 pl-8 text-small text-muted transition-colors hover:bg-mist hover:text-emerald-deep"
-                                >
-                                  {grand.title}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
+                  <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
+                    {section.children.map((child) =>
+                      child.children ? (
+                        // Groupe : sous-menu en fly-out (les petits-enfants n'apparaissent qu'au survol)
+                        <li key={child.href} className="group/sub relative">
+                          <Link
+                            href={child.href}
+                            className="flex items-center justify-between gap-2 px-4 py-2 font-semibold text-body text-ink transition-colors hover:bg-mist hover:text-emerald-deep"
+                          >
+                            {child.title}
+                            <ChevronRight className="size-3.5 shrink-0 text-taupe" aria-hidden />
+                          </Link>
+                          <div className="pointer-events-none invisible absolute top-0 left-full z-50 min-w-[240px] pl-1 opacity-0 transition-opacity duration-200 ease-discret group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:pointer-events-auto group-focus-within/sub:visible group-focus-within/sub:opacity-100">
+                            <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
+                              {child.children.map((grand: ResolvedNavLink) => (
+                                <li key={grand.href}>
+                                  <Link
+                                    href={grand.href}
+                                    className="block px-4 py-2 text-body text-muted transition-colors hover:bg-mist hover:text-emerald-deep"
+                                  >
+                                    {grand.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </li>
+                      ) : (
+                        <li key={child.href}>
+                          <Link
+                            href={child.href}
+                            className="block px-4 py-2 text-body text-muted transition-colors hover:bg-mist hover:text-emerald-deep"
+                          >
+                            {child.title}
+                          </Link>
+                        </li>
+                      ),
+                    )}
                   </ul>
                 </div>
               )}

@@ -22,9 +22,9 @@ export async function Footer({ locale }: { locale: string }) {
           <Image
             src="/images/brand/a2m-logo.png"
             alt="A2M 2027"
-            width={360}
-            height={142}
-            className="h-9 w-auto"
+            width={764}
+            height={301}
+            className="h-12 w-auto"
           />
           <p className="mt-4 text-small text-muted">{t("about")}</p>
         </div>

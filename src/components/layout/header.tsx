@@ -33,17 +33,17 @@ export async function Header({ locale }: { locale: string }) {
 
   return (
     <header className="sticky top-0 z-40 border-hairline border-b bg-ivory/95 backdrop-blur supports-[backdrop-filter]:bg-ivory/80">
-      <div className="flex min-h-16 w-full items-center justify-between gap-4 px-4 pt-4 pb-2.5 sm:px-6 lg:min-h-20">
+      <div className="flex min-h-16 w-full items-center justify-between gap-4 px-4 pt-4 pb-2.5 sm:px-6 lg:min-h-24">
         {/* Logo + date/lieu de l'événement */}
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center" aria-label="A2M 2027">
             <Image
               src="/images/brand/a2m-logo.png"
               alt="A2M 2027"
-              width={360}
-              height={142}
+              width={764}
+              height={301}
               priority
-              className="h-9 w-auto lg:h-10"
+              className="h-12 w-auto lg:h-[3.75rem]"
             />
           </Link>
           <span className="hidden border-hairline border-l pl-4 text-[11px] text-muted leading-tight md:block">

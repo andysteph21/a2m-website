@@ -65,11 +65,14 @@ function SubsectionBody({ sub, locale }: { sub: SubsectionDef; locale: Locale })
 export async function SectionPage({ section, locale }: { section: SectionDef; locale: Locale }) {
   const t = await getTranslations("common");
   const flat = flattenSubsections(section.subsections);
-  const navItems = flat.map(({ sub, depth }) => ({
-    id: sub.id,
-    label: pick(subsectionTitle(sub), locale),
-    depth,
-  }));
+  // La sous-barre / le widget ne listent que le 1er niveau ; les petits-enfants
+  // (groupes) restent dans la page comme sections empilées, façon page « Partenaire ».
+  const navItems = flat
+    .filter(({ depth }) => depth === 0)
+    .map(({ sub }) => ({
+      id: sub.id,
+      label: pick(subsectionTitle(sub), locale),
+    }));
 
   return (
     <>
