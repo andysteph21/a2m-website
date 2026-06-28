@@ -56,6 +56,16 @@ export const sections: SectionDef[] = [
         kind: "content",
         contentSlug: "about",
         title: { fr: "A2M 2027", en: "A2M 2027" },
+        children: [
+          {
+            id: "sessions",
+            kind: "content",
+            contentSlug: "program/sessions",
+            title: { fr: "Aperçu du programme", en: "Program overview" },
+          },
+          { id: "speakers", kind: "content", contentSlug: "program/speakers" },
+          { id: "schedule", kind: "schedule", title: { fr: "Calendrier", en: "Agenda" } },
+        ],
       },
       { id: "why-participate", kind: "content", contentSlug: "about/why-participate" },
       {
@@ -79,13 +89,6 @@ export const sections: SectionDef[] = [
       en: "Three days of keynotes, panels, B2B meetings and networking events (June 7–9, 2027).",
     },
     subsections: [
-      {
-        id: "sessions",
-        kind: "content",
-        contentSlug: "program/sessions",
-        title: { fr: "Aperçu du programme", en: "Program overview" },
-      },
-      { id: "speakers", kind: "content", contentSlug: "program/speakers" },
       {
         id: "ministerial-roundtable",
         title: { fr: "Table ronde ministérielle", en: "Ministerial Roundtable" },
@@ -113,7 +116,6 @@ export const sections: SectionDef[] = [
         title: { fr: "Maillage d'affaires", en: "Business Matchmaking" },
       },
       { id: "networking", kind: "content", contentSlug: "program/networking" },
-      { id: "schedule", kind: "schedule", title: { fr: "Calendrier", en: "Schedule" } },
     ],
   },
   {
