@@ -304,7 +304,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         title={p.programTitle}
         description={p.programDesc}
         seeAllLabel={p.programSeeAll}
-        seeAllHref="/program"
+        seeAllHref="/about#sessions"
       >
         <FeatureGrid
           items={programPreview.map((i) => ({
@@ -321,7 +321,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         title={p.speakersTitle}
         description={p.speakersDesc}
         seeAllLabel={p.speakersSeeAll}
-        seeAllHref="/program#speakers"
+        seeAllHref="/about#speakers"
       >
         <SpeakerGrid count={4} label={p.speakersPlaceholder} />
       </PreviewSection>
