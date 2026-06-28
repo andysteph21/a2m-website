@@ -95,7 +95,7 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
             <section
               key={sub.id}
               id={sub.id}
-              className="a2m-reveal scroll-mt-24 pt-14 sm:scroll-mt-32 lg:scroll-mt-40 lg:pt-16"
+              className="a2m-reveal scroll-mt-24 pt-14 sm:scroll-mt-32 lg:scroll-mt-[185px] xl:scroll-mt-[215px] lg:pt-16"
             >
               <Container>
                 <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
@@ -111,7 +111,7 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
             key={sub.id}
             id={sub.id}
             className={cn(
-              "a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-40 lg:py-16",
+              "a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[185px] xl:scroll-mt-[215px] lg:py-16",
               surface && "a2m-motif-light relative overflow-hidden bg-surface",
             )}
           >
