@@ -12,6 +12,10 @@ interface PageProps {
   params: Promise<{ locale: string; slug: string[] }>;
 }
 
+// ISR : les pages de section sont régénérées chaque heure afin que le tarif
+// délégué (RegisterSection) suive la date à Toronto sans dépendre du navigateur.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   const slugs = [...sectionHrefs.map((h) => h.replace(/^\//, "")), "sitemap-page"];
   return routing.locales.flatMap((locale) =>

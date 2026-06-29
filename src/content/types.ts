@@ -3,12 +3,14 @@ import type { Locale } from "@/i18n/routing";
 /** Valeur traduite dans chaque locale supportée. */
 export type Localized<T = string> = Record<Locale, T>;
 
-/** Lien de navigation simple. */
+/** Lien de navigation simple (peut imbriquer des sous-liens — menu à 3 niveaux). */
 export interface NavLink {
   title: Localized;
   href: string;
   /** Lien externe (ouvre dans un nouvel onglet). */
   external?: boolean;
+  /** Sous-liens (groupe déroulant imbriqué). */
+  children?: NavLink[];
 }
 
 /** Section de navigation avec sous-liens optionnels. */

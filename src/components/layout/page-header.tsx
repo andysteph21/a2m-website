@@ -11,7 +11,7 @@ interface PageHeaderProps {
 /** En-tête de page intérieure : bandeau émeraude profond + fil d'Ariane. */
 export function PageHeader({ eyebrow, title, lead, breadcrumb }: PageHeaderProps) {
   return (
-    <div className="a2m-aurora relative overflow-hidden border-hairline border-b bg-emerald-deep text-ivory">
+    <div className="a2m-motif relative overflow-hidden border-hairline border-b bg-emerald-deep text-ivory">
       <Container className="relative z-10 py-12 lg:py-16">
         {breadcrumb && (
           <div className="mb-6 [&_a]:text-champagne/80 [&_[aria-current]]:text-champagne [&_svg]:text-champagne/40">

@@ -22,7 +22,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
 
   return (
     <div
-      className={cn("inline-flex items-center gap-1 text-[12px] font-semibold", className)}
+      className={cn("inline-flex items-center gap-1 text-[11px] font-semibold", className)}
       aria-busy={isPending}
     >
       {routing.locales.map((loc, i) => (

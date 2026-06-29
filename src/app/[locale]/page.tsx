@@ -14,9 +14,13 @@ import { Section, SectionHeading } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import {
+  eventDetails,
   exhibitionPreview,
   heroSlides,
+  heroSubHeadline,
+  homeIntro,
   honoraryCountry,
+  introBand,
   kpis,
   pillars,
   programPreview,
@@ -26,11 +30,9 @@ import {
   whyDifferent,
 } from "@/content/data/home";
 import { articles } from "@/content/data/news";
-import { delegateTiers } from "@/content/data/pricing";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
-import { cn } from "@/lib/utils";
 
 const COPY = {
   fr: {
@@ -68,11 +70,6 @@ const COPY = {
       sponsorsDesc: "Associez votre marque à l'événement minier de référence Canada-Afrique.",
       sponsorsSeeAll: "Voir les commandites",
       sponsorsPlaceholder: "Commanditaires & partenaires à venir",
-      pricingEyebrow: "Inscription",
-      pricingTitle: "Passes délégués — tarifs Early Bird",
-      pricingDesc: "Profitez du meilleur tarif avant l'ouverture des inscriptions.",
-      pricingSeeAll: "Voir les tarifs & s'inscrire",
-      pricingNote: "*Prix en CAD, hors TPS (5 %) et TVQ (9,975 %).",
       newsEyebrow: "Actualités",
       newsTitle: "Dernières actualités",
       newsDesc: "Annonces et couverture médiatique autour d'A2M 2027.",
@@ -114,11 +111,6 @@ const COPY = {
       sponsorsDesc: "Associate your brand with the flagship Canada–Africa mining event.",
       sponsorsSeeAll: "See sponsorship options",
       sponsorsPlaceholder: "Sponsors & partners to be announced",
-      pricingEyebrow: "Register",
-      pricingTitle: "Delegate passes — Early Bird",
-      pricingDesc: "Secure the best rate before registration opens.",
-      pricingSeeAll: "See pricing & register",
-      pricingNote: "*Prices in CAD, excluding GST (5%) and QST (9.975%).",
       newsEyebrow: "News",
       newsTitle: "Latest news",
       newsDesc: "Announcements and media coverage around A2M 2027.",
@@ -133,7 +125,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   setRequestLocale(rawLocale);
 
   const t = await getTranslations("common");
-  const th = await getTranslations("home");
   const c = COPY[locale];
 
   const p = c.previews;
@@ -156,16 +147,29 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         nextLabel="→"
       />
 
+      <Section className="py-10 lg:py-12">
+        <p className="mx-auto max-w-[860px] text-center text-lead text-muted">
+          {pick(heroSubHeadline, locale)}
+        </p>
+      </Section>
+
       <EventBandeau
-        items={[
-          { label: th("eventDates"), value: th("eventDates") },
-          { label: th("venue"), value: siteConfig.venue },
-          {
-            label: locale === "fr" ? "Pays à l'honneur" : "Honorary Country",
-            value: pick(honoraryCountry.title, locale),
-          },
-        ]}
+        items={eventDetails.map((d) => ({
+          label: pick(d.label, locale),
+          value: pick(d.value, locale),
+        }))}
       />
+
+      <Section className="bg-surface" motif="contours-light">
+        <SectionHeading
+          align="center"
+          eyebrow={pick(homeIntro.eyebrow, locale)}
+          title={pick(homeIntro.title, locale)}
+        />
+        <p className="mx-auto mt-6 max-w-[820px] text-center text-lead text-muted">
+          {pick(homeIntro.text, locale)}
+        </p>
+      </Section>
 
       <Section>
         <SectionHeading
@@ -187,17 +191,24 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <Section>
         <SectionHeading
-          eyebrow={c.sectorsEyebrow}
-          title={c.sectorsTitle}
-          description={c.sectorsDesc}
+          eyebrow={pick(introBand.eyebrow, locale)}
+          title={pick(introBand.title, locale)}
         />
-        <FeatureGrid
-          className="mt-12"
-          items={whoAttends.map((s) => ({
-            title: pick(s.title, locale),
-            text: pick(s.text, locale),
-          }))}
-        />
+        <p className="mt-6 max-w-[820px] text-lead text-muted">{pick(introBand.text, locale)}</p>
+        <div className="mt-16">
+          <SectionHeading
+            eyebrow={c.sectorsEyebrow}
+            title={c.sectorsTitle}
+            description={c.sectorsDesc}
+          />
+          <FeatureGrid
+            className="mt-12"
+            items={whoAttends.map((s) => ({
+              title: pick(s.title, locale),
+              text: pick(s.text, locale),
+            }))}
+          />
+        </div>
         <div className="mt-16">
           <SectionHeading eyebrow={c.attendEyebrow} title={c.comeForTitle} />
           <FeatureGrid
@@ -281,7 +292,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         title={p.programTitle}
         description={p.programDesc}
         seeAllLabel={p.programSeeAll}
-        seeAllHref="/program"
+        seeAllHref="/about#sessions"
       >
         <FeatureGrid
           items={programPreview.map((i) => ({
@@ -298,7 +309,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         title={p.speakersTitle}
         description={p.speakersDesc}
         seeAllLabel={p.speakersSeeAll}
-        seeAllHref="/program#speakers"
+        seeAllHref="/about#speakers"
       >
         <SpeakerGrid count={4} label={p.speakersPlaceholder} />
       </PreviewSection>
@@ -329,37 +340,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         seeAllHref="/exhibit-sponsor#sponsorship"
       >
         <LogoWall count={6} label={p.sponsorsPlaceholder} />
-      </PreviewSection>
-
-      <PreviewSection
-        eyebrow={p.pricingEyebrow}
-        title={p.pricingTitle}
-        description={p.pricingDesc}
-        seeAllLabel={p.pricingSeeAll}
-        seeAllHref="/plan-your-visit#register"
-      >
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {delegateTiers.map((tier) => (
-            <div
-              key={tier.name.en}
-              className={cn(
-                "flex flex-col gap-1 rounded-sm border bg-card p-5 shadow-card",
-                tier.featured ? "border-gold" : "border-hairline",
-              )}
-            >
-              <span className="font-semibold text-[11px] text-copper uppercase tracking-[0.14em]">
-                {pick(tier.name, locale)}
-              </span>
-              <span className="tnum font-display font-bold text-data text-emerald-deep">
-                {tier.price}
-              </span>
-              {tier.period && (
-                <span className="text-small text-muted">{pick(tier.period, locale)}</span>
-              )}
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-small text-subtle">{p.pricingNote}</p>
       </PreviewSection>
 
       <PreviewSection

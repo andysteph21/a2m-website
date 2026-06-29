@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { NewsletterForm } from "@/components/blocks/newsletter-form";
 import { siteConfig } from "@/config/site";
@@ -18,12 +19,13 @@ export async function Footer({ locale }: { locale: string }) {
       <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
         {/* Marque */}
         <div className="lg:col-span-1">
-          <div className="flex items-baseline gap-1.5">
-            <span className="font-display font-extrabold text-[20px] text-anthracite tracking-[0.28em]">
-              A2M
-            </span>
-            <span className="font-semibold text-[11px] text-copper tracking-[0.2em]">2027</span>
-          </div>
+          <Image
+            src="/images/brand/a2m-logo.png"
+            alt="A2M 2027"
+            width={764}
+            height={301}
+            className="h-16 w-auto"
+          />
           <p className="mt-4 text-small text-muted">{t("about")}</p>
         </div>
 

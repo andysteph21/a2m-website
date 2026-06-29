@@ -5,6 +5,8 @@ export interface PricingTier {
   price: string;
   period?: Localized;
   featured?: boolean;
+  /** Dernier jour de validité (ISO YYYY-MM-DD). Absent = palier ouvert (plein tarif). */
+  until?: string;
   features: Localized[];
 }
 
@@ -26,6 +28,7 @@ export const delegateTiers: PricingTier[] = [
     name: { fr: "Early Bird 1", en: "Early Bird 1" },
     price: "1 050 $",
     period: { fr: "1 sept. – 31 déc. 2026", en: "Sep 1 – Dec 31, 2026" },
+    until: "2026-12-31",
     features: includedAll,
   },
   {
@@ -33,12 +36,14 @@ export const delegateTiers: PricingTier[] = [
     price: "1 312 $",
     period: { fr: "1 janv. – 31 mars 2027", en: "Jan 1 – Mar 31, 2027" },
     featured: true,
+    until: "2027-03-31",
     features: includedAll,
   },
   {
     name: { fr: "Early Bird 3", en: "Early Bird 3" },
     price: "1 640 $",
     period: { fr: "1 avr. – 31 mai 2027", en: "Apr 1 – May 31, 2027" },
+    until: "2027-05-31",
     features: includedAll,
   },
   {
@@ -48,3 +53,21 @@ export const delegateTiers: PricingTier[] = [
     features: includedAll,
   },
 ];
+
+/** Date du jour à Toronto (YYYY-MM-DD), décidée côté serveur — jamais l'horloge du navigateur. */
+export function torontoTodayISO(now: Date = new Date()): string {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Toronto",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(now);
+}
+
+/** Palier délégué applicable à une date (le premier non expiré ; sinon plein tarif). */
+export function activeDelegateTier(todayISO: string = torontoTodayISO()): PricingTier {
+  return (
+    delegateTiers.find((t) => !t.until || todayISO <= t.until) ??
+    delegateTiers[delegateTiers.length - 1]
+  );
+}
