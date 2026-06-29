@@ -65,14 +65,14 @@ export function TextSizeToggle({ className }: { className?: string }) {
           aria-label={t("textSize")}
           title={t("textSize")}
           className={cn(
-            "inline-flex size-9 items-center justify-center rounded-sm transition-colors focus-visible:outline-2 focus-visible:outline-emerald-cta focus-visible:outline-offset-2",
+            "inline-flex size-8 items-center justify-center rounded-sm transition-colors focus-visible:outline-2 focus-visible:outline-emerald-cta focus-visible:outline-offset-2",
             active
               ? "bg-mist text-emerald-deep"
               : "text-muted hover:bg-anthracite/5 hover:text-anthracite",
             className,
           )}
         >
-          <ALargeSmall className="size-5" />
+          <ALargeSmall className="size-4" />
         </button>
       </DialogTrigger>
       <DialogContent closeLabel={t("close")}>

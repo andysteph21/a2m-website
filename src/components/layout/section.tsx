@@ -7,7 +7,7 @@ export type SectionMotif = "contours" | "aurora" | "contours-light";
 
 const MOTIF_CLASS: Record<SectionMotif, string> = {
   contours: "a2m-motif",
-  aurora: "a2m-aurora",
+  aurora: "a2m-motif",
   "contours-light": "a2m-motif-light",
 };
 

@@ -33,9 +33,19 @@ export async function Header({ locale }: { locale: string }) {
 
   return (
     <header className="sticky top-0 z-40 border-hairline border-b bg-ivory/95 backdrop-blur supports-[backdrop-filter]:bg-ivory/80">
-      <div className="flex min-h-16 w-full items-center justify-between gap-4 px-4 pt-4 pb-2.5 sm:px-6 lg:min-h-24">
-        {/* Logo + date/lieu de l'événement (échelle responsive, ratio préservé) */}
-        <div className="flex items-center gap-3 sm:gap-4 lg:gap-6">
+      {/* Barre utilitaire supérieure — langue + accessibilité, alignées à droite, format compact */}
+      <div className="hidden border-hairline border-b md:block">
+        <div className="flex items-center justify-end gap-2.5 px-4 py-1 sm:px-6">
+          <LanguageSwitcher />
+          <span aria-hidden className="h-3.5 w-px bg-hairline" />
+          <TextSizeToggle />
+        </div>
+      </div>
+
+      {/* Ligne principale */}
+      <div className="flex min-h-16 w-full items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        {/* Logo + date/lieu de l'événement (logo compact, ratio préservé) */}
+        <div className="flex items-center gap-3 sm:gap-4">
           <Link href="/" className="flex items-center" aria-label="A2M 2027">
             <Image
               src="/images/brand/a2m-logo.png"
@@ -43,10 +53,10 @@ export async function Header({ locale }: { locale: string }) {
               width={764}
               height={301}
               priority
-              className="h-12 w-auto sm:h-16 md:h-20 lg:h-[100px] xl:h-[130px]"
+              className="h-9 w-auto sm:h-10 md:h-12 lg:h-14"
             />
           </Link>
-          <span className="hidden whitespace-nowrap border-hairline border-l pl-4 text-sm text-muted leading-tight md:block lg:hidden lg:pl-5 xl:block xl:text-base">
+          <span className="hidden whitespace-nowrap border-hairline border-l pl-4 text-sm text-muted leading-tight md:block lg:hidden xl:block">
             <span className="block font-bold text-anthracite uppercase tracking-[0.06em]">
               {t("eventDates")}
             </span>
@@ -54,25 +64,14 @@ export async function Header({ locale }: { locale: string }) {
           </span>
         </div>
 
-        <DesktopNav sections={sections} />
-
+        {/* Droite : deux rangées alignées à droite — boutons au-dessus, navigation en dessous */}
         <div className="flex items-center gap-3">
-          {/* Bureau : actions empilées — connexion + inscription au-dessus,
-              langue + accessibilité (même largeur, alignées) en dessous. */}
-          <div className="hidden flex-col items-stretch gap-2 sm:flex">
-            <div className="flex items-center justify-end gap-2">
+          <div className="hidden flex-col items-end gap-2.5 lg:flex">
+            <div className="flex items-center gap-2">
               <LoginButton label={t("login")} />
               <RegisterButton label={t("register")} />
             </div>
-            <div className="flex items-center">
-              <div className="flex flex-1 justify-center">
-                <LanguageSwitcher />
-              </div>
-              <span aria-hidden className="mx-2 h-5 w-px bg-hairline" />
-              <div className="flex flex-1 justify-center">
-                <TextSizeToggle />
-              </div>
-            </div>
+            <DesktopNav sections={sections} />
           </div>
           <MobileNav sections={sections} />
         </div>

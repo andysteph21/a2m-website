@@ -73,7 +73,10 @@ export function NewsSection({ locale, category }: { locale: Locale; category?: N
       </Tabs>
 
       {filtered.length > 0 ? (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
+        <div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          aria-live="polite"
+        >
           {filtered.map((a) => (
             <ArticleCard key={a.id} article={a} locale={locale} />
           ))}
