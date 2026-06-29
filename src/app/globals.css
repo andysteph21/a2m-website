@@ -67,11 +67,6 @@
     animation: a2m-page-in 0.5s var(--ease-cinema) both;
   }
 
-  /* Flottement doux des éléments décoratifs (icônes de fond). */
-  .a2m-floaticon {
-    animation: a2m-float var(--a2m-float-dur, 9s) var(--ease-aman) infinite alternate;
-  }
-
   /* Révélation au défilement (CSS pur, sans JS). Si non supporté → visible. */
   @supports (animation-timeline: view()) {
     .a2m-reveal {
@@ -103,70 +98,31 @@
     animation: a2m-rise 0.45s var(--ease-discret) 0.3s both;
   }
 
-  /* Fond animé subtil (halos lents) — conteneurs relative + overflow-hidden. */
-  .a2m-aurora::before {
-    content: "";
-    position: absolute;
-    inset: -40%;
-    z-index: 0;
-    pointer-events: none;
-    background:
-      radial-gradient(40% 50% at 20% 20%, rgba(168, 183, 136, 0.2), transparent 60%),
-      radial-gradient(45% 55% at 85% 30%, rgba(201, 169, 97, 0.16), transparent 60%);
-    animation: a2m-aurora 18s var(--ease-aman) infinite alternate;
-  }
-
-  /* Motif signature : courbes topographiques dorées, masquées et dérivant
-     lentement. « Il signe, il ne tapisse pas » — opacité basse. */
-  .a2m-motif::before {
-    content: "";
-    position: absolute;
-    inset: -20%;
-    z-index: 0;
-    pointer-events: none;
-    background: repeating-radial-gradient(
-      ellipse at 72% 32%,
-      transparent 0 13px,
-      rgba(201, 169, 97, 0.13) 13px 14.5px
-    );
-    -webkit-mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
-    mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
-    animation: a2m-motif-drift 32s var(--ease-aman) infinite alternate;
-  }
 }
 
-/* Motif statique (rendu même si reduced-motion) — la signature reste,
-   seul le mouvement est retiré ci-dessous. */
+/* Motif signature statique : champ de courbes topographiques (type carte
+   d'élévation), inspiré du logo. Texture SVG dorée + verte, sans animation. */
 .a2m-motif::before {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: repeating-radial-gradient(
-    ellipse at 72% 32%,
-    transparent 0 13px,
-    rgba(201, 169, 97, 0.13) 13px 14.5px
-  );
-  -webkit-mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
-  mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
+  background-image: url("/images/texture/contours-dark.svg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* Variante claire de la signature topographique — encre émeraude sur fond
-   « surface » (sections claires). Même masque/anchrage, opacité basse. */
+/* Variante claire : même champ de courbes, encre émeraude sur fond clair. */
 .a2m-motif-light::before {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: repeating-radial-gradient(
-    ellipse at 72% 32%,
-    transparent 0 13px,
-    rgba(22, 102, 73, 0.1) 13px 14.5px
-  );
-  -webkit-mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
-  mask-image: radial-gradient(130% 120% at 82% 18%, #000, transparent 68%);
+  background-image: url("/images/texture/contours-light.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 @keyframes a2m-reveal-in {
@@ -225,32 +181,6 @@
   }
 }
 
-@keyframes a2m-float {
-  from {
-    transform: translateY(0) rotate(0deg);
-  }
-  to {
-    transform: translateY(-10px) rotate(2deg);
-  }
-}
-
-@keyframes a2m-aurora {
-  from {
-    transform: translate3d(-3%, -2%, 0) scale(1);
-  }
-  to {
-    transform: translate3d(3%, 2%, 0) scale(1.08);
-  }
-}
-
-@keyframes a2m-motif-drift {
-  from {
-    transform: translate3d(-2%, -1%, 0) scale(1);
-  }
-  to {
-    transform: translate3d(2%, 1%, 0) scale(1.06);
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   *,

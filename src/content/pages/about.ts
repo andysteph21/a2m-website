@@ -422,7 +422,7 @@ export const aboutPages: PageContent[] = [
     slug: "about/sustainability",
     section: "/about",
     eyebrow: { fr: "À propos", en: "About" },
-    title: { fr: "Programme de durabilité", en: "Sustainability Programme" },
+    title: { fr: "Durabilité", en: "Sustainability" },
     lead: {
       fr: "Un événement d'investissement minier responsable a le devoir de créer une valeur durable pour les communautés africaines et l'industrie.",
       en: "A responsible mining investment event has a duty to deliver lasting value to African communities and the industry.",

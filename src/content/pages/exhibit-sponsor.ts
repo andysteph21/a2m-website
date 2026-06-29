@@ -4,7 +4,7 @@ export const exhibitSponsorPages: PageContent[] = [
   {
     slug: "exhibit-sponsor",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
     title: { fr: "Pourquoi exposer", en: "Why Exhibit" },
     lead: {
       fr: "Trois jours de contact direct avec celles et ceux qui décident de ce qui se construit, se finance et s'opère dans la mine africaine.",
@@ -43,33 +43,13 @@ export const exhibitSponsorPages: PageContent[] = [
   {
     slug: "exhibit-sponsor/exhibition",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
     title: { fr: "Opportunités d'exposition", en: "Exhibition Opportunities" },
     lead: {
       fr: "Du A2M Marketplace au Village des explorateurs, choisissez le format adapté à vos objectifs.",
-      en: "From the A2M Marketplace to the Explorer Village, choose the format that fits your objectives.",
+      en: "From the A2M Marketplace to the Explorers' Village, choose the format that fits your objectives.",
     },
     blocks: [
-      {
-        type: "features",
-        columns: 2,
-        items: [
-          {
-            title: { fr: "A2M Marketplace — stand 2 × 3 m", en: "A2M Marketplace — 2 × 3 m stand" },
-            text: {
-              fr: "Stand équipé avec nom et logo en fronton, profil dans le magazine officiel (2 000 ex.), 2 passes délégués offerts (+50 % sur 2 autres), accès complet et plateforme de maillage.",
-              en: "Furnished stand with name and logo on the fascia, profile in the official magazine (2,000 copies), 2 complimentary delegate passes (+50% off 2 more), full access and matchmaking platform.",
-            },
-          },
-          {
-            title: { fr: "Village des explorateurs — 1 × 1 m", en: "Explorer Village — 1 × 1 m" },
-            text: {
-              fr: "Stand équipé pour sociétés juniors/non cotées, profil au magazine, 1 passe délégué offert, accès complet. Places limitées.",
-              en: "Furnished booth for junior/unlisted companies, magazine profile, 1 complimentary delegate pass, full access. Limited spaces.",
-            },
-          },
-        ],
-      },
       {
         type: "image",
         label: {
@@ -81,9 +61,96 @@ export const exhibitSponsorPages: PageContent[] = [
     ],
   },
   {
+    slug: "exhibit-sponsor/marketplace",
+    section: "/exhibit-sponsor",
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
+    title: { fr: "A2M Marketplace", en: "A2M Marketplace" },
+    lead: {
+      fr: "Le point de rencontre du secteur : les entreprises canadiennes y présentent leurs capacités, les acteurs africains leurs opportunités.",
+      en: "The industry's meeting point: Canadian companies showcase their capabilities and African players present their opportunities.",
+    },
+    blocks: [
+      {
+        type: "heading",
+        text: {
+          fr: "Forfait exposant standard (stand 2 × 3 m)",
+          en: "Standard exhibitor package (2 × 3 m stand)",
+        },
+      },
+      {
+        type: "list",
+        items: [
+          {
+            fr: "Stand équipé avec nom et logo en fronton",
+            en: "Furnished stand with name and logo on the fascia",
+          },
+          {
+            fr: "Logo et profil (max 100 mots) dans le magazine officiel (2 000 ex.)",
+            en: "Logo and profile (max 100 words) in the official magazine (2,000 copies)",
+          },
+          {
+            fr: "2 passes délégués offerts + 50 % sur 2 passes supplémentaires",
+            en: "2 complimentary delegate passes + 50% off 2 more",
+          },
+          {
+            fr: "Accès complet et plateforme de maillage A2M",
+            en: "Full event access and the A2M matchmaking platform",
+          },
+        ],
+      },
+      {
+        type: "callout",
+        title: { fr: "Réserver un stand", en: "Book a stand" },
+        text: {
+          fr: "Les espaces sont attribués selon l'ordre de confirmation. Écrivez à info@a2mevent.com.",
+          en: "Spaces are allocated on a first-confirmed basis. Write to info@a2mevent.com.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "exhibit-sponsor/explorers-village",
+    section: "/exhibit-sponsor",
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
+    title: { fr: "Village des explorateurs", en: "Explorers' Village" },
+    lead: {
+      fr: "Une vitrine ciblée pour les sociétés d'exploration early-stage et non cotées, face à un public d'investisseurs et de dealmakers.",
+      en: "A focused showcase for early-stage and unlisted exploration companies, before an audience of investors and deal-makers.",
+    },
+    blocks: [
+      {
+        type: "heading",
+        text: { fr: "Forfait Village des explorateurs", en: "Explorers' Village package" },
+      },
+      {
+        type: "list",
+        items: [
+          { fr: "Stand équipé 1 × 1 m", en: "Furnished 1 × 1 m booth" },
+          {
+            fr: "Logo et profil (max 100 mots) dans le magazine officiel",
+            en: "Logo and profile (max 100 words) in the official magazine",
+          },
+          { fr: "1 passe délégué offert", en: "1 complimentary delegate pass" },
+          {
+            fr: "Accès complet et plateforme de maillage A2M",
+            en: "Full event access and the A2M matchmaking platform",
+          },
+        ],
+      },
+      {
+        type: "callout",
+        title: { fr: "Places limitées", en: "Limited spaces" },
+        text: {
+          fr: "Le programme du Village des explorateurs est à capacité limitée. Écrivez à info@a2mevent.com.",
+          en: "The Explorers' Village programme has limited capacity. Write to info@a2mevent.com.",
+        },
+      },
+    ],
+  },
+  {
     slug: "exhibit-sponsor/why-sponsor",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
     title: { fr: "Pourquoi commanditer", en: "Why Sponsor" },
     lead: {
       fr: "Commanditer A2M 2027, ce n'est pas une dépense marketing : c'est un positionnement stratégique sur le marché qui définira la mine africaine pour vingt ans.",
@@ -134,9 +201,37 @@ export const exhibitSponsorPages: PageContent[] = [
     ],
   },
   {
+    slug: "exhibit-sponsor/exhibitors-sponsors",
+    section: "/exhibit-sponsor",
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
+    title: { fr: "Exposants & commanditaires", en: "Exhibitors & Sponsors" },
+    lead: {
+      fr: "Les organisations qui s'associent à A2M 2027 — exposants, commanditaires et partenaires officiels.",
+      en: "The organisations associating with A2M 2027 — exhibitors, sponsors and official partners.",
+    },
+    blocks: [
+      {
+        type: "logos",
+        count: 10,
+        label: {
+          fr: "Exposants & commanditaires 2027 — logos à venir",
+          en: "2027 exhibitors & sponsors — logos coming soon",
+        },
+      },
+      {
+        type: "callout",
+        title: { fr: "Rejoindre la liste", en: "Join the list" },
+        text: {
+          fr: "Réservez votre place parmi les exposants et commanditaires 2027 : info@a2mevent.com.",
+          en: "Secure your place among the 2027 exhibitors and sponsors: info@a2mevent.com.",
+        },
+      },
+    ],
+  },
+  {
     slug: "exhibit-sponsor/associate-your-brand",
     section: "/exhibit-sponsor",
-    eyebrow: { fr: "Exposer & Commanditer", en: "Exhibit & Sponsor" },
+    eyebrow: { fr: "Exposer ou commanditer", en: "Exhibit or Sponsor" },
     title: { fr: "Associer votre marque", en: "Associate Your Brand" },
     lead: {
       fr: "Des opportunités sur mesure pour gouvernements, sociétés minières, fournisseurs et investisseurs.",
@@ -239,18 +334,6 @@ export const exhibitSponsorPages: PageContent[] = [
             },
           },
         ],
-      },
-      {
-        type: "heading",
-        text: { fr: "Exposants & commanditaires 2027", en: "2027 Exhibitors & Sponsors" },
-      },
-      {
-        type: "logos",
-        count: 10,
-        label: {
-          fr: "Exposants & commanditaires 2027 — logos à venir",
-          en: "2027 exhibitors & sponsors — logos coming soon",
-        },
       },
       {
         type: "callout",
