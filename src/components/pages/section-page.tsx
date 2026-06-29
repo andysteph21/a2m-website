@@ -83,7 +83,12 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
         breadcrumb={[{ label: pick(section.title, locale) }]}
       />
 
-      <SectionNav items={navItems} label={t("onThisPage")} />
+      <SectionNav
+        items={navItems}
+        label={t("onThisPage")}
+        prevLabel={locale === "fr" ? "Défiler vers la gauche" : "Scroll left"}
+        nextLabel={locale === "fr" ? "Défiler vers la droite" : "Scroll right"}
+      />
 
       {flat.map(({ sub, depth }, i) => {
         const isGroup = !!sub.children?.length && !sub.kind && !sub.contentSlug;
@@ -95,7 +100,7 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
             <section
               key={sub.id}
               id={sub.id}
-              className="a2m-reveal scroll-mt-24 pt-14 sm:scroll-mt-32 lg:scroll-mt-[185px] xl:scroll-mt-[215px] lg:pt-16"
+              className="a2m-reveal scroll-mt-24 pt-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:pt-16"
             >
               <Container>
                 <h2 className="font-display font-bold text-h2 text-ink tracking-[-0.01em]">
@@ -111,7 +116,7 @@ export async function SectionPage({ section, locale }: { section: SectionDef; lo
             key={sub.id}
             id={sub.id}
             className={cn(
-              "a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[185px] xl:scroll-mt-[215px] lg:py-16",
+              "a2m-reveal scroll-mt-24 py-14 sm:scroll-mt-32 lg:scroll-mt-[205px] lg:py-16",
               surface && "a2m-motif-light relative overflow-hidden bg-surface",
             )}
           >

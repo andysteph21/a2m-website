@@ -79,7 +79,7 @@ export function HeroSlider({
 
   return (
     <section
-      className="a2m-aurora relative overflow-hidden bg-emerald-deep text-ivory"
+      className="a2m-motif relative overflow-hidden bg-emerald-deep text-ivory"
       aria-roledescription="carousel"
       aria-label="A2M 2027"
     >

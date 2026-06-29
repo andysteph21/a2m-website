@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronLeft } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import type { ResolvedNavLink, ResolvedNavSection } from "./nav-types";
@@ -35,7 +35,7 @@ export function DesktopNav({ sections }: { sections: ResolvedNavSection[] }) {
               </Link>
 
               {section.children && (
-                <div className="pointer-events-none absolute top-full left-0 z-50 min-w-[260px] pt-2 opacity-0 transition-opacity duration-200 ease-discret group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                <div className="pointer-events-none absolute top-full right-0 z-50 min-w-[260px] pt-2 opacity-0 transition-opacity duration-200 ease-discret group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
                   <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
                     {section.children.map((child) =>
                       child.children ? (
@@ -43,12 +43,12 @@ export function DesktopNav({ sections }: { sections: ResolvedNavSection[] }) {
                         <li key={child.href} className="group/sub relative">
                           <Link
                             href={child.href}
-                            className="flex items-center justify-between gap-2 px-4 py-2 font-semibold text-body text-ink transition-colors hover:bg-mist hover:text-emerald-deep"
+                            className="flex items-center gap-2 px-4 py-2 font-semibold text-body text-ink transition-colors hover:bg-mist hover:text-emerald-deep"
                           >
+                            <ChevronLeft className="size-3.5 shrink-0 text-taupe" aria-hidden />
                             {child.title}
-                            <ChevronRight className="size-3.5 shrink-0 text-taupe" aria-hidden />
                           </Link>
-                          <div className="pointer-events-none invisible absolute top-0 left-full z-50 min-w-[240px] pl-1 opacity-0 transition-opacity duration-200 ease-discret group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:pointer-events-auto group-focus-within/sub:visible group-focus-within/sub:opacity-100">
+                          <div className="pointer-events-none invisible absolute top-0 right-full z-50 min-w-[240px] pr-1 opacity-0 transition-opacity duration-200 ease-discret group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:pointer-events-auto group-focus-within/sub:visible group-focus-within/sub:opacity-100">
                             <ul className="rounded-sm border border-hairline bg-card py-2 shadow-card-hover">
                               {child.children.map((grand: ResolvedNavLink) => (
                                 <li key={grand.href}>
